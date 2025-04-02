@@ -14,6 +14,7 @@ a {
     flex-direction: row;
     width: 100%;
     position: relative;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
@@ -21,21 +22,12 @@ a {
 #home-button-div {
     display: flex;
     flex-direction: row;
-
     flex-wrap: wrap;
-}
-
-#home-button-div {
-    margin-left: auto
 }
 
 #top-title {
     font-size: 2em;
     text-wrap: nowrap;
-
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%)
 }
 
 #light-mode-selector,
@@ -50,6 +42,12 @@ a {
     transition: ease-in-out;
     width: var(--icon-size);
     height: var(--icon-size);
+}
+
+#light-mode-selector:hover,
+#dark-mode-selector:hover,
+#home-button:hover {
+    background-color: var(--base02);
 }
 
 main {

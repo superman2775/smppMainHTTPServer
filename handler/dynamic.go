@@ -82,11 +82,13 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		CSS       string
 		Redirect  string
 		PageTitle string
+		Mode      string
 	}{
 		Title:     pageName,
 		CSS:       cssFile,
 		Redirect:  r.URL.Path,
 		PageTitle: pageTitle,
+		Mode:      mode,
 	}
 
 	RenderTemplate(w, tmplPath, data)
