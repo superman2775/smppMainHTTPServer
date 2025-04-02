@@ -1,0 +1,61 @@
+html {
+    --icon-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--base00);
+    color: var(--text);
+}
+
+a {
+    color: var(--accent);
+}
+
+#top-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#light-dark-selectors,
+#home-button-div {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+#home-button-div {
+    margin-left: auto
+}
+
+#top-title {
+    font-size: 2em;
+    text-wrap: nowrap;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+#light-mode-selector,
+#dark-mode-selector,
+#home-button {
+    fill: var(--text);
+    padding: 5px;
+    border-radius: 25%;
+    margin: 5px;
+    background-color: var(--base01);
+    transition-duration: 0.2s;
+    transition: ease-in-out;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
