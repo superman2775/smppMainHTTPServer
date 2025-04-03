@@ -24,10 +24,33 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 }
+@keyframes topTitle {
+    0% {
+        letter-spacing: 100px;
+        opacity: 0;
+    }
+    20% {
+        opacity: 1; /* Fully visible early in the animation */
+    }
+
+    70% {
+        letter-spacing: -5px; /* Slight squeeze for bounce effect */
+    }
+    100% {
+        letter-spacing: normal; /* Final state */
+        opacity: 1; /* Ensures it stays visible */
+    }
+}
 
 #top-title {
+    background: linear-gradient(90deg, rgb(52, 58, 143) 0%, rgba(86,96,234,1) 48%, rgb(134, 139, 214) 100%);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
     font-size: 2em;
-    text-wrap: nowrap;
+    white-space: nowrap; /* Prevents text wrapping */
+    animation: topTitle 0.5s ease-out forwards; /* Smooth easing, keeps final state */
 }
 
 #light-mode-selector,
