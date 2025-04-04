@@ -1,14 +1,47 @@
 html {
-    --icon-size: 4rem;
+    --icon-size: 2rem;
     font-family: "Montserrat", sans-serif;
     background-color: var(--base00);
     color: var(--text);
+    display: flex;
+    justify-content: center;
 }
 
 a {
     color: var(--accent);
 }
+a:hover {
+    color: var(--accent-highlight);
+}
+body {
+    width: 70%;
+    align-self: center;
+}
+.top-sub-menu{
+    display: none;
+    position: absolute;
+    transform: translateX(-50%);
+}
+#getting-started-button{
 
+}
+#getting-started-button:focus>.top-sub-menu{
+    display: flex;
+}
+#top-title {
+    font-weight: 900;
+    font-size: 1.5em;
+    color: var(--text);
+    overflow: visible;
+}
+#top-title-accent{
+    background: linear-gradient(60deg, rgb(72, 80, 189) 0%, rgba(86,96,234,1) 48%, rgb(121, 127, 209) 100%);
+    -webkit-background-clip: text;
+    font-size: 2em;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+}
 #top-bar {
     display: flex;
     flex-direction: row;
@@ -26,36 +59,25 @@ a {
 }
 @keyframes topTitle {
     0% {
-        letter-spacing: 100px;
+        letter-spacing: 40px;
         opacity: 0;
     }
     20% {
-        opacity: 1; /* Fully visible early in the animation */
+        opacity: 1; 
     }
 
     70% {
-        letter-spacing: -5px; /* Slight squeeze for bounce effect */
+        letter-spacing: -5px;
     }
     100% {
-        letter-spacing: normal; /* Final state */
-        opacity: 1; /* Ensures it stays visible */
+        letter-spacing: normal;
+        opacity: 1; 
     }
-}
-
-#top-title {
-    background: linear-gradient(90deg, rgb(52, 58, 143) 0%, rgba(86,96,234,1) 48%, rgb(134, 139, 214) 100%);
-    -webkit-background-clip: text; /* For Safari */
-    background-clip: text;
-    color: transparent;
-    font-weight: 900;
-    font-size: 2em;
-    white-space: nowrap; /* Prevents text wrapping */
-    animation: topTitle 0.5s ease-out forwards; /* Smooth easing, keeps final state */
 }
 
 #light-mode-selector,
-#dark-mode-selector,
-#home-button {
+#dark-mode-selector
+ {
     fill: var(--text);
     padding: 5px;
     border-radius: 25%;
@@ -66,10 +88,34 @@ a {
     width: var(--icon-size);
     height: var(--icon-size);
 }
+#home-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--text);
+    padding: 10px;
+    height: fit-content;
+    background-color: transparent;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 750;
+    font-size: 1.2em;
+    transition: all 0.15s ease-in-out;
+}
+#home-button:hover>img{
+    scale: 1.1;
+}
+#home-button>img{
+    transition: all 0.15s ease-in-out;
+    
+}
+#home-button:hover{
+    color: var(--accent);
+}
 
 #light-mode-selector:hover,
-#dark-mode-selector:hover,
-#home-button:hover {
+#dark-mode-selector:hover
+ {
     background-color: var(--base02);
 }
 
@@ -79,4 +125,26 @@ main {
 
 footer {
     text-align: center;
+}
+@media (max-width: 1024px) {
+    body{
+        width: 100%;
+    }
+    #top-bar{
+        margin-bottom: 10px;
+    }
+    #top-title{
+        font-size: 0.6em;
+    }
+    #top-title-accent{
+        font-size: 1.8em;
+    }
+    .visible-on-desktop{
+        display: none;
+    }
+    #home-button>img{
+        border-radius: 25%;
+        width: 35px;
+        height: 35px;
+    }
 }

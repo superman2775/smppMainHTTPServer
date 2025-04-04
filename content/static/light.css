@@ -1,10 +1,10 @@
 html {
-    --accent: #3757b5;
+    --accent: #4a50d9;
     --accent-hightlight: #5373ca;
-    --base00: #f0f3ff;
-    --base01: #e0e3ef;
-    --base02: #d7dae6;
-    --shadow: #c1c3cf;
-    --text: #010103;
+    --base00: #f2f0e3;
+    --base01: #dfddd0;
+    --base02: #cac8bb;
+    --shadow: #adab9e;
+    --text: #2e2e2e;
     --inverted-text: var(--base00);
 }
