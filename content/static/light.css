@@ -5,6 +5,7 @@ html {
     --base01: #dfddd0;
     --base02: #cac8bb;
     --shadow: #adab9e;
+    --button: #4c56e0;
     --text: #2e2e2e;
     --inverted-text: var(--base00);
 }

@@ -1,5 +1,5 @@
 html {
-    --icon-size: 2rem;
+    --icon-size: 2.5rem;
     font-family: "Montserrat", sans-serif;
     background-color: var(--base00);
     color: var(--text);
@@ -7,93 +7,229 @@ html {
     justify-content: center;
 }
 
+body::-moz-selection {
+    background-color: var(--accent-hightlight);
+    opacity: 0.2;
+}
+
+body::selection {
+    background-color: var(--accent-hightlight);
+    opacity: 0.2;
+}
+
 a {
     color: var(--accent);
 }
+
 a:hover {
     color: var(--accent-highlight);
 }
+
 body {
     width: 70%;
     align-self: center;
 }
-.top-sub-menu{
-    display: none;
-    position: absolute;
-    transform: translateX(-50%);
-}
-#getting-started-button{
 
-}
-#getting-started-button:focus>.top-sub-menu{
+#top-nav-menu-buttons {
+    width: 65%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
+
+.top-sub-menu {
+    opacity: 0;
+    z-index: -10;
+    transition: all 0.15s ease-in;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    width: 20%;
+    background-color: var(--base01);
+    border-radius: 10px;
+    border: 2px solid var(--base02);
+}
+
+#getting-started-button {
+    border: none;
+    background-color: transparent;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+}
+
+#getting-started-button:hover {
+    cursor: pointer;
+}
+
+#getting-started-button:focus>.top-sub-menu {
+    display: flex;
+    opacity: 1;
+    z-index: auto;
+}
+
+#getting-started-button:focus>.top-nav-arrow {
+    rotate: 180deg;
+}
+
+.top-nav-arrow {
+    stroke: var(--text);
+    transition: all 0.15s ease-in-out;
+}
+
 #top-title {
     font-weight: 900;
     font-size: 1.5em;
     color: var(--text);
     overflow: visible;
 }
-#top-title-accent{
-    background: linear-gradient(60deg, rgb(72, 80, 189) 0%, rgba(86,96,234,1) 48%, rgb(121, 127, 209) 100%);
+
+#top-title-accent {
+    background: linear-gradient(60deg, rgb(62, 73, 232) 0%, rgb(83, 95, 250) 48%, rgb(121, 127, 209) 100%);
     -webkit-background-clip: text;
     font-size: 2em;
     background-clip: text;
     color: transparent;
     white-space: nowrap;
+    animation: topTitle 0.3s ease-out 0ms 1 forwards;
 }
-#top-bar {
+
+#top-nav {
     display: flex;
     flex-direction: row;
     width: 100%;
     position: relative;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding: 0.5rem;
+}
+
+.download-button {
+    gap: 5px;
+    background: linear-gradient(60deg, rgb(62, 73, 232) 0%, rgb(121, 127, 209) 100%);
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    color: var(--inverted-text);
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.clipped-smpp-logo {
+    opacity: 1;
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    width: 30px;
+    height: 30px;
+}
+
+.download-button-text {
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.download-button-arrow {
+    stroke: var(--inverted-text);
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    opacity: 0;
+    width: 0px;
+    transform: translateX(100%);
+}
+
+.download-button:hover {
+    cursor: pointer;
+}
+
+.download-button:hover .clipped-smpp-logo {
+    transform: translateX(-100%);
+    opacity: 0;
+    width: 0px;
+}
+
+.download-button:hover .download-button-text {
+    transform: translateX(calc(0 - 30px));
+    color: var(--inverted-text);
+}
+
+.download-button:hover .download-button-arrow {
+    transform: translateX(0px);
+    opacity: 1;
+    width: 30px;
+    height: 30px;
 }
 
 #light-dark-selectors,
 #home-button-div {
+    width: 17.5%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    white-space: nowrap;
+    align-items: center;
 }
+
+#light-dark-selectors {
+    justify-content: flex-end;
+}
+
 @keyframes topTitle {
     0% {
         letter-spacing: 40px;
         opacity: 0;
     }
+
     20% {
-        opacity: 1; 
+        opacity: 1;
     }
 
     70% {
         letter-spacing: -5px;
     }
+
     100% {
         letter-spacing: normal;
-        opacity: 1; 
     }
 }
 
 #light-mode-selector,
-#dark-mode-selector
- {
+#dark-mode-selector {
     fill: var(--text);
     padding: 5px;
     border-radius: 25%;
     margin: 5px;
-    background-color: var(--base01);
-    transition-duration: 0.2s;
-    transition: ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: var(--icon-size);
     height: var(--icon-size);
 }
-#home-button{
+
+#light-mode-selector:hover {
+    rotate: 15deg;
+}
+
+#dark-mode-selector:hover {
+    scale: 1.05;
+    rotate: -5deg;
+}
+
+#home-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     color: var(--text);
-    padding: 10px;
     height: fit-content;
     background-color: transparent;
     gap: 10px;
@@ -102,21 +238,17 @@ body {
     font-size: 1.2em;
     transition: all 0.15s ease-in-out;
 }
-#home-button:hover>img{
+
+#home-button:hover>img {
     scale: 1.1;
 }
-#home-button>img{
+
+#home-button>img {
     transition: all 0.15s ease-in-out;
-    
-}
-#home-button:hover{
-    color: var(--accent);
 }
 
-#light-mode-selector:hover,
-#dark-mode-selector:hover
- {
-    background-color: var(--base02);
+#home-button:hover {
+    color: var(--accent);
 }
 
 main {
@@ -126,23 +258,29 @@ main {
 footer {
     text-align: center;
 }
+
 @media (max-width: 1024px) {
-    body{
+    body {
         width: 100%;
     }
-    #top-bar{
+
+    #top-nav {
         margin-bottom: 10px;
     }
-    #top-title{
+
+    #top-title {
         font-size: 0.6em;
     }
-    #top-title-accent{
+
+    #top-title-accent {
         font-size: 1.8em;
     }
-    .visible-on-desktop{
-        display: none;
+
+    .visible-on-desktop {
+        display: none !important;
     }
-    #home-button>img{
+
+    #home-button>img {
         border-radius: 25%;
         width: 35px;
         height: 35px;
