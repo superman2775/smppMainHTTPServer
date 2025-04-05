@@ -18,7 +18,7 @@
 <body>
     <header>
         <nav id="top-nav">
-            <div id="home-button-div">
+            <div id="home-button-div" class="outer-top-nav-element">
                 <a id="home-button" href="/">
                     <img src="/static/smpp_logo128.png" alt="Smartschool++ logo" width="25px" height="25px">
                     <span class="visible-on-desktop">Smartschool++</span>
@@ -37,7 +37,7 @@
                 </button>
             </div>
 
-            <div id="light-dark-selectors">
+            <div id="light-dark-selectors" class="outer-top-nav-element">
                 {{ if eq .Mode "dark" }}
                 <a id="light-mode-selector" href="/set-mode?mode=light&redirect={{ .Redirect }}">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -93,7 +93,12 @@
         <p><b style="color: var(--accent);">E-Mail:</b> lukasvandenbeghe@gmail.com</p>
         <p><b style="color: var(--accent);">Discord:</b> @NightFlavor</p>
     </footer>
-
+    <script>
+        document.addEventListener('scroll', () => {
+            const isScrolled = window.scrollY > 10;
+            document.body.classList.toggle('is-scrolled', isScrolled);
+        });
+    </script>
 </body>
 
 </html>

@@ -1,10 +1,11 @@
 html {
     --accent: #4a50d9;
-    --accent-hightlight: #5373ca;
+    --accent-text: #434eec;
     --base00: #f2f0e3;
+    --transparent-background: rgba(242, 240, 227, 0.44);
     --base01: #dfddd0;
     --base02: #cac8bb;
-    --shadow: #adab9e;
+    --shadow: rgba(119, 118, 103, 0.709);
     --button: #4c56e0;
     --text: #2e2e2e;
     --inverted-text: var(--base00);
