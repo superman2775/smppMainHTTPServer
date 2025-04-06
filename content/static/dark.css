@@ -1,12 +1,12 @@
 html {
     --accent: #5660ea;
     --accent-text: #6872f8;
-    --base00: #1f1f1f;
-    --transparent-background: #0f0f0f5f;
-    --base01: #1b1b1b;
-    --base02: #171717;
+    --background: #1f1f1f;
+    --transparent-background: #20202057;
     --shadow: rgba(12, 12, 12, 0.709);
     --button: #626bf0;
     --text: #f0f3ff;
     --inverted-text: var(--text);
+    --border-color: #cccccc;
+    --button-hover: #292929;
 }

@@ -11,6 +11,7 @@ func main() {
 	http.HandleFunc("/", handler.DynamicHandler)
 	http.HandleFunc("/set-mode", handler.SetModeHandler)
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./content/css"))))
+	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("./content/js"))))
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./content/static"))))
 	http.Handle("/media/", http.StripPrefix("/media/", http.FileServer(http.Dir("./content/media"))))
 

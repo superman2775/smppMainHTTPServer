@@ -1,7 +1,7 @@
 html {
     --icon-size: 2.5rem;
     font-family: "Montserrat", sans-serif;
-    background-color: var(--base00);
+    background-color: var(--background);
     color: var(--text);
     display: flex;
     justify-content: center;
@@ -15,9 +15,19 @@ a:hover {
     color: var(--accent-highlight);
 }
 
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    border: none;
+    background: none;
+    line-height: normal;
+    vertical-align: baseline;
+}
+
 body {
     margin: 0;
-    width: 70%;
+    width: 75%;
     align-self: center;
 }
 
@@ -30,7 +40,7 @@ body {
 header {
     position: fixed;
     height: 4rem;
-    width: calc(70% - 4rem);
+    width: calc(75% - 4rem);
     padding: 1rem 2rem 2rem 2rem;
     backdrop-filter: blur(10px);
     border-bottom-left-radius: 20px;
@@ -40,31 +50,62 @@ header {
 
 main {
     padding-top: 7rem;
+    overflow-x: hidden;
+}
+
+#top-nav {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
 #top-nav-menu-buttons {
-    width: 65%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
+}
+
+.top-nav-menu-button.open-menu .top-sub-menu {
+    opacity: 1;
+    z-index: auto;
+    filter: blur(0px);
+    visibility: visible;
+}
+
+.top-nav-menu-button.open-menu .top-nav-arrow {
+    rotate: 180deg;
+
+
 }
 
 .top-sub-menu {
+    box-shadow: 0px 0px 50px 5px var(--shadow);
+    border: 3px solid var(--border-color);
+    padding: 1rem;
     opacity: 0;
+    filter: blur(5px);
     z-index: -10;
     transition: all 0.15s ease-in;
     display: flex;
+    visibility: hidden;
     position: absolute;
-    top: 100%;
-    left: 40%;
-    width: 20%;
-    background-color: var(--base01);
-    border-radius: 10px;
-    border: 2px solid var(--base02);
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background);
+    border-radius: 1rem;
+    width: 40rem;
 }
 
-#getting-started-button {
+.top-sub-menu {
+    cursor: default;
+}
+
+.top-nav-menu-button {
     border: none;
     background-color: transparent;
     color: var(--text);
@@ -77,33 +118,52 @@ main {
     flex-direction: row;
 }
 
-button {
-    font-family: inherit;
-    font-size: inherit;
-    padding: 0;
-    border: none;
-    background: none;
-    line-height: normal;
-    vertical-align: baseline;
-}
-
-#getting-started-button:hover {
+.top-nav-menu-button:hover {
     cursor: pointer;
-}
-
-#getting-started-button:focus>.top-sub-menu {
-    display: flex;
-    opacity: 1;
-    z-index: auto;
-}
-
-#getting-started-button:focus>.top-nav-arrow {
-    rotate: 180deg;
 }
 
 .top-nav-arrow {
     stroke: var(--text);
+    transition: all 0.15s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.top-nav-menu-card {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 15px;
     transition: all 0.15s ease-in-out;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.top-nav-menu-card:hover {
+    cursor: pointer;
+}
+
+.top-nav-menu-card-title {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: large;
+    align-items: center;
+    transition: all 0.15s ease-in-out;
+}
+
+.top-nav-menu-card-description {
+    font-weight: 500;
+    font-size: medium;
+}
+
+.top-nav-menu-card:hover {
+    background-color: var(--button-hover);
+}
+
+.top-nav-menu-card:hover .top-nav-menu-card-title {
+    padding-left: 0.5rem;
 }
 
 #top-title {
@@ -123,14 +183,6 @@ button {
     animation: topTitle 0.3s ease-out 0ms 1 forwards;
     z-index: -1;
     position: relative;
-}
-
-#top-nav {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    justify-content: space-between;
-    padding: 0.5rem;
 }
 
 .download-button {
@@ -234,9 +286,8 @@ button {
     gap: 10px;
 }
 
-#light-mode-selector,
-#dark-mode-selector {
-    fill: var(--text);
+#light-mode-selector>svg,
+#dark-mode-selector>svg {
     padding: 5px;
     border-radius: 25%;
     transition: all 0.3s ease-in-out;
@@ -244,16 +295,16 @@ button {
     height: var(--icon-size);
 }
 
-#light-mode-selector:hover,
-#light-mode-selector:focus {
-    rotate: 15deg;
+#light-mode-selector:hover>svg,
+#light-mode-selector:focus>svg {
+    rotate: 25deg;
 }
 
 
-#dark-mode-selector:hover,
-#dark-mode-selector:focus {
+#dark-mode-selector:hover>svg,
+#dark-mode-selector:focus>svg {
     scale: 1.05;
-    rotate: -5deg;
+    rotate: -10deg;
 }
 
 #home-button {
@@ -299,17 +350,24 @@ footer {
     background: rgba(182, 182, 182, 0.333) !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1170px) {
     body {
         width: 100%;
     }
 
     header {
-        width: 100%;
+        width: calc(100% - 2rem);
+        padding: 0.5rem 1rem 0.5rem 1rem;
     }
 
-    #top-nav {
-        margin-bottom: 10px;
+    .is-scrolled header {
+        box-shadow: 0px 20px 50px 5px var(--shadow);
+        background-color: var(--transparent-background);
+        padding: 0rem 1rem 0.5rem 1rem;
+    }
+
+    main {
+        padding-top: 5rem;
     }
 
     #top-title {
@@ -330,4 +388,5 @@ footer {
         width: 35px;
         height: 35px;
     }
+
 }
