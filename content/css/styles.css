@@ -99,10 +99,8 @@ main {
     background-color: var(--background);
     border-radius: 1rem;
     width: 40rem;
-}
-
-.top-sub-menu {
     cursor: default;
+    gap: 0.2rem;
 }
 
 .top-nav-menu-button {
@@ -164,6 +162,10 @@ main {
 
 .top-nav-menu-card:hover .top-nav-menu-card-title {
     padding-left: 0.5rem;
+}
+
+#mobile-menu-button {
+    display: none;
 }
 
 #top-title {
@@ -228,6 +230,7 @@ main {
     cursor: pointer;
 }
 
+.download-button:focus .clipped-smpp-logo,
 .download-button:hover .clipped-smpp-logo {
     transform: translateX(-100%);
     filter: blur(5px);
@@ -235,11 +238,13 @@ main {
     width: 0px;
 }
 
+.download-button:focus .download-button-text,
 .download-button:hover .download-button-text {
     transform: translateX(calc(0 - 30px));
     color: var(--inverted-text);
 }
 
+.download-button:focus .download-button-arrow,
 .download-button:hover .download-button-arrow {
     transform: translateX(0px);
     filter: none;
@@ -247,6 +252,7 @@ main {
 
 }
 
+.download-button:focus .download-button-arrow,
 .download-button:hover .download-button-arrow,
 .clipped-smpp-logo {
     width: 24px;
@@ -342,12 +348,104 @@ footer {
     text-align: center;
 }
 
-::selection {
-    background: rgba(182, 182, 182, 0.333) !important;
+#overlay {
+    position: fixed;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.05s ease-in;
+    backdrop-filter: blur(0px);
 }
 
-::-moz-selection {
-    background: rgba(182, 182, 182, 0.333) !important;
+#overlay.active {
+    z-index: 10;
+    background-color: var(--transparent-background);
+    backdrop-filter: blur(0.5px);
+}
+
+#mobile-menu.mobile-menu-open {
+    z-index: 40;
+    transform: translateX(0px);
+    box-shadow: 0px 0px 54px 11px var(--shadow);
+}
+
+#mobile-menu {
+    background-color: var(--background);
+    position: fixed;
+    right: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition: all 0.15s ease-in-out;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#mobile-menu-close-button {
+    display: flex;
+    fill: var(--red);
+    transition: all 0.15s ease-in-out;
+}
+
+#mobile-menu-close-button:focus,
+#mobile-menu-close-button:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.mobile-menu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 1rem;
+}
+
+.mobile-menu-top-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.mobile-menu-nav-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-menu-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.mobile-menu-nav-list-item:focus,
+.mobile-menu-nav-list-item:hover {
+    color: var(--accent);
+}
+
+.mobile-menu-nav-list-item {
+    display: flex;
+    background-image: none;
+    align-items: center;
+    color: var(--text);
+    text-decoration: none;
+    flex-direction: row;
+    gap: 0.3rem;
+    transition: all 0.1s ease-in-out;
+    font-weight: 500;
 }
 
 @media (max-width: 1170px) {
@@ -389,4 +487,20 @@ footer {
         height: 35px;
     }
 
+    .download-button {
+        position: relative;
+        align-self: center;
+        justify-content: center;
+    }
+
+    #mobile-menu-button {
+        transition: all 0.15s;
+        display: flex;
+    }
+
+    #mobile-menu-button:focus,
+    #mobile-menu-button:hover {
+        scale: 1.1;
+        cursor: pointer;
+    }
 }

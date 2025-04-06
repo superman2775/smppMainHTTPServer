@@ -42,10 +42,10 @@
                         </a>
 
                         <!-- Right Column -->
-                        <div>
+                        <div style="display: flex; flex-direction:column; gap: 0.2rem;">
                             <a href="/products" class="top-nav-menu-card">
                                 <span class="top-nav-menu-card-title">Products 🎁</span>
-                                <span class="top-nav-menu-card-description">Explore our products</span>
+                                <span class="top-nav-menu-card-description">Explore our different products</span>
                             </a>
                             <a href="/roadmap" class="top-nav-menu-card">
                                 <span class="top-nav-menu-card-title">Roadmap 🚧</span>
@@ -137,12 +137,106 @@
                         <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                     </svg>
                 </a>
+                <button id="mobile-menu-button">
+                    <svg width="3rem" height="3rem" viewBox="0 0 24 24" fill="var(--text)"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M 5,7 C 5,6.44772 5.44772,6 6,6 h 12 c 0.5523,0 1,0.44772 1,1 0,0.55228 -0.4477,1 -1,1 H 6 C 5.44772,8 5,7.55228 5,7 Z"
+                            sodipodi:nodetypes="sssssss" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="m 5,12 c 0,-0.5523 0.44772,-1 1,-1 h 12 c 0.5523,0 1,0.4477 1,1 0,0.5523 -0.4477,1 -1,1 H 6 C 5.44772,13 5,12.5523 5,12 Z"
+                            sodipodi:nodetypes="sssssss" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="m 11,17 c 0,-0.5523 0.4477,-1 1,-1 h 6 c 0.5523,0 1,0.4477 1,1 0,0.5523 -0.4477,1 -1,1 h -6 c -0.5523,0 -1,-0.4477 -1,-1 z"
+                            sodipodi:nodetypes="sssssss" />
+                    </svg>
+                </button>
             </div>
-
-
         </nav>
-    </header>
 
+    </header>
+    <div id="overlay"></div>
+    <div id="mobile-menu">
+        <div class="mobile-menu-top">
+            <span class="mobile-menu-top-title">Menu</span>
+
+            <button id="mobile-menu-close-button">
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.29289 1.29289C9.68342 0.902369 10.3166 0.902369 10.7071 1.29289C11.0976 1.68342 11.0976 2.31658 10.7071 2.70711L7.41421 6L10.7071 9.29289C11.0976 9.68342 11.0976 10.3166 10.7071 10.7071C10.3166 11.0976 9.68342 11.0976 9.29289 10.7071L6 7.41421L2.70711 10.7071C2.31658 11.0976 1.68342 11.0976 1.29289 10.7071C0.902369 10.3166 0.902369 9.68342 1.29289 9.29289L4.58579 6L1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289C1.68342 0.902369 2.31658 0.902369 2.70711 1.29289L6 4.58579L9.29289 1.29289Z">
+                    </path>
+                </svg></button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <div style="display:flex;flex-direction:column; gap:0.75rem">
+                <span class="mobile-menu-nav-title">Getting started</span>
+                <ul class="mobile-menu-nav-list">
+                    <a href="/guide" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">Quick Start Guide 🚀</li>
+                    </a>
+                    <a href="/products" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">Products 🎁</li>
+                    </a>
+                    <a href="/roadmap" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">Roadmap 🚧</li>
+                    </a>
+                </ul>
+            </div>
+            <div style="display:flex;flex-direction:column; gap:0.75rem">
+                <span class="mobile-menu-nav-title">Resources</span>
+                <ul class="mobile-menu-nav-list">
+                    <a href="https://github.com/sprksoft/smpp" target="_blank" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">
+                            GitHub
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 127 96">
+                                <path fill="var(--text)" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" />
+                            </svg>
+                        </li>
+                    </a>
+                    <a href="https://discord.gg/qCHZYepDqZ" target="_blank" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">
+                            Discord
+                            <svg width="1rem" height="1rem" style="padding: 2px;" xmlns="http://www.w3.org/2000/svg"
+                                id="Discord-Logo" viewBox="0 0 127 96">
+                                <path id="Discord-Symbol-Blurple" style="fill: var(--accent-text);"
+                                    d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z" />
+                            </svg>
+                        </li>
+                    </a>
+                    <a href="/release-notes" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">Release Notes 📃</li>
+                    </a>
+                    <a href="/about-us" style="text-decoration: none;">
+                        <li class="mobile-menu-nav-list-item">About Us ✨</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+        <a href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf"
+            target="_blank" class="download-button">
+
+            <svg class="clipped-smpp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <g>
+                    <path fill="transparent"
+                        d="M512 52.54V111.05L0 414.41V52.54C0 22.37 21.79 0 51.2 0H460.8c29.4 0 51.2 22.37 51.2 52.54z" />
+                    <path fill="transparent"
+                        d="M512 460.8c0 29.4-21.8 51.2-51.2 51.2H51.2C21.79 512 0 490.2 0 460.8v-57L512 108.21z" />
+
+                    <path fill="#fff6ee" fill-rule="evenodd"
+                        d="M416.88 170.25l-19.96 45.93-59.74-25.95-27.05 62.26-45.92-19.96 27.05-62.26-40.59-17.24c-13.06-4.83-36.28-15.68-68.01-15.68-39.28 0-55.91 20.08-55.91 39.68 0 25.48 19.64 37.24 64.98 54.39 58.94 21.55 87.14 50.46 87.14 97.98 0 53.4-41.3 99.45-128.45 99.45-36.27 0-80.33-13.78-98.97-25.05l20.25-48.61c19.64 11.26 51.02 23.69 82.75 23.69 39.29 0 61.46-18.13 61.46-45.08 0-24.99-17.13-39.68-59.94-54.86-56.41-19.6-92.18-48.5-92.18-96.02 0-54.39 46.35-95.05 120.39-95.05 28.17 0 50.42 4.6 67.22 10.72 20.12 8.14 39.92 17.09 59.83 25.74l27.05-62.26 45.93 19.96-27.06 62.26 59.74 25.95z" />
+                    <path fill="#fff6ee" fill-rule="evenodd"
+                        d="M473.81 395.89c-18.55-8.05-36.75-14.9-55.29-22.96l-27.35 62.95-46.43-20.18 27.35-62.94-60.4-26.24c6.72-15.49 13.45-30.97 20.18-46.45l60.39 26.24 27.35-62.94 46.44 20.17-27.35 62.95 54.36 23.62z" />
+                </g>
+            </svg>
+
+            <span class="download-button-text">Download</span>
+            <svg class="download-button-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+            </svg>
+        </a>
+    </div>
     <main>
         {{ template "content" . }}
     </main>

@@ -9,4 +9,10 @@ html {
     --inverted-text: var(--text);
     --border-color: #cccccc;
     --button-hover: #292929;
+    --red: #e34660
+}
+
+::selection,
+::-moz-selection {
+    background: rgba(102, 115, 146, 0.33) !important;
 }
