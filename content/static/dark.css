@@ -9,7 +9,8 @@ html {
     --inverted-text: var(--text);
     --border-color: #cccccc;
     --button-hover: #292929;
-    --red: #e34660
+    --highlight-shadow: #727de4;
+    --red: #e34660;
 }
 
 ::selection,

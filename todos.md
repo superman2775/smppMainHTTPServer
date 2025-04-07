@@ -6,7 +6,7 @@
 - [ ] Roadmap
 
 ## 🌐 Resources
-- [ ] GitHub
-- [ ] Discord
+- [x] GitHub
+- [x] Discord
 - [ ] Release Notes
 - [ ] About Us

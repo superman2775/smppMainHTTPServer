@@ -43,3 +43,16 @@ document.addEventListener("click", function (e) {
         closeMobileMenu()
     }
 })
+
+const takeOffButton = document.querySelector('.take-off-button');
+const takeOffText = document.querySelector('.take-off-button-text')
+const takeOffIcon = document.querySelector('.take-off-icon')
+
+takeOffButton.addEventListener('mouseenter', () => {
+    takeOffText.style.animation = 'none';
+    takeOffIcon.style.animation = 'none';
+    void takeOffText.offsetWidth;
+    void takeOffIcon.offsetWidth
+    takeOffText.style.animation = 'take-off-text 1s 0.25s'
+    takeOffIcon.style.animation = 'take-off 2s'
+});
