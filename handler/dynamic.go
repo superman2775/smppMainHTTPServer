@@ -56,39 +56,47 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Accept-CH", "Sec-CH-Prefers-Color-Scheme")
-	mode := r.Header.Get("Sec-CH-Prefers-Color-Scheme")
-	if mode != "" {
-		mode = "dark"
+	theme := r.Header.Get("Sec-CH-Prefers-Color-Scheme")
+	if theme != "" {
+		theme = "dark"
 	}
 	cookie, err := r.Cookie("mode")
 	if err == nil {
-		mode = cookie.Value
+		theme = cookie.Value
 	}
 
-	cssFile := "light.css"
-	if mode == "dark" {
-		cssFile = "dark.css"
+	cssMainFile := page + ".css"
+	cssMainFilePath := filepath.Join("content", "css", cssMainFile)
+	if _, err := os.Stat(cssMainFilePath); os.IsNotExist(err) {
+		cssMainFile = "index.css"
 	}
+
+	cssThemeFile := "light.css"
+	if theme == "dark" {
+		cssThemeFile = "dark.css"
+	}
+
 	tmplPath := filepath.Join("content", "html", page+".html")
 
 	if _, err := os.Stat(tmplPath); os.IsNotExist(err) {
 		page = "404"
 		pageTitle = "404 Page Not Found"
-		tmplPath = filepath.Join("content", "html", page+".html")
 	}
 
 	data := struct {
 		Title     string
-		CSS       string
+		ThemeCSS  string
+		MainCSS   string
 		Redirect  string
 		PageTitle string
 		Mode      string
 	}{
 		Title:     pageName,
-		CSS:       cssFile,
+		ThemeCSS:  cssThemeFile,
+		MainCSS:   cssMainFile,
 		Redirect:  r.URL.Path,
 		PageTitle: pageTitle,
-		Mode:      mode,
+		Mode:      theme,
 	}
 
 	RenderTemplate(w, tmplPath, data)
