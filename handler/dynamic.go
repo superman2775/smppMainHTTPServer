@@ -65,10 +65,16 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		theme = cookie.Value
 	}
 
+	jsMainFile := page + ".js"
+	jsMainFilePath := filepath.Join("content", "js", jsMainFile)
+	if _, err := os.Stat(jsMainFilePath); os.IsNotExist(err) {
+		jsMainFile = "null"
+	}
+
 	cssMainFile := page + ".css"
 	cssMainFilePath := filepath.Join("content", "css", cssMainFile)
 	if _, err := os.Stat(cssMainFilePath); os.IsNotExist(err) {
-		cssMainFile = "index.css"
+		cssMainFile = "null"
 	}
 
 	cssThemeFile := "light.css"
@@ -87,6 +93,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		Title     string
 		ThemeCSS  string
 		MainCSS   string
+		MainJS    string
 		Redirect  string
 		PageTitle string
 		Mode      string
@@ -94,6 +101,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		Title:     pageName,
 		ThemeCSS:  cssThemeFile,
 		MainCSS:   cssMainFile,
+		MainJS:    jsMainFile,
 		Redirect:  r.URL.Path,
 		PageTitle: pageTitle,
 		Mode:      theme,

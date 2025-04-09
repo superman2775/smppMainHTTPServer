@@ -24,6 +24,7 @@ button {
     background: none;
     line-height: normal;
     vertical-align: baseline;
+    color: var(--text);
 }
 
 body {
@@ -45,6 +46,7 @@ header {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: all 0.2s ease-out;
+    z-index: 40;
 }
 
 .is-scrolled header {
@@ -55,8 +57,9 @@ header {
 }
 
 main {
-    padding-top: 7rem;
-    overflow-x: hidden;
+    padding-top: 10rem;
+    overflow-x: visible;
+    text-align: center;
 }
 
 #top-nav {
@@ -398,10 +401,6 @@ main {
 
 #home-button:hover {
     color: var(--accent-text);
-}
-
-main {
-    text-align: center;
 }
 
 footer {
