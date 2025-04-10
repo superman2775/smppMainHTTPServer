@@ -3,7 +3,7 @@ html {
     --accent-text: #434eec;
     --background: #f2f0e3;
     --transparent-background: rgba(229, 228, 211, 0.516);
-    --shadow: rgba(119, 118, 103, 0.709);
+    --shadow: rgba(117, 117, 117, 0.71);
     --button: #4c56e0;
     --text: #2e2e2e;
     --inverted-text: var(--background);
@@ -11,6 +11,7 @@ html {
     --button-hover: #e3e1d4;
     --highlight-shadow: #6b75fe;
     --background-card: #dedccf;
+    --transparent-image-background: rgba(239, 239, 230, 0.514);
     --red: #ce4b4e;
 }
 

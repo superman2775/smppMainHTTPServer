@@ -15,7 +15,7 @@ func SetModeHandler(w http.ResponseWriter, r *http.Request) {
 	mode := r.URL.Query().Get("mode")
 	redirect := r.URL.Query().Get("redirect")
 	if mode != "light" && mode != "dark" {
-		mode = "light"
+		mode = "dark"
 	}
 
 	http.SetCookie(w, &http.Cookie{
@@ -46,10 +46,8 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, data any) {
 func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 	page := r.URL.Path[1:]
 	pageTitle := "Title"
-	pageName := page
 	if page == "" {
 		page = "index"
-		pageName = "Home"
 		pageTitle = "Smartschool++"
 	} else {
 		pageTitle = utils.ToUpperCase(page)
@@ -90,7 +88,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	data := struct {
-		Title     string
+		Page      string
 		ThemeCSS  string
 		MainCSS   string
 		MainJS    string
@@ -98,7 +96,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		PageTitle string
 		Mode      string
 	}{
-		Title:     pageName,
+		Page:      page,
 		ThemeCSS:  cssThemeFile,
 		MainCSS:   cssMainFile,
 		MainJS:    jsMainFile,

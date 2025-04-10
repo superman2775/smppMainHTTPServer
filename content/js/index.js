@@ -1,50 +1,37 @@
-let previewContainers = document.querySelectorAll(".preview-img-container")
-let activeIndex = 0
-let nextIndex = 1
-let prevIndex = 4
+const previewContainers = document.querySelectorAll(".preview-img-container");
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+let activeIndex = 1;
+
+if (!previewContainers.length || !prevButton || !nextButton) console.error("Required elements not found");
+
+const getNextIndex = (currentIndex) => (currentIndex + 1) % previewContainers.length;
+const getPrevIndex = (currentIndex) => (currentIndex - 1 + previewContainers.length) % previewContainers.length;
 
 function updateCard() {
-    getNextCardIndex()
-    getPrevCardIndex()
     previewContainers.forEach(preview => {
-        preview.classList.remove("active", "next", "prev")
-    })
-    previewContainers[activeIndex].classList.add("active")
-    previewContainers[nextIndex].classList.add("next")
-    previewContainers[prevIndex].classList.add("prev")
-}
+        preview.classList.remove("active", "next", "prev");
+    });
 
-function getNextCardIndex() {
-    nextIndex = activeIndex + 1
-    if (nextIndex > (previewContainers.length - 1)) {
-        nextIndex = 0
-    }
-}
+    const nextIndex = getNextIndex(activeIndex);
+    const prevIndex = getPrevIndex(activeIndex);
 
-function getPrevCardIndex() {
-    prevIndex = activeIndex - 1
-    if (prevIndex < 0) {
-        prevIndex = (previewContainers.length - 1)
-    }
+    previewContainers[activeIndex].classList.add("active");
+    previewContainers[nextIndex].classList.add("next");
+    previewContainers[prevIndex].classList.add("prev");
 }
 
 function showPrevCard() {
-    activeIndex -= 1
-    if (activeIndex < 0) {
-        activeIndex = (previewContainers.length - 1)
-    }
-    updateCard()
+    activeIndex = getPrevIndex(activeIndex);
+    updateCard();
 }
 
 function showNextCard() {
-    activeIndex += 1
-    if (activeIndex > (previewContainers.length - 1)) {
-        activeIndex = 0
-    }
-    updateCard()
+    activeIndex = getNextIndex(activeIndex);
+    updateCard();
 }
-document.getElementById("prev-button").addEventListener("click", showPrevCard)
-document.getElementById("next-button").addEventListener("click", showNextCard)
 
-updateCard()
+prevButton.addEventListener("click", showPrevCard);
+nextButton.addEventListener("click", showNextCard);
 
+updateCard();

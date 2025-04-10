@@ -15,7 +15,7 @@
     font-size: 2.4em;
     white-space: nowrap;
     animation: topTitle 0.3s ease-out 0ms 1 forwards;
-    z-index: -1;
+    z-index: 2;
     position: relative;
 }
 
@@ -162,6 +162,48 @@
     opacity: 0.9;
     z-index: 1;
     box-shadow: 0px 0px 45px 10px var(--shadow);
+}
+
+.preview-img-container.active:hover {
+    scale: 1.05;
+    cursor: pointer;
+}
+
+body:has(.preview-img-container.active:hover) {
+    background-color: var(--transparent-image-background);
+}
+
+body {
+    background-color: var(--background);
+    transition: background-color 0.5s ease-in-out;
+}
+
+html {
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+html:has(.preview-img-container.active #darkSands) {
+    background-image: url(https://i.redd.it/yfssdsfosao11.png);
+}
+
+html:has(.preview-img-container.active #midnightSapphire) {
+    background-image: url(https://wallpapercave.com/wp/wp4673203.jpg);
+}
+
+html:has(.preview-img-container.active #rubyEclipse) {
+    background-image: url(https://media.timeout.com/images/102945740/image.jpg);
+}
+
+html:has(.preview-img-container.active #cherryHaze) {
+    background-image: url(https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/pxfuel.jpg);
+}
+
+html:has(.preview-img-container.active #fluorescentGalaxy) {
+    background-image: url(https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/galaxy.png);
 }
 
 .preview-img-container.prev {

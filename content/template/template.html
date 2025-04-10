@@ -14,6 +14,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    {{ if eq .Page "index" }}
+    <link rel="preload" as="image" href="/media/previewDarkSands.png">
+    <link rel="preload" as="image" href="/media/previewMidnightSapphire.png">
+    <link rel="preload" as="image" href="/media/previewGalaxy.png">
+    <link rel="preload" as="image" href="https://i.redd.it/yfssdsfosao11.png">
+    <link rel="preload" as="image" href="https://wallpapercave.com/wp/wp4673203.jpg">
+    <link rel="preload" as="image" href="https://media.timeout.com/images/102945740/image.jpg">
+    <link rel="preload" as="image"
+        href="https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/pxfuel.jpg">
+    <link rel="preload" as="image"
+        href="https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/galaxy.png">
+    {{ end }}
     <link rel="icon" href="/static/smpp_logo128.png">
     <title>{{ .PageTitle }}</title>
 </head>
