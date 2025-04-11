@@ -19,6 +19,11 @@ function updateCard() {
     previewContainers[activeIndex].classList.add("active");
     previewContainers[nextIndex].classList.add("next");
     previewContainers[prevIndex].classList.add("prev");
+    previewContainers[activeIndex].addEventListener("transitionend", function transitionEndHandler() {
+        previewContainers.forEach(preview => { preview.classList.remove("ready"); });
+        previewContainers[activeIndex].classList.add("ready");
+        previewContainers[activeIndex].removeEventListener("transitionend", transitionEndHandler);
+    });
 }
 
 function showPrevCard() {

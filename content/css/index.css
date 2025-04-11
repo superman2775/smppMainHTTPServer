@@ -184,25 +184,27 @@ html {
     background-size: cover;
     background-position: center;
     background-size: cover;
+    transition: all;
+    transition-delay: 0.5s;
 }
 
-html:has(.preview-img-container.active #darkSands) {
+html:has(.preview-img-container.ready #darkSands) {
     background-image: url(https://i.redd.it/yfssdsfosao11.png);
 }
 
-html:has(.preview-img-container.active #midnightSapphire) {
+html:has(.preview-img-container.ready #midnightSapphire) {
     background-image: url(https://wallpapercave.com/wp/wp4673203.jpg);
 }
 
-html:has(.preview-img-container.active #rubyEclipse) {
+html:has(.preview-img-container.ready #rubyEclipse) {
     background-image: url(https://media.timeout.com/images/102945740/image.jpg);
 }
 
-html:has(.preview-img-container.active #cherryHaze) {
+html:has(.preview-img-container.ready #cherryHaze) {
     background-image: url(https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/pxfuel.jpg);
 }
 
-html:has(.preview-img-container.active #fluorescentGalaxy) {
+html:has(.preview-img-container.ready #fluorescentGalaxy) {
     background-image: url(https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/galaxy.png);
 }
 
