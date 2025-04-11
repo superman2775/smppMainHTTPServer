@@ -17,7 +17,8 @@
     {{ if eq .Page "index" }}
     <link rel="preload" as="image" href="/media/previewDarkSands.png">
     <link rel="preload" as="image" href="/media/previewMidnightSapphire.png">
-    <link rel="preload" as="image" href="/media/previewGalaxy.png">
+    <link rel="preload" as="image" href="/media/previewFluorescentGalaxy.png">
+    {{ if eq .IsMobile false}}
     <link rel="preload" as="image" href="https://i.redd.it/yfssdsfosao11.png">
     <link rel="preload" as="image" href="https://wallpapercave.com/wp/wp4673203.jpg">
     <link rel="preload" as="image" href="https://media.timeout.com/images/102945740/image.jpg">
@@ -25,6 +26,11 @@
         href="https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/pxfuel.jpg">
     <link rel="preload" as="image"
         href="https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/galaxy.png">
+    {{ end }}
+    <link rel="preload" as="image" href="/media/previewPlanner1.png">
+    <link rel="preload" as="image" href="/media/previewDelijn.png">
+    <link rel="preload" as="image" href="/media/previewPlanner2.png">
+
     {{ end }}
     <link rel="icon" href="/static/smpp_logo128.png">
     <title>{{ .PageTitle }}</title>

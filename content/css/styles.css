@@ -57,6 +57,7 @@ header {
 }
 
 main {
+    width: 75%;
     padding-top: 10rem;
     overflow-x: visible;
     text-align: center;
@@ -526,6 +527,7 @@ footer {
 
     main {
         padding-top: 5rem;
+        width: 100%;
     }
 
     .visible-on-desktop {

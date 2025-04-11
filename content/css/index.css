@@ -289,6 +289,238 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     rotate: 180deg;
 }
 
+@keyframes size-swap {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 0.5;
+        opacity: 0;
+    }
+}
+
+#productivity {
+    margin-bottom: 7rem;
+}
+
+#prod {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+#clock-container,
+#prod-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#prod-preview.changing {
+    animation: size-swap 0.25s ease-in-out 0ms 2 alternate;
+}
+
+#clock-container {
+    width: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#preview-prod-description {
+    width: 800px;
+    font-size: 2rem;
+    padding-top: 2rem;
+    font-weight: 500;
+}
+
+#clock-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-wrap: nowrap;
+}
+
+#digital-time {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 0.7rem;
+}
+
+#clock {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 15rem;
+    background-color: var(--background-card);
+    box-shadow: 0px 0px 45px 10px var(--shadow);
+    position: relative;
+}
+
+#big-handle,
+#small-handle {
+    position: absolute;
+    transform-origin: bottom center;
+    left: calc(-0.5rem + 50%);
+    top: calc(-0.5rem + 50%);
+    background-color: var(--inverted-text);
+    width: 1rem;
+    transform: rotate(0deg);
+    border-radius: 0.5rem;
+    transition: transform 0.75s ease-in-out;
+    box-shadow: 0px 0px 30px 1px var(--shadow);
+}
+
+.clock-point {
+    position: absolute;
+    width: 2rem;
+    aspect-ratio: 1;
+    background: var(--accent);
+    border-radius: 50%;
+    top: calc(-1rem + 50%);
+    left: calc(-1rem + 50%);
+    transition: all 0.15s ease-in;
+    transition: box-shadow 0.25s ease-in scale 0.15s ease-in-out;
+    opacity: 0.9;
+    backdrop-filter: blur(3px);
+}
+
+.clock-point:hover {
+    scale: 1.05;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px var(--highlight-shadow);
+}
+
+.clock-point.active {
+    box-shadow: 0px 0px 10px 0px var(--highlight-shadow);
+    opacity: 1;
+}
+
+#point-10am {
+    transform: rotate(312.5deg) translateY(-6.2rem) rotate(-312.5deg);
+}
+
+#point-12am {
+    transform: rotate(7.5deg) translateY(-6.2rem) rotate(7.5deg);
+}
+
+#point-4pm {
+    transform: rotate(125deg) translateY(-6.2rem) rotate(-125deg);
+}
+
+#point-8pm {
+    transform: rotate(255deg) translateY(-6.2rem) rotate(-255deg);
+}
+
+#small-handle {
+    height: 30%;
+    top: 20%;
+}
+
+#big-handle {
+    height: 45%;
+    top: 5%;
+}
+
+#clock-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#time-forward-button,
+#time-back-button {
+    width: 4.5rem;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    transition: all 0.25s ease-in-out;
+}
+
+#time-forward-button {
+    transform-origin: left;
+}
+
+#time-back-button {
+    transform-origin: right;
+}
+
+#time-forward-button:hover,
+#time-back-button:hover {
+    background-color: var(--background-card);
+    cursor: pointer;
+    transform: scaleX(1.1);
+}
+
+#time-forward-button:hover .clock-control-svg,
+#time-back-button:hover .clock-control-svg {
+    scale: 1.1;
+}
+
+.clock-control-svg {
+    fill: var(--text);
+    aspect-ratio: 1;
+    width: 3rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.preview-prod-container {
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    background-color: var(--background-card);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 45px 10px var(--shadow);
+}
+
+.preview-prod-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+}
+
+.preview-prod-buttons {
+    position: absolute;
+    left: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#preview-prod-img {
+    width: 800px;
+    height: auto;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#preview-prod-title {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#clock-bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#prod-preview-wrapper {
+    height: 640px;
+}
+
+#clock-title-mobile {
+    display: none;
+}
+
 @media (max-width: 1170px) {
     #top-title {
         font-size: 0.8em;
@@ -298,12 +530,12 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     }
 
     .main-title {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
         margin-bottom: 2rem;
     }
 
     #top-title-accent {
-        font-size: 1.8em;
+        font-size: 1.7em;
     }
 
     #try-now-button-container {
@@ -357,5 +589,93 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
     .preview-img-buttons {
         display: none;
+    }
+
+    #prod-preview {
+        height: 300px;
+    }
+
+    #preview-prod-description {
+        width: 300px;
+        font-size: 1.2rem;
+        padding-top: 1rem;
+        z-index: 2;
+        height: 3rem;
+    }
+
+    #preview-prod-img {
+        width: 300px;
+        height: auto;
+        border-radius: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .preview-prod-container {
+        border-radius: 1.5rem;
+        padding: 0.5rem;
+        padding-top: 0.25rem;
+    }
+
+    #prod {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #clock {
+        scale: 0.8;
+    }
+
+    #clock-container {
+        width: 100%;
+        margin-top: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #clock-title {
+        display: none;
+    }
+
+    #clock-title-mobile {
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .preview-prod-buttons {
+        display: none;
+    }
+
+    #digital-time {
+        font-size: 2rem;
+        letter-spacing: 0.4rem;
+    }
+
+    #clock-buttons {
+        gap: 1rem;
+    }
+
+    #time-forward-button,
+    #time-back-button {
+        width: 3rem;
+        aspect-ratio: 1;
+        border-radius: 0.75rem;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .clock-control-svg {
+        width: 2.5rem;
+    }
+
+    #clock-bottom-container {
+        gap: 2rem;
+        width: 150px;
+    }
+
+    #prod-preview-wrapper {
+        height: 300px
+    }
+
+    #productivity {
+        margin-bottom: 2rem;
     }
 }

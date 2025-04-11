@@ -54,6 +54,13 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Accept-CH", "Sec-CH-Prefers-Color-Scheme")
+	userAgent := r.Header.Get("User-Agent")
+	isMobile := strings.Contains(strings.ToLower(userAgent), "mobile") ||
+		strings.Contains(strings.ToLower(userAgent), "android") ||
+		strings.Contains(strings.ToLower(userAgent), "iphone") ||
+		strings.Contains(strings.ToLower(userAgent), "ipad") ||
+		strings.Contains(strings.ToLower(userAgent), "windows phone")
+
 	theme := r.Header.Get("Sec-CH-Prefers-Color-Scheme")
 	if theme != "" {
 		theme = "dark"
@@ -95,6 +102,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		Redirect  string
 		PageTitle string
 		Mode      string
+		IsMobile  bool
 	}{
 		Page:      page,
 		ThemeCSS:  cssThemeFile,
@@ -103,6 +111,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		Redirect:  r.URL.Path,
 		PageTitle: pageTitle,
 		Mode:      theme,
+		IsMobile:  isMobile,
 	}
 
 	RenderTemplate(w, tmplPath, data)
