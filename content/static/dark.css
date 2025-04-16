@@ -10,7 +10,7 @@ html {
     --border-color: #cccccc;
     --button-hover: #292929;
     --highlight-shadow: #727de4;
-    --background-card: #2b2b2b;
+    --background-card: rgba(68, 68, 68, 0.48);
     --transparent-image-background: rgba(36, 36, 36, 0.54);
     --red: #e34660;
 }

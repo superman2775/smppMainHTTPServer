@@ -57,10 +57,13 @@ header {
 }
 
 main {
-    width: 75%;
+    width: 100%;
     padding-top: 10rem;
     overflow-x: visible;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #top-nav {
@@ -527,7 +530,6 @@ footer {
 
     main {
         padding-top: 5rem;
-        width: 100%;
     }
 
     .visible-on-desktop {

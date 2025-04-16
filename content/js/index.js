@@ -98,7 +98,6 @@ function updateClock(shouldAnimate) {
     if (hours > 12) hours -= 12;
     let minutesAngle = minutes * 6
     let hoursAngle = hours * 30 + (minutes / 2)
-    console.log(hoursAngle)
     if (minutesAngle > 270) minutesAngle -= 360
     if (hoursAngle > 270) hoursAngle -= 360
     document.getElementById("big-handle").style.transform = `rotate(${minutesAngle}deg)`
@@ -141,3 +140,62 @@ function prevTime() {
 document.getElementById("time-back-button").addEventListener("click", prevTime)
 document.getElementById("time-forward-button").addEventListener("click", nextTime)
 updateClock(false)
+
+let activeFunIndex = 0
+const funApps = [
+    document.getElementById("fun-app-flappy"),
+    document.getElementById("fun-app-snake"),
+    document.getElementById("fun-app-plant"),
+    document.getElementById("fun-app-gc")
+]
+const funAppMedia = [
+    "media/previewFlappy.mp4",
+    "media/previewSnake.mp4",
+    "media/previewPlant.mp4",
+    "media/previewGC.mp4"
+]
+
+function updateFunPreviewData() {
+    document.getElementById("fun-app-preview").src = funAppMedia[activeFunIndex]
+}
+
+function updateFunPreview(shouldAnimate) {
+    if (shouldAnimate) {
+        document.getElementById("fun-app-preview").classList.add("changing")
+        document.getElementById("fun-app-preview").addEventListener("animationiteration", updateFunPreviewData)
+        document.getElementById("fun-app-preview").addEventListener("animationend", function funAnimationEndHandler() {
+            document.getElementById("fun-app-preview").removeEventListener("animationiteration", updateFunPreviewData)
+            document.getElementById("fun-app-preview").removeEventListener("animationend", funAnimationEndHandler)
+            document.getElementById("fun-app-preview").classList.remove("changing")
+        })
+    } else {
+        updateFunPreviewData()
+    }
+    funApps.forEach(funApp => {
+        funApp.classList.remove("active")
+    })
+    funApps[activeFunIndex].classList.add("active")
+}
+
+document.getElementById("fun-app-flappy").addEventListener("click", () => {
+    let shouldAnimate = activeFunIndex != 0
+    activeFunIndex = 0
+    updateFunPreview(shouldAnimate)
+})
+document.getElementById("fun-app-snake").addEventListener("click", () => {
+    let shouldAnimate = activeFunIndex != 1
+    activeFunIndex = 1
+    updateFunPreview(shouldAnimate)
+})
+document.getElementById("fun-app-plant").addEventListener("click", () => {
+    let shouldAnimate = activeFunIndex != 2
+    activeFunIndex = 2
+    updateFunPreview(shouldAnimate)
+})
+document.getElementById("fun-app-gc").addEventListener("click", () => {
+    let shouldAnimate = activeFunIndex != 3
+    activeFunIndex = 3
+    updateFunPreview(shouldAnimate)
+})
+
+updateFunPreview(false)

@@ -10,12 +10,12 @@ html {
     --border-color: #343434;
     --button-hover: #e3e1d4;
     --highlight-shadow: #6b75fe;
-    --background-card: #dedccf;
+    --background-card: rgba(198, 196, 183, 0.51);
     --transparent-image-background: rgba(239, 239, 230, 0.514);
     --red: #ce4b4e;
 }
 
 ::selection,
 ::-moz-selection {
-    background: rgba(212, 210, 193, 0.33) !important;
+    background: rgba(148, 146, 140, 0.33) !important;
 }

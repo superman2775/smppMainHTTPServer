@@ -142,6 +142,7 @@
     padding: 1rem;
     padding-top: 0.5rem;
     background-color: var(--background-card);
+    backdrop-filter: blur(10px);
     transform: scale(0.6);
     opacity: 0;
     transition: all 0.3s ease-in-out;
@@ -175,7 +176,7 @@ body:has(.preview-img-container.active:hover) {
 
 body {
     background-color: var(--background);
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s cubic-bezier(.76, .4, .34, .93);
 }
 
 html {
@@ -269,6 +270,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 .theme-preview-button:hover {
     background-color: var(--background-card);
+    backdrop-filter: blur(10px);
 }
 
 .theme-preview-button:hover .prev-arrow,
@@ -301,15 +303,17 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 }
 
 #productivity {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #prod {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4rem;
-    width: 100%;
+    gap: 2.5rem;
 }
 
 #clock-container,
@@ -340,12 +344,14 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-wrap: nowrap;
+    z-index: 1;
 }
 
 #digital-time {
     font-size: 4rem;
     font-weight: 800;
     letter-spacing: 0.7rem;
+    z-index: 1;
 }
 
 #clock {
@@ -353,6 +359,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     aspect-ratio: 1;
     width: 15rem;
     background-color: var(--background-card);
+    backdrop-filter: blur(10px);
     box-shadow: 0px 0px 45px 10px var(--shadow);
     position: relative;
 }
@@ -367,7 +374,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     width: 1rem;
     transform: rotate(0deg);
     border-radius: 0.5rem;
-    transition: transform 0.75s ease-in-out;
+    transition: transform 0.75s cubic-bezier(.58, .14, .44, 1.2);
     box-shadow: 0px 0px 30px 1px var(--shadow);
 }
 
@@ -447,6 +454,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 #time-forward-button:hover,
 #time-back-button:hover {
     background-color: var(--background-card);
+    backdrop-filter: blur(10px);
     cursor: pointer;
     transform: scaleX(1.1);
 }
@@ -468,6 +476,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     padding: 1rem;
     padding-top: 0.5rem;
     background-color: var(--background-card);
+    backdrop-filter: blur(10px);
     opacity: 1;
     transition: all 0.3s ease-in-out;
     display: flex;
@@ -519,6 +528,108 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 #clock-title-mobile {
     display: none;
+}
+
+#fun {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#fun-container {
+    padding: 1.5rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1250px;
+    gap: 2rem
+}
+
+#fun-app-gallery {
+    padding: 1.5rem;
+    aspect-ratio: 1;
+    flex-grow: 1;
+    background-color: var(--background-card);
+}
+
+#fun-app-preview-container {
+    flex-grow: 1;
+    padding: 1.5rem;
+    aspect-ratio: 1;
+    background-color: var(--background-card);
+    height: 100%;
+    overflow: hidden;
+}
+
+#fun-app-preview.changing {
+    animation: size-swap 0.25s ease-in-out 0ms 2 alternate;
+}
+
+#fun-app-preview {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.fun-app-container {
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    flex-grow: 1;
+    background-color: var(--background-card);
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#fun-app-preview-container,
+#fun-app-gallery {
+    width: calc(50% - 4.5rem);
+    border-radius: 3rem;
+    overflow: visible;
+    box-shadow: 0px 0px 45px 10px var(--shadow);
+    z-index: 1;
+}
+
+#fun-app-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    aspect-ratio: 1;
+}
+
+.fun-app-container:hover {
+    scale: 1.1;
+    cursor: pointer;
+    box-shadow: 0px 0px 50px 15px var(--shadow), inset 0px 0px 50px 0px color-mix(in srgb, var(--highlight-shadow) 30%, var(--shadow) 70%);
+}
+
+.fun-app-container.active {
+    box-shadow: 0px 0px 50px 5px transparent, inset 0px 0px 50px 10px var(--highlight-shadow);
+}
+
+.fun-app-container.active:hover {
+    box-shadow: 0px 0px 50px 5px var(--shadow), inset 0px 0px 50px 0px var(--highlight-shadow);
+
+}
+
+.fun-app-icon {
+    height: 10rem;
+    padding-bottom: 0.5rem;
+    aspect-ratio: 1;
+    fill: var(--accent);
+}
+
+.fun-app-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.emoji {
+    font-size: 8rem;
 }
 
 @media (max-width: 1170px) {
@@ -619,6 +730,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     #prod {
         flex-direction: column;
         gap: 0;
+        width: 100%;
     }
 
     #clock {
