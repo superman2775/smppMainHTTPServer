@@ -53,6 +53,12 @@ const prodPreviewDescriptionsENG = [
     `Find out when <span class="accent-text">your bus</span> will arrive`,
     `Quickly check if you made your <span class="accent-text">homework</span>`
 ]
+const prodPreviewImagesPrimary = [
+    "media/previewWeather.webp",
+    "media/previewPlanner1.webp",
+    "media/previewDelijn.webp",
+    "media/previewPlanner2.webp"
+]
 const prodPreviewImages = [
     "media/previewWeather.png",
     "media/previewPlanner1.png",
@@ -69,6 +75,7 @@ let activeTimeIndex = 0
 
 function updateProdPreview() {
     document.getElementById("preview-prod-description").innerHTML = prodPreviewDescriptionsENG[activeTimeIndex]
+    document.getElementById("preview-prod-img-primary-source").srcset = prodPreviewImagesPrimary[activeTimeIndex]
     document.getElementById("preview-prod-img").src = prodPreviewImages[activeTimeIndex]
     document.getElementById("preview-prod-title").innerText = prodPreviewTitles[activeTimeIndex]
 }
@@ -197,5 +204,14 @@ document.getElementById("fun-app-gc").addEventListener("click", () => {
     activeFunIndex = 3
     updateFunPreview(shouldAnimate)
 })
+const targetElement = document.getElementById("fun-container");
+const funObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            updateFunPreview(false)
+            funObserver.unobserve(targetElement)
+        }
+    });
+});
 
-updateFunPreview(false)
+funObserver.observe(targetElement);

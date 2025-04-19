@@ -64,8 +64,12 @@
                     </svg></div>
                 <span class="preview-img-title">Midnight Sapphire</span>
             </div>
-            <img id="midnightSapphire" class="preview-img" src="media/previewMidnightSapphire.png"
-                alt="Homepage preview">
+            <picture>
+                <source id="preview-prod-img-primary-source" srcset="media/previewMidnightSapphire.webp"
+                    type="image/webp">
+                <img id="midnightSapphire" class="preview-img" loading="lazy" src="media/previewMidnightSapphire.png"
+                    alt="Homepage preview">
+            </picture>
         </div>
         <div class="preview-img-container">
             <div class="preview-img-top">
@@ -100,7 +104,11 @@
                     </svg></div>
                 <span class="preview-img-title">Dark Sands</span>
             </div>
-            <img id="darkSands" class="preview-img" src="media/previewDarkSands.png" alt="Homepage preview">
+            <picture>
+                <source id="preview-prod-img-primary-source" srcset="media/previewDarkSands.webp" type="image/webp">
+                <img id="darkSands" class="preview-img" loading="lazy" src="media/previewDarkSands.png"
+                    alt="Homepage preview">
+            </picture>
         </div>
         <div class="preview-img-container">
             <div class="preview-img-top">
@@ -134,8 +142,13 @@
                         </g>
                     </svg></div>
                 <span class="preview-img-title">Fluorescent Galaxy</span>
-            </div><img id="fluorescentGalaxy" class="preview-img" src="media/previewFluorescentGalaxy.png"
-                alt="Homepage preview">
+            </div>
+            <picture>
+                <source id="preview-prod-img-primary-source" srcset="media/previewFluorescentGalaxy.webp"
+                    type="image/webp">
+                <img id="fluorescentGalaxy" class="preview-img" loading="lazy" src="media/previewFluorescentGalaxy.png"
+                    alt="Homepage preview">
+            </picture>
         </div>
         <div class="preview-img-container">
             <div class="preview-img-top">
@@ -169,8 +182,12 @@
                         </g>
                     </svg></div>
                 <span class="preview-img-title">Ruby Eclipse</span>
-            </div><img id="rubyEclipse" class="preview-img" loading="lazy" src="media/previewRubyEclipse.png"
-                alt="Homepage preview">
+            </div>
+            <picture>
+                <source id="preview-prod-img-primary-source" srcset="media/previewRubyEclipse.webp" type="image/webp">
+                <img id="rubyEclipse" class="preview-img" loading="lazy" src="media/previewRubyEclipse.png"
+                    alt="Homepage preview">
+            </picture>
         </div>
         <div class="preview-img-container">
             <div class="preview-img-top">
@@ -204,8 +221,12 @@
                         </g>
                     </svg></div>
                 <span class="preview-img-title">Cherry Haze</span>
-            </div><img id="cherryHaze" class="preview-img" loading="lazy" src="media/previewCherryHaze.png"
-                alt="Homepage preview">
+            </div>
+            <picture>
+                <source id="preview-prod-img-primary-source" srcset="media/previewCherryHaze.webp" type="image/webp">
+                <img id="cherryHaze" class="preview-img" loading="lazy" src="media/previewCherryHaze.png"
+                    alt="Homepage preview">
+            </picture>
         </div>
     </div>
     <div id="theme-preview-buttons">
@@ -260,7 +281,11 @@
                         </div>
                         <span id="preview-prod-title"></span>
                     </div>
-                    <img id="preview-prod-img" src="media/previewWeather.png" alt="Homepage preview">
+                    <picture>
+                        <source id="preview-prod-img-primary-source" srcset="media/previewWeather.webp"
+                            type="image/webp">
+                        <img id="preview-prod-img" src="media/previewWeather.png" alt="Homepage preview">
+                    </picture>
                 </div>
                 <span id="preview-prod-description"></span>
             </div>
@@ -342,7 +367,7 @@
             </div>
         </div>
         <div id="fun-app-preview-container">
-            <video id="fun-app-preview" autoplay muted></video>
+            <video id="fun-app-preview" autoplay muted loop></video>
         </div>
     </div>
 </div>

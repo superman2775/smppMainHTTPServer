@@ -190,23 +190,23 @@ html {
 }
 
 html:has(.preview-img-container.ready #darkSands) {
-    background-image: url(https://i.redd.it/yfssdsfosao11.png);
+    background-image: url(../media/backgroundDarkSands.webp);
 }
 
 html:has(.preview-img-container.ready #midnightSapphire) {
-    background-image: url(https://wallpapercave.com/wp/wp4673203.jpg);
+    background-image: url(../media/backgroundMidnightSapphire.webp);
 }
 
 html:has(.preview-img-container.ready #rubyEclipse) {
-    background-image: url(https://media.timeout.com/images/102945740/image.jpg);
+    background-image: url(../media/backgroundRubyEclipse.webp);
 }
 
 html:has(.preview-img-container.ready #cherryHaze) {
-    background-image: url(https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/pxfuel.jpg);
+    background-image: url(../media/backgroundCherryHaze.webp);
 }
 
 html:has(.preview-img-container.ready #fluorescentGalaxy) {
-    background-image: url(https://raw.githubusercontent.com/NightFlavor/smpp-images/refs/heads/main/galaxy.png);
+    background-image: url(../media/backgroundFluorescentGalaxy.webp);
 }
 
 .preview-img-container.prev {
@@ -294,11 +294,13 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 @keyframes size-swap {
     0% {
         scale: 1;
+        box-shadow: 0px 0px 45px 10px transparent;
     }
 
     100% {
         scale: 0.5;
         opacity: 0;
+        box-shadow: 0px 0px 45px 10px var(--shadow);
     }
 }
 
@@ -551,6 +553,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
     aspect-ratio: 1;
     flex-grow: 1;
     background-color: var(--background-card);
+    overflow: visible;
 }
 
 #fun-app-preview-container {
@@ -588,7 +591,6 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 #fun-app-gallery {
     width: calc(50% - 4.5rem);
     border-radius: 3rem;
-    overflow: visible;
     box-shadow: 0px 0px 45px 10px var(--shadow);
     z-index: 1;
 }
