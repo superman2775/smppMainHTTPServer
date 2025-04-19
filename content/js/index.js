@@ -46,7 +46,7 @@ const timePoints = [
     document.getElementById("point-8pm")
 ]
 const timeTitlesENG = ["First Break🍎", "Lunch🥪", "School's Out!🏫", "Night Check-in💤"]
-const timeTitlesMobileENG = ["First Break🍎", "Lunch🥪", "School's Out", "Night💤"]
+const timeTitlesMobileENG = ["Break🍎", "Lunch🥪", "Done! 🏫", "Night💤"]
 const prodPreviewDescriptionsENG = [
     `See if it's <a href="https://open.spotify.com/track/2QjOHCTQ1Jl3zawyYOpxh6?si=62dad11bc7384e79" target="_blank" class="accent-text"> sweater weather </a> outside`,
     `Check which <span class="accent-text">lessons</span> you have in the afternoon`,
@@ -166,7 +166,19 @@ function updateFunPreviewData() {
     document.getElementById("fun-app-preview").src = funAppMedia[activeFunIndex]
 }
 
-function updateFunPreview(shouldAnimate) {
+function updateFunPreview(shouldAnimate, extraFun) {
+    if (extraFun) {
+        document.getElementById("fun-app-preview").controls = true
+        document.getElementById("fun-app-preview").muted = false
+        if (activeFunIndex == 0) {
+            // document.getElementById("fun-app-preview").src = "media/"
+        } else if (activeFunIndex == 1) {
+
+        }
+        return
+    }
+    document.getElementById("fun-app-preview").controls = false
+    document.getElementById("fun-app-preview").muted = true
     if (shouldAnimate) {
         document.getElementById("fun-app-preview").classList.add("changing")
         document.getElementById("fun-app-preview").addEventListener("animationiteration", updateFunPreviewData)
@@ -183,32 +195,63 @@ function updateFunPreview(shouldAnimate) {
     })
     funApps[activeFunIndex].classList.add("active")
 }
+const resetDelay = 2000; // 2000ms
+let lastFlappyClickTime = 0;
+let lastSnakeClickTime = 0;
+let flappyClickCount = 0;
+let snakeClickCount = 0;
 
 document.getElementById("fun-app-flappy").addEventListener("click", () => {
+    const now = Date.now();
+    if (now - lastFlappyClickTime > resetDelay) {
+        flappyClickCount = 0;
+    }
+    flappyClickCount++
+    lastFlappyClickTime = now
     let shouldAnimate = activeFunIndex != 0
     activeFunIndex = 0
-    updateFunPreview(shouldAnimate)
+
+    if (flappyClickCount >= 5) {
+        updateFunPreview(shouldAnimate, true)
+        flappyClickCount = 0;
+        return;
+    }
+    updateFunPreview(shouldAnimate, false)
 })
 document.getElementById("fun-app-snake").addEventListener("click", () => {
+    const now = Date.now();
+
+    if (now - lastFlappyClickTime > resetDelay) {
+        snakeClickCount = 0;
+    }
+    snakeClickCount++
+    lastSnakeClickTime = now
+
     let shouldAnimate = activeFunIndex != 1
     activeFunIndex = 1
-    updateFunPreview(shouldAnimate)
+
+    if (snakeClickCount >= 5) {
+        updateFunPreview(shouldAnimate, true)
+        snakeClickCount = 0;
+        return;
+    }
+    updateFunPreview(shouldAnimate, false)
 })
 document.getElementById("fun-app-plant").addEventListener("click", () => {
     let shouldAnimate = activeFunIndex != 2
     activeFunIndex = 2
-    updateFunPreview(shouldAnimate)
+    updateFunPreview(shouldAnimate, false)
 })
 document.getElementById("fun-app-gc").addEventListener("click", () => {
     let shouldAnimate = activeFunIndex != 3
     activeFunIndex = 3
-    updateFunPreview(shouldAnimate)
+    updateFunPreview(shouldAnimate, false)
 })
 const targetElement = document.getElementById("fun-container");
 const funObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            updateFunPreview(false)
+            updateFunPreview(false, false)
             funObserver.unobserve(targetElement)
         }
     });
