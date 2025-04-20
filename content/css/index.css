@@ -593,6 +593,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 #fun-app-video-container {
     width: 100%;
+    aspect-ratio: 1;
     position: absolute;
     scale: 0.92;
     top: 0px;
@@ -657,6 +658,59 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 .emoji {
     font-size: 8rem;
+}
+
+#volume-container {
+    display: none;
+}
+
+#fun-app-preview {
+    display: none;
+}
+
+#volume-container.active {
+    display: flex;
+}
+
+#fun-app-preview.active {
+    display: block;
+}
+
+#volume-icon {
+    width: 25rem;
+    aspect-ratio: 1;
+    fill: var(--text);
+    transition: all 0.25s;
+}
+
+.volume-icon-x {
+    transition: all 0.25s;
+    fill: var(--red);
+}
+
+.volume-icon-hover:hover .volume-icon-x {
+    fill: var(--text);
+}
+
+.volume-icon-hover:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#volume-text {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#fun-continue-button:hover {
+    cursor: pointer;
+}
+
+#volume-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 }
 
 @media (max-width: 1170px) {
