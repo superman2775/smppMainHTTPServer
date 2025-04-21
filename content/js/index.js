@@ -218,11 +218,12 @@ function updateFunPreview(shouldAnimate, extraFun) {
     })
     funApps[activeFunIndex].classList.add("active")
 }
-const resetDelay = 2000; // 2000ms
+const resetDelay = 500; // 500ms
 let lastFlappyClickTime = 0;
 let lastSnakeClickTime = 0;
 let flappyClickCount = 0;
 let snakeClickCount = 0;
+let lastClickedOn = 0
 
 document.getElementById("fun-app-flappy").addEventListener("click", () => {
     const now = Date.now();
@@ -239,7 +240,10 @@ document.getElementById("fun-app-flappy").addEventListener("click", () => {
         flappyClickCount = 0;
         return;
     }
-    updateFunPreview(shouldAnimate, false)
+    if (lastClickedOn != 0) {
+        updateFunPreview(shouldAnimate, false)
+    }
+    lastClickedOn = 0
 })
 document.getElementById("fun-app-snake").addEventListener("click", () => {
     const now = Date.now();
@@ -258,17 +262,26 @@ document.getElementById("fun-app-snake").addEventListener("click", () => {
         snakeClickCount = 0;
         return;
     }
-    updateFunPreview(shouldAnimate, false)
+    if (lastClickedOn != 1) {
+        updateFunPreview(shouldAnimate, false)
+    }
+    lastClickedOn = 1
 })
 document.getElementById("fun-app-plant").addEventListener("click", () => {
     let shouldAnimate = activeFunIndex != 2
     activeFunIndex = 2
-    updateFunPreview(shouldAnimate, false)
+    if (lastClickedOn != 2) {
+        updateFunPreview(shouldAnimate, false)
+    }
+    lastClickedOn = 2
 })
 document.getElementById("fun-app-gc").addEventListener("click", () => {
     let shouldAnimate = activeFunIndex != 3
     activeFunIndex = 3
-    updateFunPreview(shouldAnimate, false)
+    if (lastClickedOn != 3) {
+        updateFunPreview(shouldAnimate, false)
+    }
+    lastClickedOn = 3
 })
 const targetElement = document.getElementById("fun-container");
 const funObserver = new IntersectionObserver((entries) => {
