@@ -275,6 +275,9 @@
     </div>
     <main>
         {{ template "content" . }}
+        {{ if eq .Page "roadmap" }}
+        <div class="markdown-content">{{ .MarkdownHTML }}</div>
+        {{ end }}
     </main>
 
     <footer>

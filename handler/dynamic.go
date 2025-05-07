@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -13,6 +14,7 @@ import (
 
 func SetModeHandler(w http.ResponseWriter, r *http.Request) {
 	mode := r.URL.Query().Get("mode")
+	fmt.Printf(mode)
 	redirect := r.URL.Query().Get("redirect")
 	if mode != "light" && mode != "dark" {
 		mode = "dark"
@@ -94,24 +96,39 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		pageTitle = "404 Page Not Found"
 	}
 
+	var markdownHTML template.HTML
+	if page == "roadmap" {
+		mdPath := filepath.Join("content", "md", "roadmap.md")
+		mdTextBytes, err := os.ReadFile(mdPath)
+		if err != nil {
+			http.Error(w, "Failed to read roadmap markdown", http.StatusInternalServerError)
+			log.Println("Error reading roadmap.md:", err)
+			return
+		}
+		// Parse the markdown to HTML
+		markdownHTML = template.HTML(utils.ParseMd(string(mdTextBytes))) // Mark it as raw HTML
+	}
+
 	data := struct {
-		Page      string
-		ThemeCSS  string
-		MainCSS   string
-		MainJS    string
-		Redirect  string
-		PageTitle string
-		Mode      string
-		IsMobile  bool
+		Page         string
+		ThemeCSS     string
+		MainCSS      string
+		MainJS       string
+		Redirect     string
+		PageTitle    string
+		Mode         string
+		IsMobile     bool
+		MarkdownHTML template.HTML
 	}{
-		Page:      page,
-		ThemeCSS:  cssThemeFile,
-		MainCSS:   cssMainFile,
-		MainJS:    jsMainFile,
-		Redirect:  r.URL.Path,
-		PageTitle: pageTitle,
-		Mode:      theme,
-		IsMobile:  isMobile,
+		Page:         page,
+		ThemeCSS:     cssThemeFile,
+		MainCSS:      cssMainFile,
+		MainJS:       jsMainFile,
+		Redirect:     r.URL.Path,
+		PageTitle:    pageTitle,
+		Mode:         theme,
+		IsMobile:     isMobile,
+		MarkdownHTML: markdownHTML,
 	}
 
 	RenderTemplate(w, tmplPath, data)
