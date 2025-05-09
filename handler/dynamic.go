@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -14,7 +13,6 @@ import (
 
 func SetModeHandler(w http.ResponseWriter, r *http.Request) {
 	mode := r.URL.Query().Get("mode")
-	fmt.Printf(mode)
 	redirect := r.URL.Query().Get("redirect")
 	if mode != "light" && mode != "dark" {
 		mode = "dark"

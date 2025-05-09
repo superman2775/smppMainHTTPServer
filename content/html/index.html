@@ -1,378 +1,609 @@
 {{ define "content" }}
 <div id="top-title">
-    <h1 style="margin: 0;">Welcome to <br><span id="top-title-accent">{{ .PageTitle
-            }}</span><br><i style="font-weight: 400;">innovating</i> education</h1>
+  <h1 style="margin: 0">
+    Welcome to <br /><span id="top-title-accent">{{ .PageTitle }}</span><br /><i
+      style="font-weight: 400"
+      >innovating</i
+    >
+    education
+  </h1>
 </div>
 <div id="try-now-button-container">
-    <a href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf" target="_blank"
-        class="try-now-button">
+  <a
+    href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf"
+    target="_blank"
+    class="try-now-button"
+  >
+    <svg
+      class="try-now-clipped-smpp-logo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+    >
+      <g>
+        <path
+          fill="transparent"
+          d="M512 52.54V111.05L0 414.41V52.54C0 22.37 21.79 0 51.2 0H460.8c29.4 0 51.2 22.37 51.2 52.54z"
+        />
+        <path
+          fill="transparent"
+          d="M512 460.8c0 29.4-21.8 51.2-51.2 51.2H51.2C21.79 512 0 490.2 0 460.8v-57L512 108.21z"
+        />
 
-        <svg class="try-now-clipped-smpp-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <g>
-                <path fill="transparent"
-                    d="M512 52.54V111.05L0 414.41V52.54C0 22.37 21.79 0 51.2 0H460.8c29.4 0 51.2 22.37 51.2 52.54z" />
-                <path fill="transparent"
-                    d="M512 460.8c0 29.4-21.8 51.2-51.2 51.2H51.2C21.79 512 0 490.2 0 460.8v-57L512 108.21z" />
+        <path
+          fill="#fff6ee"
+          fill-rule="evenodd"
+          d="M416.88 170.25l-19.96 45.93-59.74-25.95-27.05 62.26-45.92-19.96 27.05-62.26-40.59-17.24c-13.06-4.83-36.28-15.68-68.01-15.68-39.28 0-55.91 20.08-55.91 39.68 0 25.48 19.64 37.24 64.98 54.39 58.94 21.55 87.14 50.46 87.14 97.98 0 53.4-41.3 99.45-128.45 99.45-36.27 0-80.33-13.78-98.97-25.05l20.25-48.61c19.64 11.26 51.02 23.69 82.75 23.69 39.29 0 61.46-18.13 61.46-45.08 0-24.99-17.13-39.68-59.94-54.86-56.41-19.6-92.18-48.5-92.18-96.02 0-54.39 46.35-95.05 120.39-95.05 28.17 0 50.42 4.6 67.22 10.72 20.12 8.14 39.92 17.09 59.83 25.74l27.05-62.26 45.93 19.96-27.06 62.26 59.74 25.95z"
+        />
+        <path
+          fill="#fff6ee"
+          fill-rule="evenodd"
+          d="M473.81 395.89c-18.55-8.05-36.75-14.9-55.29-22.96l-27.35 62.95-46.43-20.18 27.35-62.94-60.4-26.24c6.72-15.49 13.45-30.97 20.18-46.45l60.39 26.24 27.35-62.94 46.44 20.17-27.35 62.95 54.36 23.62z"
+        />
+      </g>
+    </svg>
 
-                <path fill="#fff6ee" fill-rule="evenodd"
-                    d="M416.88 170.25l-19.96 45.93-59.74-25.95-27.05 62.26-45.92-19.96 27.05-62.26-40.59-17.24c-13.06-4.83-36.28-15.68-68.01-15.68-39.28 0-55.91 20.08-55.91 39.68 0 25.48 19.64 37.24 64.98 54.39 58.94 21.55 87.14 50.46 87.14 97.98 0 53.4-41.3 99.45-128.45 99.45-36.27 0-80.33-13.78-98.97-25.05l20.25-48.61c19.64 11.26 51.02 23.69 82.75 23.69 39.29 0 61.46-18.13 61.46-45.08 0-24.99-17.13-39.68-59.94-54.86-56.41-19.6-92.18-48.5-92.18-96.02 0-54.39 46.35-95.05 120.39-95.05 28.17 0 50.42 4.6 67.22 10.72 20.12 8.14 39.92 17.09 59.83 25.74l27.05-62.26 45.93 19.96-27.06 62.26 59.74 25.95z" />
-                <path fill="#fff6ee" fill-rule="evenodd"
-                    d="M473.81 395.89c-18.55-8.05-36.75-14.9-55.29-22.96l-27.35 62.95-46.43-20.18 27.35-62.94-60.4-26.24c6.72-15.49 13.45-30.97 20.18-46.45l60.39 26.24 27.35-62.94 46.44 20.17-27.35 62.95 54.36 23.62z" />
-            </g>
-        </svg>
-
-        <span class="try-now-text">Try it now</span>
-        <svg class="try-now-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-        </svg>
-    </a>
+    <span class="try-now-text">Try it now</span>
+    <svg
+      class="try-now-arrow"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+    </svg>
+  </a>
 </div>
 <div id="personalization" class="mains">
-    <h1 class="main-title">A new standard for <span class="accent-text">personalization</span></h1>
-    <div id="theme-preview-container">
-        <div class="preview-img-container">
-            <div class="preview-img-top">
-                <div class="preview-img-buttons"><svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e24b41" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#ed6a5f" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e1a73e" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#f6be50" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#2dac2f" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#61c555" />
-                        </g>
-                    </svg></div>
-                <span class="preview-img-title">Midnight Sapphire</span>
-            </div>
-            <picture>
-                <source srcset="media/previewMidnightSapphire.webp" type="image/webp">
-                <img id="midnightSapphire" class="preview-img" loading="lazy" src="media/previewMidnightSapphire.png"
-                    alt="Homepage preview">
-            </picture>
+  <h1 class="main-title">
+    A new standard for <span class="accent-text">personalization</span>
+  </h1>
+  <div id="theme-preview-container">
+    <div class="preview-img-container">
+      <div class="preview-img-top">
+        <div class="preview-img-buttons">
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e24b41"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#ed6a5f"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e1a73e"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#f6be50"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#2dac2f"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#61c555"
+              />
+            </g>
+          </svg>
         </div>
-        <div class="preview-img-container">
-            <div class="preview-img-top">
-                <div class="preview-img-buttons"><svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e24b41" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#ed6a5f" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e1a73e" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#f6be50" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#2dac2f" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#61c555" />
-                        </g>
-                    </svg></div>
-                <span class="preview-img-title">Dark Sands</span>
-            </div>
-            <picture>
-                <source srcset="media/previewDarkSands.webp" type="image/webp">
-                <img id="darkSands" class="preview-img" loading="lazy" src="media/previewDarkSands.png"
-                    alt="Homepage preview">
-            </picture>
-        </div>
-        <div class="preview-img-container">
-            <div class="preview-img-top">
-                <div class="preview-img-buttons"><svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e24b41" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#ed6a5f" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e1a73e" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#f6be50" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#2dac2f" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#61c555" />
-                        </g>
-                    </svg></div>
-                <span class="preview-img-title">Fluorescent Galaxy</span>
-            </div>
-            <picture>
-                <source srcset="media/previewFluorescentGalaxy.webp" type="image/webp">
-                <img id="fluorescentGalaxy" class="preview-img" loading="lazy" src="media/previewFluorescentGalaxy.png"
-                    alt="Homepage preview">
-            </picture>
-        </div>
-        <div class="preview-img-container">
-            <div class="preview-img-top">
-                <div class="preview-img-buttons"><svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e24b41" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#ed6a5f" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e1a73e" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#f6be50" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#2dac2f" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#61c555" />
-                        </g>
-                    </svg></div>
-                <span class="preview-img-title">Ruby Eclipse</span>
-            </div>
-            <picture>
-                <source srcset="media/previewRubyEclipse.webp" type="image/webp">
-                <img id="rubyEclipse" class="preview-img" loading="lazy" src="media/previewRubyEclipse.png"
-                    alt="Homepage preview">
-            </picture>
-        </div>
-        <div class="preview-img-container">
-            <div class="preview-img-top">
-                <div class="preview-img-buttons"><svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e24b41" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#ed6a5f" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#e1a73e" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#f6be50" />
-                        </g>
-                    </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-rule="evenodd" fill-rule="evenodd">
-                            <path
-                                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                fill="#2dac2f" />
-                            <path
-                                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                fill="#61c555" />
-                        </g>
-                    </svg></div>
-                <span class="preview-img-title">Cherry Haze</span>
-            </div>
-            <picture>
-                <source srcset="media/previewCherryHaze.webp" type="image/webp">
-                <img id="cherryHaze" class="preview-img" loading="lazy" src="media/previewCherryHaze.png"
-                    alt="Homepage preview">
-            </picture>
-        </div>
+        <span class="preview-img-title">Midnight Sapphire</span>
+      </div>
+      <picture>
+        <source srcset="media/previewMidnightSapphire.webp" type="image/webp" />
+        <img
+          id="midnightSapphire"
+          class="preview-img"
+          loading="lazy"
+          src="media/previewMidnightSapphire.png"
+          alt="Homepage preview"
+        />
+      </picture>
     </div>
-    <div id="theme-preview-buttons">
-        <button id="prev-button" class="theme-preview-button"><svg class="prev-arrow" viewBox="0 0 24 24" fill="none"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-            </svg></button>
-        <button id="next-button" class="theme-preview-button"> <svg class="next-arrow" viewBox="0 0 24 24" fill="none"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-            </svg></button>
+    <div class="preview-img-container">
+      <div class="preview-img-top">
+        <div class="preview-img-buttons">
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e24b41"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#ed6a5f"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e1a73e"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#f6be50"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#2dac2f"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#61c555"
+              />
+            </g>
+          </svg>
+        </div>
+        <span class="preview-img-title">Dark Sands</span>
+      </div>
+      <picture>
+        <source srcset="media/previewDarkSands.webp" type="image/webp" />
+        <img
+          id="darkSands"
+          class="preview-img"
+          loading="lazy"
+          src="media/previewDarkSands.png"
+          alt="Homepage preview"
+        />
+      </picture>
     </div>
+    <div class="preview-img-container">
+      <div class="preview-img-top">
+        <div class="preview-img-buttons">
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e24b41"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#ed6a5f"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e1a73e"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#f6be50"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#2dac2f"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#61c555"
+              />
+            </g>
+          </svg>
+        </div>
+        <span class="preview-img-title">Fluorescent Galaxy</span>
+      </div>
+      <picture>
+        <source
+          srcset="media/previewFluorescentGalaxy.webp"
+          type="image/webp"
+        />
+        <img
+          id="fluorescentGalaxy"
+          class="preview-img"
+          loading="lazy"
+          src="media/previewFluorescentGalaxy.png"
+          alt="Homepage preview"
+        />
+      </picture>
+    </div>
+    <div class="preview-img-container">
+      <div class="preview-img-top">
+        <div class="preview-img-buttons">
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e24b41"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#ed6a5f"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e1a73e"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#f6be50"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#2dac2f"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#61c555"
+              />
+            </g>
+          </svg>
+        </div>
+        <span class="preview-img-title">Ruby Eclipse</span>
+      </div>
+      <picture>
+        <source srcset="media/previewRubyEclipse.webp" type="image/webp" />
+        <img
+          id="rubyEclipse"
+          class="preview-img"
+          loading="lazy"
+          src="media/previewRubyEclipse.png"
+          alt="Homepage preview"
+        />
+      </picture>
+    </div>
+    <div class="preview-img-container">
+      <div class="preview-img-top">
+        <div class="preview-img-buttons">
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e24b41"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#ed6a5f"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#e1a73e"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#f6be50"
+              />
+            </g>
+          </svg>
+          <svg
+            class="traffic-light-button"
+            viewBox="0 0 85.4 85.4"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-rule="evenodd" fill-rule="evenodd">
+              <path
+                d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                fill="#2dac2f"
+              />
+              <path
+                d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                fill="#61c555"
+              />
+            </g>
+          </svg>
+        </div>
+        <span class="preview-img-title">Cherry Haze</span>
+      </div>
+      <picture>
+        <source srcset="media/previewCherryHaze.webp" type="image/webp" />
+        <img
+          id="cherryHaze"
+          class="preview-img"
+          loading="lazy"
+          src="media/previewCherryHaze.png"
+          alt="Homepage preview"
+        />
+      </picture>
+    </div>
+  </div>
+  <div id="theme-preview-buttons">
+    <button id="prev-button" class="theme-preview-button">
+      <svg
+        class="prev-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+      </svg>
+    </button>
+    <button id="next-button" class="theme-preview-button">
+      <svg
+        class="next-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+      </svg>
+    </button>
+  </div>
 </div>
 <div id="productivity" class="mains">
-    <h1 class="main-title"><span class="accent-text">Productivity</span> at its finest</h1>
-    <div id="prod">
-        <div id="prod-preview-wrapper">
-            <div id="prod-preview">
-                <div class="preview-prod-container">
-                    <div class="preview-prod-top">
-                        <div class="preview-prod-buttons"><svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-rule="evenodd" fill-rule="evenodd">
-                                    <path
-                                        d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                        fill="#e24b41" />
-                                    <path
-                                        d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                        fill="#ed6a5f" />
-                                </g>
-                            </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-rule="evenodd" fill-rule="evenodd">
-                                    <path
-                                        d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                        fill="#e1a73e" />
-                                    <path
-                                        d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                        fill="#f6be50" />
-                                </g>
-                            </svg> <svg class="traffic-light-button" viewBox="0 0 85.4 85.4"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-rule="evenodd" fill-rule="evenodd">
-                                    <path
-                                        d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
-                                        fill="#2dac2f" />
-                                    <path
-                                        d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
-                                        fill="#61c555" />
-                                </g>
-                            </svg>
-                        </div>
-                        <span id="preview-prod-title"></span>
-                    </div>
-                    <picture>
-                        <source id="preview-prod-img-primary-source" srcset="media/previewWeather.webp"
-                            type="image/webp">
-                        <img id="preview-prod-img" src="media/previewWeather.png" alt="Homepage preview">
-                    </picture>
-                </div>
-                <span id="preview-prod-description"></span>
+  <h1 class="main-title">
+    <span class="accent-text">Productivity</span> at its finest
+  </h1>
+  <div id="prod">
+    <div id="prod-preview-wrapper">
+      <div id="prod-preview">
+        <div class="preview-prod-container">
+          <div class="preview-prod-top">
+            <div class="preview-prod-buttons">
+              <svg
+                class="traffic-light-button"
+                viewBox="0 0 85.4 85.4"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-rule="evenodd" fill-rule="evenodd">
+                  <path
+                    d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                    fill="#e24b41"
+                  />
+                  <path
+                    d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                    fill="#ed6a5f"
+                  />
+                </g>
+              </svg>
+              <svg
+                class="traffic-light-button"
+                viewBox="0 0 85.4 85.4"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-rule="evenodd" fill-rule="evenodd">
+                  <path
+                    d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                    fill="#e1a73e"
+                  />
+                  <path
+                    d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                    fill="#f6be50"
+                  />
+                </g>
+              </svg>
+              <svg
+                class="traffic-light-button"
+                viewBox="0 0 85.4 85.4"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-rule="evenodd" fill-rule="evenodd">
+                  <path
+                    d="m42.7 85.4c23.6 0 42.7-19.1 42.7-42.7s-19.1-42.7-42.7-42.7-42.7 19.1-42.7 42.7 19.1 42.7 42.7 42.7z"
+                    fill="#2dac2f"
+                  />
+                  <path
+                    d="m42.7 81.8c21.6 0 39.1-17.5 39.1-39.1s-17.5-39.1-39.1-39.1-39.1 17.5-39.1 39.1 17.5 39.1 39.1 39.1z"
+                    fill="#61c555"
+                  />
+                </g>
+              </svg>
             </div>
+            <span id="preview-prod-title"></span>
+          </div>
+          <picture>
+            <source
+              id="preview-prod-img-primary-source"
+              srcset="media/previewWeather.webp"
+              type="image/webp"
+            />
+            <img
+              id="preview-prod-img"
+              src="media/previewWeather.png"
+              alt="Homepage preview"
+            />
+          </picture>
         </div>
-        <div id="clock-container">
-            <span id="clock-title"></span>
-            <div id="clock">
-                <div id="big-handle"></div>
-                <div id="small-handle"></div>
-                <div class="clock-point" id="point-10am"></div>
-                <div class="clock-point" id="point-12am"></div>
-                <div class="clock-point" id="point-4pm"></div>
-                <div class="clock-point" id="point-8pm"></div>
-            </div>
-            <div id="clock-bottom-container">
-                <span id="clock-title-mobile"></span>
-                <span id="digital-time"></span>
-                <div id="clock-buttons">
-                    <button id="time-back-button">
-                        <svg class="clock-control-svg" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path
-                                    d="m 7 4.003906 c -0.179688 -0.003906 -0.359375 0.046875 -0.515625 0.140625 l -5 3 c -0.648437 0.386719 -0.648437 1.328125 0 1.714844 l 5 3 c 0.15625 0.09375 0.335937 0.140625 0.515625 0.140625 v 0.003906 c 1 -0.003906 1 -1 1 -1 v -6 s 0.003906 -1 -1 -1 z m 0 0" />
-                                <path
-                                    d="m 14 4.003906 c -0.179688 -0.003906 -0.359375 0.046875 -0.515625 0.140625 l -5 3 c -0.648437 0.386719 -0.648437 1.328125 0 1.714844 l 5 3 c 0.15625 0.09375 0.335937 0.140625 0.515625 0.140625 v 0.003906 c 1 -0.003906 1 -1 1 -1 v -6 s 0.003906 -1 -1 -1 z m 0 0" />
-                            </g>
-                        </svg>
-                    </button>
-                    <button id="time-forward-button">
-                        <svg class="clock-control-svg" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path
-                                    d="m 2 4 c 0.179688 0 0.359375 0.046875 0.515625 0.140625 l 5 3 c 0.648437 0.386719 0.648437 1.328125 0 1.71875 l -5 3 c -0.15625 0.089844 -0.335937 0.140625 -0.515625 0.136719 c -1 0.003906 -1 -0.996094 -1 -0.996094 v -6 s -0.003906 -1 1 -1 z m 0 0" />
-                                <path
-                                    d="m 9 4 c 0.179688 0 0.359375 0.046875 0.515625 0.140625 l 5 3 c 0.648437 0.386719 0.648437 1.328125 0 1.71875 l -5 3 c -0.15625 0.089844 -0.335937 0.140625 -0.515625 0.136719 c -1 0.003906 -1 -0.996094 -1 -0.996094 v -6 s -0.003906 -1 1 -1 z m 0 0" />
-                            </g>
-                        </svg></button>
-                </div>
-            </div>
-
-        </div>
+        <span id="preview-prod-description"></span>
+      </div>
     </div>
+    <div id="clock-container">
+      <span id="clock-title"></span>
+      <div id="clock">
+        <div id="big-handle"></div>
+        <div id="small-handle"></div>
+        <div class="clock-point" id="point-10am"></div>
+        <div class="clock-point" id="point-12am"></div>
+        <div class="clock-point" id="point-4pm"></div>
+        <div class="clock-point" id="point-8pm"></div>
+      </div>
+      <div id="clock-bottom-container">
+        <span id="clock-title-mobile"></span>
+        <span id="digital-time"></span>
+        <div id="clock-buttons">
+          <button id="time-back-button">
+            <svg
+              class="clock-control-svg"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="m 7 4.003906 c -0.179688 -0.003906 -0.359375 0.046875 -0.515625 0.140625 l -5 3 c -0.648437 0.386719 -0.648437 1.328125 0 1.714844 l 5 3 c 0.15625 0.09375 0.335937 0.140625 0.515625 0.140625 v 0.003906 c 1 -0.003906 1 -1 1 -1 v -6 s 0.003906 -1 -1 -1 z m 0 0"
+                />
+                <path
+                  d="m 14 4.003906 c -0.179688 -0.003906 -0.359375 0.046875 -0.515625 0.140625 l -5 3 c -0.648437 0.386719 -0.648437 1.328125 0 1.714844 l 5 3 c 0.15625 0.09375 0.335937 0.140625 0.515625 0.140625 v 0.003906 c 1 -0.003906 1 -1 1 -1 v -6 s 0.003906 -1 -1 -1 z m 0 0"
+                />
+              </g>
+            </svg>
+          </button>
+          <button id="time-forward-button">
+            <svg
+              class="clock-control-svg"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path
+                  d="m 2 4 c 0.179688 0 0.359375 0.046875 0.515625 0.140625 l 5 3 c 0.648437 0.386719 0.648437 1.328125 0 1.71875 l -5 3 c -0.15625 0.089844 -0.335937 0.140625 -0.515625 0.136719 c -1 0.003906 -1 -0.996094 -1 -0.996094 v -6 s -0.003906 -1 1 -1 z m 0 0"
+                />
+                <path
+                  d="m 9 4 c 0.179688 0 0.359375 0.046875 0.515625 0.140625 l 5 3 c 0.648437 0.386719 0.648437 1.328125 0 1.71875 l -5 3 c -0.15625 0.089844 -0.335937 0.140625 -0.515625 0.136719 c -1 0.003906 -1 -0.996094 -1 -0.996094 v -6 s -0.003906 -1 1 -1 z m 0 0"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div id="fun" class="mains">
-    <h1 class="main-title">Not without some <span class="accent-text">fun</span></h1>
-    <div id="fun-container">
-        <div id="fun-app-gallery">
-            <div id="fun-app-gallery-grid">
-                <div id="fun-app-flappy" class="fun-app-container">
-                    <span class="emoji">🐤</span>
-                    <span class="fun-app-title">Flappy++</span>
-                </div>
-                <div id="fun-app-snake" class="fun-app-container">
-                    <span class="emoji">🐍</span>
-                    <span class="fun-app-title">Snake++</span>
-                </div>
-                <div id="fun-app-plant" class="fun-app-container">
-                    <span class="emoji">🪴</span>
-                    <span class="fun-app-title">Plant</span>
-                </div>
-                <div id="fun-app-gc" class="fun-app-container">
-                    <svg class="fun-app-icon" xmlns="http://www.w3.org/2000/svg" viewBox="3000 66 450 450" class="st5">
-                        <g>
-                            <g>
-                                <path
-                                    d="M3436.9,158.5c0-3.6-.4-7-.9-10.8-2.6-20.6-12.9-39.8-29-53.9-16.3-14.2-37-22.1-58.4-22.1h-.3c-56,.2-112.9.2-168,.1-29.2,0-58.3,0-87.5,0-3.9,0-8.1.3-12.9.9-20.5,2.7-39.5,12.9-53.6,28.9-14.2,16.1-22,36.6-21.9,57.6,0,31.4,0,63.4,0,94.3,0,26.1,0,52.2,0,78.3,0,3.8.3,7.6.9,11.5,5.4,33.9,24.4,57.5,56.3,70,6.6,2.6,13.5,3.9,20.7,5.3,2.3.5,4.7.9,7.1,1.4v1.7c0,5.2,0,10.3,0,15.5,0,13.6-.1,27.8.3,41.6.2,5.9,2.4,12.3,5.8,16.7,4.2,5.5,10.2,8.8,16.7,9.2.5,0,1,0,1.5,0,6.7,0,13.2-2.9,18.6-8.3,26.5-26.4,50.9-50.9,74.5-74.7,1.9-1.9,3.5-2.5,6.2-2.5h0c51.1.1,93.2.1,132.5,0,6.7,0,13.5-.7,20.4-2,40.4-7.5,70.9-44.1,71-85.1,0-59.1,0-119.9,0-173.5h0ZM3203.6,344.5c-16.5,14.1-40.7,21.6-70,21.6s-51.3-6.3-66.1-15.2l-2.8-1.7,12.1-43,4.7,2.7c11.8,6.8,32.5,14,54.8,14s38.4-10.1,38.4-27-10.1-23.9-38.8-34c-44.9-15.6-66.8-38.7-66.8-70.6s8.6-37.8,24.1-50.4c15.9-12.9,37.9-19.8,63.7-19.8s34.1,2.6,48.1,7.7c1.2.4,2.4.9,3.9,1.5h.1c0,0,3.5,1.6,3.5,1.6l30.3,13.2,18.8-43.2,39.7,17.2-18.8,43.2,41.4,18-17.2,39.7-41.4-18-18.8,43.2-39.7-17.2,18.8-43.2-19.7-8.6v.5c-.1,0-4.8-2.3-4.8-2.3-9.4-4.8-24.9-10.4-45.3-10.4s-34.5,12.5-34.5,23.3,9.1,21.2,42.3,33.7c43.7,16,63.2,38.2,63.2,71.9s-8.3,38.7-23.4,51.6h0ZM3375.4,308.6c-3.8,11.3-8.8,22.3-14.8,32.6l-2,3.4-2-.9-34.7-15.1-19,43.7-40-17.4,19-43.7-41.9-18.2,17.4-40,41.9,18.2,19-43.7,40,17.4-19,43.7,37.4,16.2-1.3,3.7h0Z">
-                                </path>
-                                <path style="fill: var(--inverted-text);"
-                                    d="M3227,292.9c0,20.4-8.3,38.7-23.4,51.6-16.5,14.1-40.7,21.6-70,21.6s-51.3-6.3-66.1-15.2l-2.8-1.7,12.1-43,4.7,2.7c11.8,6.8,32.5,14,54.8,14s38.4-10.1,38.4-27-10.1-23.9-38.8-34c-44.9-15.6-66.8-38.7-66.8-70.6s8.6-37.8,24.1-50.4c15.9-12.9,37.9-19.8,63.7-19.8s34.1,2.6,48.1,7.7c1.2.4,2.4.9,3.9,1.5h.1c0,0,3.5,1.6,3.5,1.6l30.3,13.2,18.8-43.2,39.7,17.2-18.8,43.2,41.4,18-17.2,39.7-41.4-18-18.8,43.2-39.7-17.2,18.8-43.2-19.7-8.6v.5c-.1,0-4.8-2.3-4.8-2.3-9.4-4.8-24.9-10.4-45.3-10.4s-34.5,12.5-34.5,23.3,9.1,21.2,42.3,33.7c43.7,16,63.2,38.2,63.2,71.9h0Z">
-                                </path>
-                                <path style="fill: var(--inverted-text);"
-                                    d="M3376.6,304.9l-1.3,3.7c-3.8,11.3-8.8,22.3-14.8,32.6l-2,3.4-2-.9-34.7-15.1-19,43.7-40-17.4,19-43.7-41.9-18.2,17.4-40,41.9,18.2,19-43.7,40,17.4-19,43.7,37.4,16.2h0Z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                    <span class="fun-app-title">Global Chat</span>
-                </div>
-            </div>
+  <h1 class="main-title">
+    Not without some <span class="accent-text">fun</span>
+  </h1>
+  <div id="fun-container">
+    <div id="fun-app-gallery">
+      <div id="fun-app-gallery-grid">
+        <div id="fun-app-flappy" class="fun-app-container">
+          <span class="emoji">🐤</span>
+          <span class="fun-app-title">Flappy++</span>
         </div>
-        <div id="fun-app-preview-container">
-            <div id="fun-app-video-container">
-                <video id="fun-app-preview" class="active" autoplay muted loop></video>
-                <div id="volume-container">
-                    <svg id="volume-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
-                    <span id="volume-text"></span>
-                </div>
-            </div>
+        <div id="fun-app-snake" class="fun-app-container">
+          <span class="emoji">🐍</span>
+          <span class="fun-app-title">Snake++</span>
         </div>
+        <div id="fun-app-plant" class="fun-app-container">
+          <span class="emoji">🪴</span>
+          <span class="fun-app-title">Plant</span>
+        </div>
+        <div id="fun-app-gc" class="fun-app-container">
+          <svg
+            class="fun-app-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="3000 66 450 450"
+            class="st5"
+          >
+            <g>
+              <g>
+                <path
+                  d="M3436.9,158.5c0-3.6-.4-7-.9-10.8-2.6-20.6-12.9-39.8-29-53.9-16.3-14.2-37-22.1-58.4-22.1h-.3c-56,.2-112.9.2-168,.1-29.2,0-58.3,0-87.5,0-3.9,0-8.1.3-12.9.9-20.5,2.7-39.5,12.9-53.6,28.9-14.2,16.1-22,36.6-21.9,57.6,0,31.4,0,63.4,0,94.3,0,26.1,0,52.2,0,78.3,0,3.8.3,7.6.9,11.5,5.4,33.9,24.4,57.5,56.3,70,6.6,2.6,13.5,3.9,20.7,5.3,2.3.5,4.7.9,7.1,1.4v1.7c0,5.2,0,10.3,0,15.5,0,13.6-.1,27.8.3,41.6.2,5.9,2.4,12.3,5.8,16.7,4.2,5.5,10.2,8.8,16.7,9.2.5,0,1,0,1.5,0,6.7,0,13.2-2.9,18.6-8.3,26.5-26.4,50.9-50.9,74.5-74.7,1.9-1.9,3.5-2.5,6.2-2.5h0c51.1.1,93.2.1,132.5,0,6.7,0,13.5-.7,20.4-2,40.4-7.5,70.9-44.1,71-85.1,0-59.1,0-119.9,0-173.5h0ZM3203.6,344.5c-16.5,14.1-40.7,21.6-70,21.6s-51.3-6.3-66.1-15.2l-2.8-1.7,12.1-43,4.7,2.7c11.8,6.8,32.5,14,54.8,14s38.4-10.1,38.4-27-10.1-23.9-38.8-34c-44.9-15.6-66.8-38.7-66.8-70.6s8.6-37.8,24.1-50.4c15.9-12.9,37.9-19.8,63.7-19.8s34.1,2.6,48.1,7.7c1.2.4,2.4.9,3.9,1.5h.1c0,0,3.5,1.6,3.5,1.6l30.3,13.2,18.8-43.2,39.7,17.2-18.8,43.2,41.4,18-17.2,39.7-41.4-18-18.8,43.2-39.7-17.2,18.8-43.2-19.7-8.6v.5c-.1,0-4.8-2.3-4.8-2.3-9.4-4.8-24.9-10.4-45.3-10.4s-34.5,12.5-34.5,23.3,9.1,21.2,42.3,33.7c43.7,16,63.2,38.2,63.2,71.9s-8.3,38.7-23.4,51.6h0ZM3375.4,308.6c-3.8,11.3-8.8,22.3-14.8,32.6l-2,3.4-2-.9-34.7-15.1-19,43.7-40-17.4,19-43.7-41.9-18.2,17.4-40,41.9,18.2,19-43.7,40,17.4-19,43.7,37.4,16.2-1.3,3.7h0Z"
+                ></path>
+                <path
+                  style="fill: var(--white-text)"
+                  d="M3227,292.9c0,20.4-8.3,38.7-23.4,51.6-16.5,14.1-40.7,21.6-70,21.6s-51.3-6.3-66.1-15.2l-2.8-1.7,12.1-43,4.7,2.7c11.8,6.8,32.5,14,54.8,14s38.4-10.1,38.4-27-10.1-23.9-38.8-34c-44.9-15.6-66.8-38.7-66.8-70.6s8.6-37.8,24.1-50.4c15.9-12.9,37.9-19.8,63.7-19.8s34.1,2.6,48.1,7.7c1.2.4,2.4.9,3.9,1.5h.1c0,0,3.5,1.6,3.5,1.6l30.3,13.2,18.8-43.2,39.7,17.2-18.8,43.2,41.4,18-17.2,39.7-41.4-18-18.8,43.2-39.7-17.2,18.8-43.2-19.7-8.6v.5c-.1,0-4.8-2.3-4.8-2.3-9.4-4.8-24.9-10.4-45.3-10.4s-34.5,12.5-34.5,23.3,9.1,21.2,42.3,33.7c43.7,16,63.2,38.2,63.2,71.9h0Z"
+                ></path>
+                <path
+                  style="fill: var(--white-text)"
+                  d="M3376.6,304.9l-1.3,3.7c-3.8,11.3-8.8,22.3-14.8,32.6l-2,3.4-2-.9-34.7-15.1-19,43.7-40-17.4,19-43.7-41.9-18.2,17.4-40,41.9,18.2,19-43.7,40,17.4-19,43.7,37.4,16.2h0Z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <span class="fun-app-title">Global Chat</span>
+        </div>
+      </div>
     </div>
+    <div id="fun-app-preview-container">
+      <div id="fun-app-video-container">
+        <video id="fun-app-preview" class="active" autoplay muted loop></video>
+        <div id="volume-container">
+          <svg
+            id="volume-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          ></svg>
+          <span id="volume-text"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}

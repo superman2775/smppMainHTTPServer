@@ -1,22 +1,23 @@
 html {
-    --accent: #4a50d9;
-    --accent-text: #434eec;
-    --background: #f2f0e3;
-    --transparent-background: rgba(229, 228, 211, 0.516);
-    --shadow: rgba(117, 117, 117, 0.71);
-    --button: #4c56e0;
-    --button-background: rgba(218, 216, 203, 0.50);
-    --text: #2e2e2e;
-    --inverted-text: var(--background);
-    --border-color: #343434;
-    --button-hover: #e3e1d4;
-    --highlight-shadow: #6b75fe;
-    --background-card: rgba(203, 201, 189, 0.50);
-    --transparent-image-background: rgba(239, 239, 230, 0.514);
-    --red: #ce4b4e;
+  --accent: #4a50d9;
+  --accent-text: #434eec;
+  --background: #f2f0e3;
+  --transparent-background: rgba(229, 228, 211, 0.516);
+  --shadow: rgba(117, 117, 117, 0.71);
+  --button: #4c56e0;
+  --button-background: rgba(218, 216, 203, 0.5);
+  --text: #2e2e2e;
+  --white-text: var(--background);
+  --black-text: var(--text);
+  --border-color: #343434;
+  --button-hover: #e3e1d4;
+  --highlight-shadow: #6b75fe;
+  --background-card: rgba(203, 201, 189, 0.5);
+  --transparent-image-background: rgba(239, 239, 230, 0.514);
+  --red: #ce4b4e;
 }
 
 ::selection,
 ::-moz-selection {
-    background: rgba(148, 146, 140, 0.33) !important;
+  background: rgba(148, 146, 140, 0.33) !important;
 }
