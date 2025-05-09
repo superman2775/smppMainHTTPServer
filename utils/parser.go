@@ -10,9 +10,10 @@ func ParseMd(mdText string) string {
 	var builder strings.Builder
 	insideCard := false
 	firstCardMade := false
+	firstCardOpen := false
 
 	boldRe := regexp.MustCompile(`\*\*(.*?)\*\*`)
-	italicRe := regexp.MustCompile(`\*(.*?)\*`)
+	italicRe := regexp.MustCompile(`\_(.*?)\_`)
 
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
@@ -20,10 +21,10 @@ func ParseMd(mdText string) string {
 		if strings.HasPrefix(line, "##") {
 			// Close previous card if open
 			if insideCard {
-				builder.WriteString("</div>\n")
-				if firstCardMade {
-					// Close wrapper for first card
-					builder.WriteString("</div>\n")
+				builder.WriteString("</div>\n") // Close .card
+				if firstCardOpen {
+					builder.WriteString("</div>\n") // Close .first-card
+					firstCardOpen = false
 				}
 				insideCard = false
 			}
@@ -44,6 +45,7 @@ func ParseMd(mdText string) string {
 			if !firstCardMade {
 				builder.WriteString(`<div class="first-card">` + "\n")
 				builder.WriteString(`<div class="upcoming-update">Upcoming</div>` + "\n")
+				firstCardOpen = true
 				firstCardMade = true
 			}
 
@@ -62,8 +64,9 @@ func ParseMd(mdText string) string {
 		} else if strings.HasPrefix(line, "# ") {
 			if insideCard {
 				builder.WriteString("</div>\n")
-				if firstCardMade {
+				if firstCardOpen {
 					builder.WriteString("</div>\n")
+					firstCardOpen = false
 				}
 				insideCard = false
 			}
@@ -83,7 +86,7 @@ func ParseMd(mdText string) string {
 	// Final card cleanup
 	if insideCard {
 		builder.WriteString("</div>\n")
-		if firstCardMade {
+		if firstCardOpen {
 			builder.WriteString("</div>\n") // Close first-card wrapper
 		}
 	}

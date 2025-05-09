@@ -4,7 +4,7 @@
 
 IMG /media/backgroundMidnightSapphire.webp
 New **widgets** on the homepage, completely **customisable**  
-Updated settings -> Quick settings  
+Old settings -> **Quick** settings  
 Major code refactors/rewrites
 
 ## dark Settings Update ⚙️
@@ -15,23 +15,23 @@ New settings panel for customisation of features that don’t have customisation
 ## dark Theme Update 🎨
 
 IMG /media/backgroundCherryHaze.webp
-New themes, user submitted themes, in a new UI
-Save multiple custom themes
-Maybe gradient backgrounds
+New **themes**, user submitted themes, in a new UI
+Save **multiple** _custom_ themes
+_Gradient_ backgrounds
 
-## dark Profile/Customisation Update 🪪
+## dark Profile personalisation Update 🪪
 
 IMG /media/backgroundFluorescentGalaxy.webp
-Custom profile with profile pictures  
-Own colors like Discord profile
+Add personality with **custom** _profile pictures_  
+Choose your own **colours**
 
 ## dark Plant Update 🪴
 
 IMG /media/backgroundMatchaGreen.webp
-New plants that can be unlocked by growing your plant  
-Naming your plant  
-Time based decos (Easter, Christmas)  
-Autowater when raining
+New **plants** that can be _unlocked_ by growing your plant  
+Give your plant a **name**  
+Time based **decorations** (_Easter, Christmas...)_  
+Automatic **watering** during _rain_
 
 # Small Patches
 

@@ -5,9 +5,11 @@
   overflow: hidden;
   border-radius: 2.2rem;
   color: var(--text);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.323) inset,
-    0px 0px 30px 1px var(--shadow);
+    0px 0px 45px 10px var(--shadow);
+  background-color: var(--background-card);
+  z-index: -2;
 }
 .first-card .card {
   margin-bottom: 0rem !important;
@@ -23,10 +25,17 @@
 .first-card {
   border-radius: 3.2rem;
   padding: 1rem;
-  margin-bottom: 2rem;
-  background-color: var(--button);
-  box-shadow: 0 0 10px 2px var(--highlight-shadow);
+  margin-bottom: 4rem;
+  background: radial-gradient(
+    farthest-corner at 50% 10%,
+    rgb(76, 88, 243) 0%,
+    var(--button) 100%
+  );
+  box-shadow: 0 0 10px -2px var(--highlight-shadow);
   z-index: -3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .backdrop-card {
@@ -49,7 +58,7 @@
   position: absolute;
 }
 
-.markdown-content {
+.roadmap-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,11 +74,12 @@ main {
   z-index: 2;
   margin-bottom: 1rem;
   color: var(--white-text);
+  width: fit-content;
 }
 
 h1 {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-top: 0rem;
   text-decoration: underline;
   text-decoration-thickness: 3px;
@@ -82,4 +92,9 @@ h2 {
 
 p {
   font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+p:last-child {
+  margin-bottom: 1rem !important;
 }
