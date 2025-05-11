@@ -1,6 +1,6 @@
 .card {
   width: fit-content;
-  padding: 0 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   position: relative;
   overflow: hidden;
   border-radius: 2.2rem;
@@ -10,6 +10,7 @@
     0px 0px 45px 10px var(--shadow);
   background-color: var(--background-card);
   z-index: -2;
+  width: 40rem;
 }
 .first-card .card {
   margin-bottom: 0rem !important;
@@ -88,16 +89,28 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  margin-top: 0rem;
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   max-width: 50rem;
+  text-align: left;
 }
 
 p:last-child {
   margin-bottom: 1rem !important;
+}
+
+ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+li {
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 1170px) {
@@ -128,12 +141,20 @@ p:last-child {
     padding-top: 5rem !important;
   }
   h1 {
-    font-size: 3rem !important  ;
+    font-size: 2.5rem !important  ;
   }
   h2 {
     font-size: 1.6rem !important;
+    width: 90% !important;
+    margin-left: 5% !important;
   }
   p {
     margin-bottom: 1.25rem !important;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  ul {
+    padding-left: 1.5rem !important;
   }
 }

@@ -9,6 +9,7 @@ func ParseMd(mdText string) string {
 	lines := strings.Split(mdText, "\n")
 	var builder strings.Builder
 	insideCard := false
+	insideList := false
 	firstCardMade := false
 	firstCardOpen := false
 
@@ -20,6 +21,7 @@ func ParseMd(mdText string) string {
 		line = strings.TrimSpace(line)
 
 		if strings.HasPrefix(line, "##") {
+			insideList = false
 			// Close previous card if open
 			if insideCard {
 				builder.WriteString("</div>\n") // Close .card
@@ -63,6 +65,7 @@ func ParseMd(mdText string) string {
 			insideCard = true
 
 		} else if strings.HasPrefix(line, "# ") {
+			insideList = false
 			if insideCard {
 				builder.WriteString("</div>\n")
 				if firstCardOpen {
@@ -76,12 +79,25 @@ func ParseMd(mdText string) string {
 
 		} else if strings.HasPrefix(line, "IMG ") {
 			builder.WriteString(`<div class=backdrop-card-img style="background-image: url(` + strings.TrimPrefix(line, "IMG ") + `)"> <div class=backdrop-card></div></div>`)
-
+		} else if strings.HasPrefix(line, "- ") {
+			line := strings.TrimPrefix(line, "- ")
+			if !insideList {
+				builder.WriteString("<ul>")
+			}
+			line = boldItalicRe.ReplaceAllString(line, "<strong><em>$1</em></strong>")
+			line = boldRe.ReplaceAllString(line, "<strong>$1</strong>")
+			line = italicRe.ReplaceAllString(line, "<em>$1</em>")
+			builder.WriteString(`<li>` + line + `</li>`)
+			insideList = true
 		} else if line != "" {
+			insideList = false
 			line = boldItalicRe.ReplaceAllString(line, "<strong><em>$1</em></strong>")
 			line = boldRe.ReplaceAllString(line, "<strong>$1</strong>")
 			line = italicRe.ReplaceAllString(line, "<em>$1</em>")
 			builder.WriteString("<p>" + line + "</p>\n")
+		}
+		if !insideList {
+			builder.WriteString("</ul>")
 		}
 	}
 
@@ -91,6 +107,9 @@ func ParseMd(mdText string) string {
 		if firstCardOpen {
 			builder.WriteString("</div>\n") // Close first-card wrapper
 		}
+	}
+	if insideList {
+		builder.WriteString("</ul>")
 	}
 
 	return builder.String()
