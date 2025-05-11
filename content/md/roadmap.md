@@ -1,5 +1,13 @@
 # Roadmap
 
+## dark Global Chat Update 🌐
+
+IMG /media/backgroundCyberWave.webp
+Login via **Smartschool** — goodbye spammers 👋  
+Usernames are now synced across multiple devices  
+Moderators can now **ban users** from the chat  
+Fresh batch of **stickers** added 🎉
+
 ## dark Widget Update 🧩
 
 IMG /media/backgroundMidnightSapphire.webp  
