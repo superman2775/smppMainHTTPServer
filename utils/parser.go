@@ -12,8 +12,9 @@ func ParseMd(mdText string) string {
 	firstCardMade := false
 	firstCardOpen := false
 
-	boldRe := regexp.MustCompile(`\*\*(.*?)\*\*`)
-	italicRe := regexp.MustCompile(`\_(.*?)\_`)
+	boldItalicRe := regexp.MustCompile(`\*\*\_(.*?)\_\*\*`) // **_text_**
+	boldRe := regexp.MustCompile(`\*\*(.*?)\*\*`)           // **text**
+	italicRe := regexp.MustCompile(`\_(.*?)\_`)             // _text_
 
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
@@ -77,6 +78,7 @@ func ParseMd(mdText string) string {
 			builder.WriteString(`<div class=backdrop-card-img style="background-image: url(` + strings.TrimPrefix(line, "IMG ") + `)"> <div class=backdrop-card></div></div>`)
 
 		} else if line != "" {
+			line = boldItalicRe.ReplaceAllString(line, "<strong><em>$1</em></strong>")
 			line = boldRe.ReplaceAllString(line, "<strong>$1</strong>")
 			line = italicRe.ReplaceAllString(line, "<em>$1</em>")
 			builder.WriteString("<p>" + line + "</p>\n")

@@ -93,8 +93,47 @@ h2 {
 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  max-width: 50rem;
 }
 
 p:last-child {
   margin-bottom: 1rem !important;
+}
+
+@media (max-width: 1170px) {
+  .card {
+    width: 90% !important;
+    padding: 0 0.5rem 0.25rem 0.5rem !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.323) inset,
+      0px 0px 20px 2px var(--shadow) !important;
+  }
+  .first-card {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 2rem !important;
+  }
+  .first-card .card {
+    width: calc(100% - 1rem) !important;
+    border-radius: 2.7rem !important;
+  }
+  .upcoming-update {
+    margin-bottom: 0.5rem !important;
+    font-size: 1.7rem !important;
+  }
+  .roadmap-content {
+    width: 100%;
+  }
+  main {
+    padding-top: 5rem !important;
+  }
+  h1 {
+    font-size: 3rem !important  ;
+  }
+  h2 {
+    font-size: 1.6rem !important;
+  }
+  p {
+    margin-bottom: 1.25rem !important;
+  }
 }
