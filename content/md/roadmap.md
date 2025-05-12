@@ -90,3 +90,4 @@ _Already fully compatible_ with **Smarter** & **Smartest Smartschool**.
 
 - **_True modding/plugin support_** (_community-powered extensions_)
 - **Onboarding Quick Start** (_interactive guide for new users_)
+- **Customizable** iframes for _fullscreen_ apps or _widgets_
