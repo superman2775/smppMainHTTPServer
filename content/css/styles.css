@@ -8,7 +8,7 @@ html {
 }
 
 a {
-  color: var(--accent);
+  color: var(--button);
   text-decoration: none;
 }
 

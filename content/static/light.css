@@ -15,6 +15,7 @@ html {
   --background-card: rgba(203, 201, 189, 0.5);
   --transparent-image-background: rgba(239, 239, 230, 0.514);
   --red: #ce4b4e;
+  --green: #68b74f;
 }
 
 ::selection,

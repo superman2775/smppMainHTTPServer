@@ -44,13 +44,14 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, data any) {
 	}
 }
 func DynamicHandler(w http.ResponseWriter, r *http.Request) {
-	page := r.URL.Path[1:]
+	page := strings.ToLower(r.URL.Path[1:])
 	pageTitle := "Title"
 	if page == "" {
 		page = "index"
 		pageTitle = "Smartschool++"
 	} else {
-		pageTitle = utils.ToUpperCase(page)
+		pageTitle = utils.RemoveDash(page)
+		pageTitle = utils.ToUpperCase(pageTitle)
 	}
 
 	w.Header().Set("Accept-CH", "Sec-CH-Prefers-Color-Scheme")
@@ -62,7 +63,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		strings.Contains(strings.ToLower(userAgent), "windows phone")
 
 	theme := r.Header.Get("Sec-CH-Prefers-Color-Scheme")
-	if theme != "" {
+	if theme == "" {
 		theme = "dark"
 	}
 	cookie, err := r.Cookie("mode")
