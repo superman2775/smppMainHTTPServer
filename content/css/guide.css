@@ -64,6 +64,11 @@ main {
 
 section {
   min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 .toast {
@@ -90,6 +95,9 @@ code {
   background-color: var(--transparent-background);
   border-radius: 0.5rem;
 }
+#content {
+  width: 100%;
+}
 code:hover {
   cursor: pointer;
 }
@@ -98,8 +106,67 @@ a {
 }
 h2 {
   font-size: 2rem;
+  margin-bottom: 0rem;
+}
+.guide-toggle-arrow {
+  stroke: var(--text);
+  transition: all 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  rotate: -90deg;
+}
+#guide-menu.active .guide-toggle-arrow {
+  rotate: 90deg;
 }
 
+.instruction-card {
+  border-radius: 2rem;
+  background-color: var(--background-card);
+  box-shadow: 0px 0px 30px 5px var(--shadow);
+  max-width: 30rem;
+}
+
+.instruction-icon {
+  stroke: var(--text);
+  width: 4rem;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.instruction-number {
+  border-radius: 10000px;
+  background-color: var(--button);
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white-text);
+}
+
+.instruction-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.instruction-card-top {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+.instruction-card-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  padding-top: 0rem;
+  align-items: center;
+}
+.instruction-description {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: left;
+}
 @media (max-width: 1170px) {
   main {
     margin-left: 0rem;
@@ -134,14 +201,5 @@ h2 {
   }
   #guide-menu:not(.active) #guide-menu-toggle {
     box-shadow: 0px 0px 10px var(--shadow);
-  }
-  .guide-toggle-arrow {
-    stroke: var(--text);
-    transition: all 0.3s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    rotate: -90deg;
-  }
-  #guide-menu.active .guide-toggle-arrow {
-    rotate: 90deg;
   }
 }

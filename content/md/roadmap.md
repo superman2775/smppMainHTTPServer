@@ -48,7 +48,7 @@ IMG /media/backgroundMatchaGreen.webp
 
 _Already fully compatible_ with **Smarter** & **Smartest Smartschool**.
 
-## App 📱
+## Mobile App 📱
 
 **_Months-to-years_** dev time + **_extra costs_** = **not viable** 💵
 
