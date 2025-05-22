@@ -76,24 +76,41 @@ section {
   bottom: 1rem;
   right: 1rem;
   background-color: var(--green);
-  color: white;
+  box-shadow: 0px 0px 25px 0px
+    color-mix(in srgb, var(--shadow) 70%, var(--green) 30%);
+  color: var(--white-text);
+  font-weight: 600;
+  font-size: 1.2rem;
   padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  display: block;
+  border-radius: 0.75rem;
   opacity: 0;
   z-index: -1;
-  transition: opacity 0.3s ease-in-out;
+  right: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 .toast.toast-visible {
   opacity: 1;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 10000;
 }
 code {
+  font-family: "JetBrains Mono", monospace;
   color: var(--red);
   font-weight: 600;
-  font-size: 1rem;
-  background-color: var(--transparent-background);
+  font-size: inherit;
+  background-color: var(--background);
   border-radius: 0.5rem;
+  padding: 0 0.2em;
+}
+kbd {
+  font-family: "JetBrains Mono", monospace;
+  border: 2px solid var(--background);
+  box-shadow: 0px 0.25em 10px 0px var(--background) inset,
+    0px 0.15em 10px 0px var(--background);
+  padding: 0 0.2em;
+  border-radius: 0.5rem;
+  cursor: default;
 }
 #content {
   width: 100%;
@@ -113,6 +130,7 @@ h2 {
   transition: all 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   rotate: -90deg;
+  width: 100%;
 }
 #guide-menu.active .guide-toggle-arrow {
   rotate: 90deg;

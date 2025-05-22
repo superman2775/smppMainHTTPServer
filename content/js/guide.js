@@ -2,11 +2,11 @@ const sections = document.querySelectorAll("#content section");
 const buttons = document.querySelectorAll(".guide-button");
 const topbar = document.querySelector("header");
 const codeBlocks = document.querySelectorAll("code");
-const getTopOffset = () => 180;
+const getTopOffset = () =>
+  window.matchMedia("(max-width: 1170px)").matches ? 80 : 140;
 
-let scrollLock = false; // 🔒 prevent scroll interference temporarily
+let scrollLock = false;
 
-// Scroll to section on button click
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const targetId = button.getAttribute("data-target");
@@ -87,4 +87,3 @@ function toggleMobileGuideMenu() {
 document
   .getElementById("guide-menu-toggle")
   .addEventListener("click", toggleMobileGuideMenu);
-
