@@ -158,8 +158,23 @@
           </svg>
         </div>
         <p class="instruction-description">
-          Click "install" & then allow <i>all</i> <br />
-          the required <b>permissions</b>
+          Click
+          <button
+            style="
+              background-color: #0b57d0;
+              border-radius: 1000px;
+              padding: 0.25rem 0.6rem;
+              font-size: 0.9rem;
+              display: inline-flex;
+              font-weight: 600;
+              transform: translateY(-0.1rem);
+              box-shadow: 0px 0px 1rem -0.2rem var(--shadow);
+              color: var(--white-text);
+            "
+          >
+            Download
+          </button>
+          & then allow <i>all</i> the required <b>permissions</b>
         </p>
       </div>
     </div>
@@ -197,7 +212,7 @@
     <div class="instruction-card" style="margin-right: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">1</span>
-        <h3 class="instruction-title">Open the Quick settings</h3>
+        <h3 class="instruction-title">Open the Quick Settings</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -222,7 +237,32 @@
           </svg>
         </div>
         <p class="instruction-description">
-          Click the "Settings" button <br />
+          Click the
+          <button
+            style="
+              height: 2.5rem;
+              line-height: initial;
+              text-decoration-thickness: 2px;
+              width: auto;
+              border: 2px solid var(--background);
+              box-shadow: 0px 0px 1rem -0.2rem var(--shadow);
+              border-radius: 50px;
+              background: var(--background);
+              font-size: 1.1rem;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0.25rem 1rem;
+              height: calc(100% - 0.5rem);
+              transform: translateY(-0.1rem);
+              color: var(--button);
+              font-weight: 800;
+            "
+            title="Ga in/uit edit mode om de locatie van de widgets te veranderen."
+          >
+            Settings
+          </button>
+          button <br />
           in the top right
         </p>
       </div>
@@ -391,7 +431,7 @@
     <div class="instruction-card" style="margin-right: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">3</span>
-        <h3 class="instruction-title">Drop the widgets</h3>
+        <h3 class="instruction-title">Drop the <b>widgets</b></h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -514,7 +554,23 @@
     <div class="instruction-card faq-card">
       <div class="instruction-card-top">
         <span class="instruction-number">?</span>
-        <h3 class="instruction-title">Save your own Quicks</h3>
+        <h3 class="instruction-title">How do I change my weather location?</h3>
+      </div>
+      <div class="instruction-card-bottom">
+        <div class="instruction-card-icon">
+          <p class="instruction-icon">🌦️</p>
+        </div>
+        <p class="instruction-description">
+          Click on the current location in the widget and type out
+          <i>your own</i>
+          location.
+        </p>
+      </div>
+    </div>
+    <div class="instruction-card faq-card">
+      <div class="instruction-card-top">
+        <span class="instruction-number">?</span>
+        <h3 class="instruction-title">Why can't I install it?</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -526,8 +582,8 @@
             >
               <path
                 xmlns="http://www.w3.org/2000/svg"
-                d="M10 12H14M12 10V14M21.0039 12C21.0039 16.9706 16.9745 21 12.0039 21C9.9675 21 3.00463 21 3.00463 21C3.00463 21 4.56382 17.2561 3.93982 16.0008C3.34076 14.7956 3.00391 13.4372 3.00391 12C3.00391 7.02944 7.03334 3 12.0039 3C16.9745 3 21.0039 7.02944 21.0039 12Z"
-                stroke-width="2"
+                d="M13 3H8.2C7.0799 3 6.51984 3 6.09202 3.21799C5.71569 3.40973 5.40973 3.71569 5.21799 4.09202C5 4.51984 5 5.0799 5 6.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.0799 21 8.2 21H15.8C16.9201 21 17.4802 21 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C19 19.4802 19 18.9201 19 17.8V9M13 3L19 9M13 3V7.4C13 7.96005 13 8.24008 13.109 8.45399C13.2049 8.64215 13.3578 8.79513 13.546 8.89101C13.7599 9 14.0399 9 14.6 9H19M9.86328 16.6057L14.1007 12.3582M15 14.5C15 16.1569 13.6569 17.5 12 17.5C10.3431 17.5 9 16.1569 9 14.5C9 12.8431 10.3431 11.5 12 11.5C13.6569 11.5 15 12.8431 15 14.5Z"
+                stroke-width="1.8 "
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
@@ -535,10 +591,100 @@
           </p>
         </div>
         <p class="instruction-description">
-          Use "<code>quick add</code>" to save a shortcut. Enter a
-          <code>name</code>: (eg. <i style="font-weight: 600">google</i>), then
-          a <code>value</code> <i>(URL)</i>: (e.g.
-          <i style="font-weight: 600">https://google.com</i>)
+          On school laptops or school <i>wifi</i>, it might be <b>blocked</b>.
+          Try a different browser or use
+          <a
+            href="https://chromewebstore.google.com/detail/smartschool++-lite/dogkhghdahlgebhojaaoijdcadmebkcg"
+            target="_blank"
+            >Lite</a
+          >.
+        </p>
+      </div>
+    </div>
+    <div class="instruction-card faq-card">
+      <div class="instruction-card-top">
+        <span class="instruction-number">?</span>
+        <h3 class="instruction-title">
+          Can I use Smarter/Smartest Smartschool?
+        </h3>
+      </div>
+      <div class="instruction-card-bottom">
+        <div class="instruction-card-icon">
+          <p class="instruction-icon">
+            <img
+              src="media/smartestSmartschoolLogo.png"
+              alt="Smartest Smartschool logo"
+              style="border-radius: 1rem"
+            />
+          </p>
+        </div>
+        <p class="instruction-description">
+          Yes, both
+          <a
+            href="https://chromewebstore.google.com/detail/smarter-smartschool/lbpdknjafmmnemenflppkofaakldbfom"
+            target="_blank"
+            >Smarter Smartschool</a
+          >
+          and <br />
+          <a
+            href="https://chromewebstore.google.com/detail/smartest-smartschool/hamjjkjpoeaomembdbcfegkmblbocgke"
+            target="_blank"
+            >Smartest Smartschool</a
+          >
+          are compatible<br />
+          But don't forget to disable the <i>Smarter</i> themes
+        </p>
+      </div>
+    </div>
+    <div class="instruction-card faq-card">
+      <div class="instruction-card-top">
+        <span class="instruction-number">?</span>
+        <h3 class="instruction-title">On which browsers can I install?</h3>
+      </div>
+      <div class="instruction-card-bottom">
+        <div class="instruction-card-icon">
+          <p class="instruction-icon">
+            <img src="media/firefoxLogo.png" alt="Firefox logo" width="100%" />
+          </p>
+        </div>
+        <p class="instruction-description">
+          You can use any
+          <a
+            href="https://alternativeto.net/category/browsers/chromium-based/"
+            target="_blank"
+            >Chromium</a
+          >
+          based browser like Opera or Edge. <b>Firefox</b> users can follow our
+          guide on
+          <a href="https://discord.gg/qCHZYepDqZ" target="_blank">Discord</a>.
+        </p>
+      </div>
+    </div>
+    <div class="instruction-card faq-card">
+      <div class="instruction-card-top">
+        <span class="instruction-number">?</span>
+        <h3 class="instruction-title">Other questions?</h3>
+      </div>
+      <div class="instruction-card-bottom">
+        <div class="instruction-card-icon">
+          <p class="instruction-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="Discord-Logo"
+              viewBox="0 0 127 96"
+            >
+              <path
+                id="Discord-Symbol-Blurple"
+                style="fill: var(--accent-text); stroke: var(--accent-text)"
+                d="M81.15,0c-1.2376,2.1973-2.3489,4.4704-3.3591,6.794-9.5975-1.4396-19.3718-1.4396-28.9945,0-.985-2.3236-2.1216-4.5967-3.3591-6.794-9.0166,1.5407-17.8059,4.2431-26.1405,8.0568C2.779,32.5304-1.6914,56.3725.5312,79.8863c9.6732,7.1476,20.5083,12.603,32.0505,16.0884,2.6014-3.4854,4.8998-7.1981,6.8698-11.0623-3.738-1.3891-7.3497-3.1318-10.8098-5.1523.9092-.6567,1.7932-1.3386,2.6519-1.9953,20.281,9.547,43.7696,9.547,64.0758,0,.8587.7072,1.7427,1.3891,2.6519,1.9953-3.4601,2.0457-7.0718,3.7632-10.835,5.1776,1.97,3.8642,4.2683,7.5769,6.8698,11.0623,11.5419-3.4854,22.3769-8.9156,32.0509-16.0631,2.626-27.2771-4.496-50.9172-18.817-71.8548C98.9811,4.2684,90.1918,1.5659,81.1752.0505l-.0252-.0505ZM42.2802,65.4144c-6.2383,0-11.4159-5.6575-11.4159-12.6535s4.9755-12.6788,11.3907-12.6788,11.5169,5.708,11.4159,12.6788c-.101,6.9708-5.026,12.6535-11.3907,12.6535ZM84.3576,65.4144c-6.2637,0-11.3907-5.6575-11.3907-12.6535s4.9755-12.6788,11.3907-12.6788,11.4917,5.708,11.3906,12.6788c-.101,6.9708-5.026,12.6535-11.3906,12.6535Z"
+              ></path>
+            </svg>
+          </p>
+        </div>
+        <p class="instruction-description">
+          You can reach out in our <i>official</i> Smartschool++
+          <a href="https://discord.gg/qCHZYepDqZ" target="_blank">Discord</a>
+          server.
         </p>
       </div>
     </div>
