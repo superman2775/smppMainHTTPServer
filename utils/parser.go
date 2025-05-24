@@ -111,6 +111,5 @@ func ParseMd(mdText string) string {
 	if insideList {
 		builder.WriteString("</ul>")
 	}
-
 	return builder.String()
 }
