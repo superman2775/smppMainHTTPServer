@@ -12,10 +12,11 @@ html {
   --border-color: #cccccc;
   --button-hover: #292929;
   --highlight-shadow: #727de4;
-  --background-card: rgba(68, 68, 68, 0.5);
+  --background-card: rgba(50, 50, 50, 0.5);
+  --background-ui: rgba(39, 39, 39, 0.5);
   --transparent-image-background: rgba(36, 36, 36, 0.54);
   --red: #e34660;
-  --green: #58b95b;
+  --green: #75e678;
 }
 
 ::selection,

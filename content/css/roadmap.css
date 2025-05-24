@@ -116,7 +116,8 @@ li {
 @media (max-width: 1170px) {
   .card {
     width: 90% !important;
-    padding: 0 0.5rem 0.25rem 0.5rem !important;
+    padding: 0.5rem !important;
+    padding-left: 1rem !important;
     margin-bottom: 2rem !important;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.323) inset,
       0px 0px 20px 2px var(--shadow) !important;

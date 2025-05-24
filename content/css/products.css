@@ -1,0 +1,197 @@
+.product-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.product-top-container {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.product-top-line {
+  width: 0.25rem;
+  background-color: var(--text);
+  opacity: 0.7;
+  border-radius: 1000px;
+  margin: 0rem 5rem;
+}
+.smpp-logo-big {
+  width: 22.5rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 40px 10px var(--shadow);
+  transition: all 0.2s ease-in-out;
+}
+.smpp-logo-big:hover {
+  transform: scale(1.05);
+}
+#smpp-main-logo-big:hover {
+  box-shadow: 0px 0px 50px 0px #383da5;
+}
+#smpp-lite-logo-big:hover {
+  box-shadow: 0px 0px 60px -10px #a2aad7;
+}
+.product-main-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.product-main-description {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  width: 17rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background-ui);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 20px 0px var(--shadow),
+    0px 0px 10px 0px var(--shadow) inset;
+  font-weight: 500;
+  opacity: 0.8;
+}
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+p {
+  margin-top: 0;
+}
+.table-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0.5rem 1rem;
+  font-size: 1.3rem;
+  background-color: var(--background);
+  box-shadow: 0px 0px 30px 5px var(--shadow);
+  border-radius: 2rem;
+  padding: 0rem 0.5rem;
+}
+
+.comparison-table thead th {
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.comparison-table .subhead th {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: var(--text);
+}
+
+.comparison-table td,
+.comparison-table th {
+  padding: 12px 16px;
+  background-color: var(--background-ui);
+  box-shadow: 0px 0px 10px -5px var(--shadow);
+  text-align: center;
+  border-radius: 0.75rem;
+}
+
+.comparison-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.check {
+  fill: var(--green);
+  stroke: var(--green);
+}
+
+.cross {
+  fill: var(--red);
+  stroke: var(--red);
+}
+.visible-when-small-text {
+  display: none;
+}
+.table-header {
+  width: 15rem;
+}
+@media (max-width: 1170px) {
+  .product-top-container {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  .product-top-line {
+    width: 0.25rem;
+    background-color: var(--text);
+    opacity: 0.7;
+    border-radius: 1000px;
+    margin: 0rem 1rem;
+  }
+  .product-main-title {
+    font-size: 1.1rem;
+    max-width: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .product-main-description {
+    display: none;
+  }
+  .smpp-logo-big {
+    width: 10rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px 0px var(--shadow);
+    transition: all 0.2s ease-in-out;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+  .comparison-table {
+    border-spacing: 0.25rem 0.5rem;
+    font-size: 1.1rem;
+    background-color: var(--background);
+    box-shadow: 0px 0px 20px 0px var(--shadow);
+  }
+
+  .comparison-table thead th {
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .comparison-table .subhead th {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--text);
+  }
+
+  .comparison-table td,
+  .comparison-table th {
+    background-color: var(--background-ui);
+    box-shadow: 0px 0px 10px -5px var(--shadow);
+    text-align: center;
+    border-radius: 0.75rem;
+  }
+  .smartschool-text-in-table {
+    display: none;
+  }
+  .visible-when-small-text {
+    display: block;
+  }
+  .table-header {
+    width: 3rem;
+  }
+  main {
+    width: 100%;
+  }
+}
