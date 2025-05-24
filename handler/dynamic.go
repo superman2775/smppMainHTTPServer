@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -97,9 +96,10 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var markdownHTML template.HTML
-	fmt.Print(page)
-	if page == "roadmap" || page == "release-notes" {
-		fmt.Print(page)
+
+	markdownPath := filepath.Join("content", "md", page+".md")
+
+	if _, err := os.Stat(markdownPath); err == nil {
 		mdPath := filepath.Join("content", "md", page+".md")
 		mdTextBytes, err := os.ReadFile(mdPath)
 		if err != nil {
@@ -109,7 +109,6 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		// Parse the markdown to HTML
 		markdownHTML = template.HTML(utils.ParseMd(string(mdTextBytes))) // Mark it as raw HTML
-		fmt.Print(markdownHTML)
 	}
 	data := struct {
 		Page         string
