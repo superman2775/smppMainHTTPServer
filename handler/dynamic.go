@@ -108,7 +108,7 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		// Parse the markdown to HTML
-		markdownHTML = template.HTML(utils.ParseMd(string(mdTextBytes))) // Mark it as raw HTML
+		markdownHTML = template.HTML(utils.ParseMd(string(mdTextBytes), page)) // Mark it as raw HTML
 	}
 	data := struct {
 		Page         string

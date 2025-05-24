@@ -115,7 +115,7 @@ li {
 
 @media (max-width: 1170px) {
   .card {
-    width: 90% !important;
+    width: 87.5% !important;
     padding: 0.5rem !important;
     padding-left: 1rem !important;
     margin-bottom: 2rem !important;
@@ -128,7 +128,7 @@ li {
     margin-bottom: 2rem !important;
   }
   .first-card .card {
-    width: calc(100% - 1rem) !important;
+    width: calc(100% - 1.5rem) !important;
     border-radius: 2.7rem !important;
   }
   .upcoming-update {

@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func ParseMd(mdText string) string {
+func ParseMd(mdText string, page string) string {
 	lines := strings.Split(mdText, "\n")
 	var builder strings.Builder
 	insideCard := false
@@ -47,7 +47,9 @@ func ParseMd(mdText string) string {
 			// If this is the first card, open wrapper and add label
 			if !firstCardMade {
 				builder.WriteString(`<div class="first-card">` + "\n")
-				builder.WriteString(`<div class="upcoming-update">Upcoming</div>` + "\n")
+				if page == "roadmap" {
+					builder.WriteString(`<div class="upcoming-update">Upcoming</div>` + "\n")
+				}
 				firstCardOpen = true
 				firstCardMade = true
 			}

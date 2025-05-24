@@ -50,6 +50,9 @@
     0 0 0.2em rgb(121, 127, 209);
   color: var(--white-text);
 }
+.accent-text:hover {
+  text-decoration: none;
+}
 
 .main-title {
   font-size: 3rem;
@@ -131,6 +134,7 @@ main {
   box-shadow: 0 0 40px 7px var(--highlight-shadow);
   scale: 1.02;
   z-index: 1;
+  text-decoration: none;
 }
 
 .try-now-button:hover .try-now-arrow,
