@@ -45,11 +45,11 @@ body {
 }
 
 .milestone-card.left {
-  left: 0;
+  right: 5rem;
 }
 
 .milestone-card.right {
-  right: 0;
+  left: 30rem;
 }
 
 .milestone-icon {
