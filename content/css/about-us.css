@@ -1,6 +1,6 @@
 body {
   background: var(--background-color);
-  color: var(--text);
+  color: var(--text-color);
   min-height: 200vh;
 }
 
@@ -14,7 +14,7 @@ body {
   position: absolute;
   left: 50%;
   width: 0.25rem;
-  background: var(--text);
+  background: var(--text-color);
   height: calc(100% - 6.25rem);
   transform: translateX(-50%);
   top: 3.125rem;
@@ -36,7 +36,7 @@ body {
 }
 
 .milestone-card {
-  background: var(--background-card);
+  background: var(--background-ui2);
   padding: 2rem;
   border-radius: 0.9375rem;
   box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
@@ -62,7 +62,7 @@ body {
   justify-content: center;
   position: absolute;
   top: 0rem;
-  color: var(--text);
+  color: var(--text-color);
   font-size: 1.5rem;
   z-index: 2;
 }

@@ -1,7 +1,7 @@
 #top-title {
   font-weight: 900;
   font-size: 1.9em;
-  color: var(--text);
+  color: var(--text-color);
   overflow: visible;
   margin-top: 2rem;
   margin-bottom: 8rem;
@@ -48,7 +48,7 @@
   font-weight: 600;
   text-shadow: 1px 1px 2px rgb(62, 73, 232), 0 0 1em rgb(83, 95, 250),
     0 0 0.2em rgb(121, 127, 209);
-  color: var(--white-text);
+  color: var(--white);
 }
 .accent-text:hover {
   text-decoration: none;
@@ -78,7 +78,7 @@ main {
 }
 
 .try-now-arrow {
-  stroke: var(--white-text);
+  stroke: var(--white);
   transition: all 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
@@ -119,7 +119,7 @@ main {
   border-radius: 3rem;
   border: none;
   text-decoration: none;
-  color: var(--white-text);
+  color: var(--white);
   padding: 2rem 3rem;
   display: flex;
   flex-direction: row;
@@ -131,7 +131,7 @@ main {
 }
 
 .try-now-button:hover {
-  box-shadow: 0 0 40px 7px var(--highlight-shadow);
+  box-shadow: 0 0 40px 7px var(--highlight-shadow-color);
   scale: 1.02;
   z-index: 1;
   text-decoration: none;
@@ -157,7 +157,7 @@ main {
   border-radius: 2rem;
   padding: 1rem;
   padding-top: 0.5rem;
-  background-color: var(--background-card);
+  background-color: var(--background-ui1);
   backdrop-filter: blur(10px);
   transform: scale(0.6);
   opacity: 0;
@@ -171,14 +171,14 @@ main {
   transform: scale(1) translateX(0);
   opacity: 1;
   z-index: 10;
-  box-shadow: 0px 0px 45px 10px var(--shadow);
+  box-shadow: 0px 0px 45px 10px var(--shadow-color);
 }
 
 .preview-img-container.prev,
 .preview-img-container.next {
   opacity: 0.9;
   z-index: 1;
-  box-shadow: 0px 0px 45px 10px var(--shadow);
+  box-shadow: 0px 0px 45px 10px var(--shadow-color);
 }
 
 .preview-img-container.active:hover {
@@ -283,11 +283,11 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  background-color: var(--button-background);
+  background-color: var(--background-ui1);
 }
 
 .theme-preview-button:hover {
-  background-color: var(--background-card);
+  background-color: var(--background-ui1);
   backdrop-filter: blur(10px);
 }
 
@@ -299,7 +299,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 .prev-arrow,
 .next-arrow {
   transition: all 0.2s ease-in;
-  stroke: var(--text);
+  stroke: var(--text-color);
   width: 3rem;
   height: 3rem;
 }
@@ -317,7 +317,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   100% {
     scale: 0.5;
     opacity: 0;
-    box-shadow: 0px 0px 45px 10px var(--shadow);
+    box-shadow: 0px 0px 45px 10px var(--shadow-color);
   }
 }
 
@@ -377,9 +377,9 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   border-radius: 50%;
   aspect-ratio: 1;
   width: 15rem;
-  background-color: var(--background-card);
+  background-color: var(--background-ui2);
   backdrop-filter: blur(10px);
-  box-shadow: 0px 0px 45px 10px var(--shadow);
+  box-shadow: 0px 0px 45px 10px var(--shadow-color);
   position: relative;
 }
 
@@ -389,12 +389,12 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   transform-origin: bottom center;
   left: calc(-0.5rem + 50%);
   top: calc(-0.5rem + 50%);
-  background-color: var(--white-text);
+  background-color: var(--white);
   width: 1rem;
   transform: rotate(0deg);
   border-radius: 0.5rem;
   transition: transform 0.75s cubic-bezier(0.58, 0.14, 0.44, 1.2);
-  box-shadow: 0px 0px 30px 1px var(--shadow);
+  box-shadow: 0px 0px 30px 1px var(--shadow-color);
 }
 
 .clock-point {
@@ -414,11 +414,11 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 .clock-point:hover {
   scale: 1.05;
   cursor: pointer;
-  box-shadow: 0px 0px 10px 0px var(--highlight-shadow);
+  box-shadow: 0px 0px 10px 0px var(--highlight-shadow-color);
 }
 
 .clock-point.active {
-  box-shadow: 0px 0px 10px 0px var(--highlight-shadow);
+  box-shadow: 0px 0px 10px 0px var(--highlight-shadow-color);
   opacity: 1;
 }
 
@@ -460,7 +460,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   aspect-ratio: 1;
   border-radius: 1rem;
   transition: all 0.25s ease-in-out;
-  background-color: var(--button-background);
+  background-color: var(--background-ui1);
   display: flex;
   justify-content: center;
 }
@@ -475,7 +475,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 #time-forward-button:hover,
 #time-back-button:hover {
-  background-color: var(--background-card);
+  background-color: var(--background-ui1);
   backdrop-filter: blur(10px);
   cursor: pointer;
   transform: scaleX(1.1);
@@ -487,7 +487,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 }
 
 .clock-control-svg {
-  fill: var(--text);
+  fill: var(--text-color);
   aspect-ratio: 1;
   width: 3rem;
   transition: all 0.25s ease-in-out;
@@ -497,7 +497,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   border-radius: 2rem;
   padding: 1rem;
   padding-top: 0.5rem;
-  background-color: var(--background-card);
+  background-color: var(--background-ui1);
   backdrop-filter: blur(10px);
   opacity: 1;
   transition: all 0.3s ease-in-out;
@@ -505,7 +505,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  box-shadow: 0px 0px 45px 10px var(--shadow);
+  box-shadow: 0px 0px 45px 10px var(--shadow-color);
 }
 
 .preview-prod-top {
@@ -527,7 +527,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 #preview-prod-img {
   width: 800px;
-  height: auto;
+  height: 100%;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
 }
@@ -572,7 +572,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   padding: 1.5rem;
   aspect-ratio: 1;
   flex-grow: 1;
-  background-color: var(--background-card);
+  background-color: var(--background-ui1);
   overflow: visible;
 }
 
@@ -580,7 +580,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   flex-grow: 1;
   padding: 1.5rem;
   aspect-ratio: 1;
-  background-color: var(--background-card);
+  background-color: var(--background-ui1);
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -616,7 +616,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   padding: 0.5rem;
   border-radius: 2rem;
   flex-grow: 1;
-  background-color: var(--background-card);
+  background-color: var(--background-ui2);
   transition: all 0.25s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -628,7 +628,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 #fun-app-gallery {
   width: calc(50% - 4.5rem);
   border-radius: 3rem;
-  box-shadow: 0px 0px 45px 10px var(--shadow);
+  box-shadow: 0px 0px 45px 10px var(--shadow-color);
   z-index: 1;
 }
 
@@ -643,19 +643,23 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 .fun-app-container:hover {
   scale: 1.1;
   cursor: pointer;
-  box-shadow: 0px 0px 50px 15px var(--shadow),
+  box-shadow: 0px 0px 50px 15px var(--shadow-color),
     inset 0px 0px 50px 0px
-      color-mix(in srgb, var(--highlight-shadow) 30%, var(--shadow) 70%);
+      color-mix(
+        in srgb,
+        var(--highlight-shadow-color) 30%,
+        var(--shadow-color) 70%
+      );
 }
 
 .fun-app-container.active {
   box-shadow: 0px 0px 50px 5px transparent,
-    inset 0px 0px 50px 10px var(--highlight-shadow);
+    inset 0px 0px 50px 10px var(--highlight-shadow-color);
 }
 
 .fun-app-container.active:hover {
-  box-shadow: 0px 0px 50px 5px var(--shadow),
-    inset 0px 0px 50px 0px var(--highlight-shadow);
+  box-shadow: 0px 0px 50px 5px var(--shadow-color),
+    inset 0px 0px 50px 0px var(--highlight-shadow-color);
 }
 
 .fun-app-icon {
@@ -693,7 +697,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 #volume-icon {
   width: 25rem;
   aspect-ratio: 1;
-  fill: var(--text);
+  fill: var(--text-color);
   transition: all 0.25s;
 }
 
@@ -703,7 +707,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 }
 
 .volume-icon-hover:hover .volume-icon-x {
-  fill: var(--text);
+  fill: var(--text-color);
 }
 
 .volume-icon-hover:hover {
@@ -898,7 +902,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   #fun-app-gallery {
     width: 100%;
     border-radius: 2.5rem;
-    box-shadow: 0px 0px 45px 10px var(--shadow);
+    box-shadow: 0px 0px 45px 10px var(--shadow-color);
     z-index: 1;
     padding: 0.5rem;
   }

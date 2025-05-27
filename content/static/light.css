@@ -1,20 +1,17 @@
 html {
   --accent: #4a50d9;
-  --accent-text: #434eec;
   --background: #f2f0e3;
   --transparent-background: rgba(229, 228, 211, 0.516);
-  --shadow: rgba(117, 117, 117, 0.71);
-  --button: #4c56e0;
-  --button-background: rgba(218, 216, 203, 0.5);
-  --text: #2e2e2e;
-  --white-text: var(--background);
-  --black-text: var(--text);
+  --shadow-color: rgba(117, 117, 117, 0.71);
+  --button: #434ede;
+  --text-color: #2e2e2e;
   --border-color: #343434;
-  --button-hover: #e3e1d4;
-  --highlight-shadow: #6b75fe;
-  --background-card: rgba(221, 219, 206, 0.5);
-  --background-ui: rgba(224, 222, 209, 0.5);
-  --transparent-image-background: rgba(239, 239, 230, 0.514);
+  --highlight-shadow-color: #6b75fe;
+  --background-ui1: rgba(224, 222, 209, 0.5);
+  --background-ui2: rgba(221, 219, 206, 0.5);
+  --transparent-image-background: rgba(239, 239, 230, 0.5);
+  --white: var(--background);
+  --black: var(--text-color);
   --red: #ce4b4e;
   --green: #8edf76;
 }

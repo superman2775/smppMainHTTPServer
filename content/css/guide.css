@@ -14,7 +14,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  box-shadow: 0px 0px 50px 5px var(--shadow);
+  box-shadow: 0px 0px 50px 5px var(--shadow-color);
   background-color: var(--transparent-background);
   padding: 1.5rem;
   padding-left: 0.5rem;
@@ -38,19 +38,19 @@ html {
   display: none;
 }
 .guide-button svg {
-  stroke: var(--text);
+  stroke: var(--text-color);
 }
 .guide-button:hover {
-  background-color: var(--background-card);
+  background-color: var(--background-ui2);
   cursor: pointer;
   scale: 1.05;
 }
 .guide-button.active {
   background-color: var(--button);
-  color: var(--white-text);
+  color: var(--white);
 }
 .guide-button.active svg {
-  stroke: var(--white-text);
+  stroke: var(--white);
 }
 .guide-button-icon {
   width: 2rem;
@@ -77,8 +77,8 @@ section {
   right: 1rem;
   background-color: var(--green);
   box-shadow: 0px 0px 25px 0px
-    color-mix(in srgb, var(--shadow) 70%, var(--green) 30%);
-  color: var(--white-text);
+    color-mix(in srgb, var(--shadow-color) 70%, var(--green) 30%);
+  color: var(--white);
   font-weight: 600;
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
@@ -107,7 +107,7 @@ kbd {
   font-family: "JetBrains Mono", monospace;
   border: 2px solid var(--background);
   box-shadow: 0px 0.25em 10px 0px var(--background) inset,
-    0px 0.15em 10px 0px var(--shadow);
+    0px 0.15em 10px 0px var(--shadow-color);
   padding: 0 0.2em;
   border-radius: 0.65rem;
   cursor: default;
@@ -126,7 +126,7 @@ h2 {
   margin-bottom: 0rem;
 }
 .guide-toggle-arrow {
-  stroke: var(--text);
+  stroke: var(--text-color);
   transition: all 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   rotate: -90deg;
@@ -138,15 +138,15 @@ h2 {
 
 .instruction-card {
   border-radius: 2rem;
-  background-color: var(--background-card);
-  box-shadow: 0px 0px 20px 0px var(--shadow) inset,
-    0px 0px 30px 5px var(--shadow);
+  background-color: var(--background-ui2);
+  box-shadow: 0px 0px 20px 0px var(--shadow-color) inset,
+    0px 0px 30px 5px var(--shadow-color);
   max-width: 30rem;
   transition: all 0.25s ease-in-out;
 }
 
 .instruction-icon {
-  stroke: var(--text);
+  stroke: var(--text-color);
   width: 4rem;
   font-size: 3rem;
   margin: 0;
@@ -164,10 +164,10 @@ h2 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--white-text);
+  color: var(--white);
   box-shadow: 0px 0px 2px
-      color-mix(in srgb, var(--button) 10%, var(--black-text) 90%) inset,
-    0px 0px 10px 0px var(--shadow);
+      color-mix(in srgb, var(--button) 10%, var(--black) 90%) inset,
+    0px 0px 10px 0px var(--shadow-color);
   z-index: 10;
 }
 
@@ -230,10 +230,10 @@ h2 {
     justify-content: center;
   }
   #guide-menu.active {
-    filter: drop-shadow(0px 0px 10px var(--shadow));
+    filter: drop-shadow(0px 0px 10px var(--shadow-color));
   }
   #guide-menu:not(.active) #guide-menu-toggle {
-    box-shadow: 0px 0px 10px var(--shadow);
+    box-shadow: 0px 0px 10px var(--shadow-color);
   }
   .instruction-card {
     margin-left: 0 !important;

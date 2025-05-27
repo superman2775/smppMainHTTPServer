@@ -2,7 +2,7 @@ html {
   --icon-size: 2.5rem;
   font-family: "Montserrat", sans-serif;
   background-color: var(--background);
-  color: var(--text);
+  color: var(--text-color);
   display: flex;
   justify-content: center;
 }
@@ -25,7 +25,7 @@ button {
   background: none;
   line-height: normal;
   vertical-align: baseline;
-  color: var(--text);
+  color: var(--text-color);
 }
 
 body {
@@ -51,7 +51,7 @@ header {
 }
 
 .is-scrolled header {
-  box-shadow: 0px 20px 50px 5px var(--shadow);
+  box-shadow: 0px 20px 50px 5px var(--shadow-color);
   background-color: var(--transparent-background);
   padding: 2rem;
   padding-top: 0.5rem;
@@ -95,7 +95,7 @@ main {
 }
 
 .top-sub-menu {
-  box-shadow: 0px 0px 50px 5px var(--shadow);
+  box-shadow: 0px 0px 50px 5px var(--shadow-color);
   border: 3px solid var(--border-color);
   padding: 0.75rem;
   opacity: 0;
@@ -116,7 +116,7 @@ main {
 }
 
 .top-nav-arrow {
-  stroke: var(--text);
+  stroke: var(--text-color);
   transition: all 0.15s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -124,7 +124,7 @@ main {
 .top-nav-menu-button {
   border: none;
   background-color: transparent;
-  color: var(--text);
+  color: var(--text-color);
   font-weight: 500;
   font-size: 1.2em;
   text-align: center;
@@ -146,13 +146,13 @@ main {
   padding: 0.75rem;
   border-radius: 1rem;
   transition: all 0.15s ease-in-out;
-  color: var(--text);
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .top-nav-menu-card:hover {
   cursor: pointer;
-  background-color: var(--button-hover);
+  background-color: var(--background-ui1);
   text-decoration: none;
 }
 
@@ -251,7 +251,7 @@ main {
 }
 
 .take-off-icon {
-  stroke: var(--white-text);
+  stroke: var(--white);
   height: 3rem;
   aspect-ratio: 1;
   transform-origin: center;
@@ -269,7 +269,7 @@ main {
     rgb(62, 73, 232) 0%,
     rgb(121, 127, 209) 100%
   );
-  color: var(--white-text);
+  color: var(--white);
   border-radius: 1rem;
   padding: 0.75rem;
   display: flex;
@@ -281,7 +281,7 @@ main {
 }
 
 .take-off-button:hover {
-  box-shadow: 0 0 20px var(--highlight-shadow);
+  box-shadow: 0 0 20px var(--highlight-shadow-color);
   scale: 1.02;
 }
 
@@ -295,7 +295,7 @@ main {
   border-radius: 10px;
   border: none;
   text-decoration: none;
-  color: var(--white-text);
+  color: var(--white);
   padding: 8px 12px;
   display: flex;
   flex-direction: row;
@@ -319,7 +319,7 @@ main {
 }
 
 .download-button-arrow {
-  stroke: var(--white-text);
+  stroke: var(--white);
   transition: all 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
@@ -393,7 +393,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: var(--text);
+  color: var(--text-color);
   height: fit-content;
   background-color: transparent;
   gap: 10px;
@@ -413,7 +413,7 @@ main {
 }
 
 #home-button:hover {
-  color: var(--accent-text);
+  color: var(--accent);
 }
 
 footer {
@@ -445,7 +445,7 @@ footer {
 #mobile-menu.mobile-menu-open {
   z-index: 40;
   transform: translateX(0px);
-  box-shadow: 0px 0px 54px 11px var(--shadow);
+  box-shadow: 0px 0px 54px 11px var(--shadow-color);
 }
 
 #mobile-menu {
@@ -480,7 +480,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 2px solid var(--text-color);
   padding-bottom: 1rem;
 }
 
@@ -517,7 +517,7 @@ footer {
   display: flex;
   background-image: none;
   align-items: center;
-  color: var(--text);
+  color: var(--text-color);
   text-decoration: none;
   flex-direction: row;
   gap: 0.3rem;
@@ -536,7 +536,7 @@ footer {
   }
 
   .is-scrolled header {
-    box-shadow: 0px 20px 50px 5px var(--shadow);
+    box-shadow: 0px 20px 50px 5px var(--shadow-color);
     background-color: var(--transparent-background);
     padding: 0rem 1rem 0.5rem 1rem;
   }

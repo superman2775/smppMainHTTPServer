@@ -11,7 +11,7 @@
 }
 .product-top-line {
   width: 0.25rem;
-  background-color: var(--text);
+  background-color: var(--text-color);
   opacity: 0.7;
   border-radius: 1000px;
   margin: 0rem 5rem;
@@ -19,7 +19,7 @@
 .smpp-logo-big {
   width: 22.5rem;
   border-radius: 3rem;
-  box-shadow: 0px 0px 40px 10px var(--shadow);
+  box-shadow: 0px 0px 40px 10px var(--shadow-color);
   transition: all 0.2s ease-in-out;
 }
 .smpp-logo-big:hover {
@@ -42,11 +42,11 @@
   width: 17rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--background-ui);
+  background-color: var(--background-ui1);
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  box-shadow: 0px 0px 20px 0px var(--shadow),
-    0px 0px 10px 0px var(--shadow) inset;
+  box-shadow: 0px 0px 20px 0px var(--shadow-color),
+    0px 0px 10px 0px var(--shadow-color) inset;
   font-weight: 500;
   opacity: 0.8;
 }
@@ -69,12 +69,13 @@ h2 {
 }
 
 .comparison-table {
+  transition: all 0.2s ease-in-out;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0.5rem 1rem;
   font-size: 1.3rem;
   background-color: var(--background);
-  box-shadow: 0px 0px 30px 5px var(--shadow);
+  box-shadow: 0px 0px 30px 5px var(--shadow-color);
   border-radius: 2rem;
   padding: 0rem 0.5rem;
 }
@@ -84,20 +85,20 @@ h2 {
   text-align: center;
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--text);
+  color: var(--text-color);
 }
 
 .comparison-table .subhead th {
   font-size: 1.1rem;
   font-weight: normal;
-  color: var(--text);
+  color: var(--text-color);
 }
 
 .comparison-table td,
 .comparison-table th {
   padding: 12px 16px;
-  background-color: var(--background-ui);
-  box-shadow: 0px 0px 10px -5px var(--shadow);
+  background-color: var(--background-ui1);
+  box-shadow: 0px 0px 10px -5px var(--shadow-color);
   text-align: center;
   border-radius: 0.75rem;
 }
@@ -131,13 +132,13 @@ h2 {
   }
   .product-top-line {
     width: 0.25rem;
-    background-color: var(--text);
+    background-color: var(--text-color);
     opacity: 0.7;
     border-radius: 1000px;
     margin: 0rem 1rem;
   }
   .product-main-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     max-width: 8rem;
     margin-left: auto;
     margin-right: auto;
@@ -149,8 +150,7 @@ h2 {
   .smpp-logo-big {
     width: 10rem;
     border-radius: 2rem;
-    box-shadow: 0px 0px 20px 0px var(--shadow);
-    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 0px 20px 0px var(--shadow-color);
   }
   h1 {
     font-size: 1.8rem;
@@ -160,7 +160,7 @@ h2 {
     border-spacing: 0.25rem 0.5rem;
     font-size: 1.1rem;
     background-color: var(--background);
-    box-shadow: 0px 0px 20px 0px var(--shadow);
+    box-shadow: 0px 0px 20px 0px var(--shadow-color);
   }
 
   .comparison-table thead th {
@@ -172,13 +172,13 @@ h2 {
   .comparison-table .subhead th {
     font-size: 1.1rem;
     font-weight: normal;
-    color: var(--text);
+    color: var(--text-color);
   }
 
   .comparison-table td,
   .comparison-table th {
-    background-color: var(--background-ui);
-    box-shadow: 0px 0px 10px -5px var(--shadow);
+    background-color: var(--background-ui1);
+    box-shadow: 0px 0px 10px -5px var(--shadow-color);
     text-align: center;
     border-radius: 0.75rem;
   }
