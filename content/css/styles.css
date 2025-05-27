@@ -1,5 +1,10 @@
 html {
   --icon-size: 2.5rem;
+  --button-gradient: linear-gradient(
+    60deg,
+    rgb(62, 73, 232) 0%,
+    rgb(121, 127, 209) 100%
+  );
   font-family: "Montserrat", sans-serif;
   background-color: var(--background);
   color: var(--text-color);
@@ -264,11 +269,7 @@ main {
 }
 
 .take-off-button {
-  background: linear-gradient(
-    60deg,
-    rgb(62, 73, 232) 0%,
-    rgb(121, 127, 209) 100%
-  );
+  background: var(--button-gradient);
   color: var(--white);
   border-radius: 1rem;
   padding: 0.75rem;
@@ -287,11 +288,7 @@ main {
 
 .download-button {
   gap: 5px;
-  background: linear-gradient(
-    60deg,
-    rgb(62, 73, 232) 0%,
-    rgb(121, 127, 209) 100%
-  );
+  background: var(--button-gradient);
   border-radius: 10px;
   border: none;
   text-decoration: none;

@@ -1,20 +1,20 @@
-body {
-  background: var(--background-color);
-  color: var(--text-color);
-  min-height: 200vh;
-}
-
-.timeline-container {
-  max-width: 75rem;
-  padding: 2rem;
+.main-content {
+  min-width: 60rem;
+  margin-bottom: 3rem;
   position: relative;
 }
 
 .timeline-line {
   position: absolute;
   left: 50%;
-  width: 0.25rem;
-  background: var(--text-color);
+  width: 0.5rem;
+  background: linear-gradient(
+    304deg,
+    rgba(46, 54, 171, 1) 10%,
+    rgba(62, 73, 232, 1) 33%,
+    rgba(121, 127, 209, 1) 66%,
+    rgba(153, 166, 240, 1) 90%
+  );
   height: calc(100% - 6.25rem);
   transform: translateX(-50%);
   top: 3.125rem;
@@ -22,84 +22,85 @@ body {
   border-radius: 1rem;
 }
 
-.timeline-milestone {
-  display: flex;
-  margin: 4rem 0;
-  opacity: 0;
-  transform: translateY(1.25rem);
-  transition: 1s;
-}
-
-.timeline-milestone.visible {
+.card.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.milestone-card {
-  background: var(--background-ui2);
-  padding: 2rem;
-  border-radius: 0.9375rem;
-  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
-  width: 45%;
-  position: relative;
-}
-
-.milestone-card.left {
-  right: 5rem;
-}
-
-.milestone-card.right {
-  left: 30rem;
-}
-
-.milestone-icon {
-  width: 3.125rem;
-  height: 3.125rem;
+.card-icon {
+  width: 3rem;
+  height: 3rem;
   background: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0rem;
-  color: var(--text-color);
+  color: var(--white);
   font-size: 1.5rem;
   z-index: 2;
 }
-.left .milestone-icon {
-  left: 17.9rem;
+
+.card:nth-child(odd) .card-icon {
+  top: 1rem;
+  left: 1rem;
 }
 
-.right .milestone-icon {
-  right: 17.9rem;
+.card:nth-child(even) .card-icon {
+  top: 1rem;
+  right: 1rem;
+}
+
+.first-card .card:nth-child(odd) .card-icon {
+  top: 1rem;
+  right: 1rem;
+  left: auto;
+}
+
+.first-card {
+  width: 100%;
+}
+
+.first-card .card:nth-child(odd) {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.card {
+  background: var(--background-ui1);
+  padding: 2rem;
+  border-radius: 2.5rem;
+  box-shadow: 0px 0px 10px 0px var(--shadow-color) inset,
+    0px 5px 30px 0px var(--shadow-color);
+  width: 37.5%;
+  position: relative;
+}
+
+.card:nth-child(odd) {
+  margin-left: auto;
+}
+
+.card:nth-child(even) {
+  margin-right: auto;
 }
 
 h2 {
   color: var(--accent);
   margin-bottom: 1rem;
+  margin-top: 0;
   font-size: 1.8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.highlight {
-  color: var(--accent);
-  font-weight: bold;
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1170px) {
-  .timeline-line,
-  .progress-line {
-    left: 1.25rem;
-    height: calc(100% - 5rem);
-    top: 2.5rem;
-  }
-
-  .milestone-card {
-    width: 80%;
-    margin-left: 3.75rem !important;
-  }
-
-  .milestone-icon {
-    left: 0rem !important;
-    right: auto !important;
-  }
 }

@@ -80,7 +80,9 @@ func ParseMd(mdText string, page string) string {
 			builder.WriteString("<h1>" + content + "</h1>\n")
 
 		} else if strings.HasPrefix(line, "IMG ") {
-			builder.WriteString(`<div class=backdrop-card-img style="background-image: url(` + strings.TrimPrefix(line, "IMG ") + `)"> <div class=backdrop-card></div></div>`)
+			builder.WriteString(`<div class=card-backdrop-img style="background-image: url(` + strings.TrimPrefix(line, "IMG ") + `)"> <div class=backdrop-card></div></div>`)
+		} else if strings.HasPrefix(line, "ICO ") {
+			builder.WriteString(`<div class=card-icon>` + strings.TrimPrefix(line, "ICO ") + `</div>`)
 		} else if strings.HasPrefix(line, "- ") {
 			line := strings.TrimPrefix(line, "- ")
 			if !insideList {

@@ -111,11 +111,7 @@ main {
 
 .try-now-button {
   gap: 1rem;
-  background: linear-gradient(
-    60deg,
-    rgb(62, 73, 232) 0%,
-    rgb(121, 127, 209) 100%
-  );
+  background: var(--button-gradient);
   border-radius: 3rem;
   border: none;
   text-decoration: none;
