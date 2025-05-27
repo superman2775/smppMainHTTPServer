@@ -96,18 +96,20 @@ func DynamicHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var markdownHTML template.HTML
-	if page == "roadmap" {
-		mdPath := filepath.Join("content", "md", "roadmap.md")
+
+	markdownPath := filepath.Join("content", "md", page+".md")
+
+	if _, err := os.Stat(markdownPath); err == nil {
+		mdPath := filepath.Join("content", "md", page+".md")
 		mdTextBytes, err := os.ReadFile(mdPath)
 		if err != nil {
-			http.Error(w, "Failed to read roadmap markdown", http.StatusInternalServerError)
-			log.Println("Error reading roadmap.md:", err)
+			http.Error(w, "Failed to read markdown", http.StatusInternalServerError)
+			log.Println("Error reading "+page+".md:", err)
 			return
 		}
 		// Parse the markdown to HTML
-		markdownHTML = template.HTML(utils.ParseMd(string(mdTextBytes))) // Mark it as raw HTML
+		markdownHTML = template.HTML(utils.ParseMd(string(mdTextBytes), page)) // Mark it as raw HTML
 	}
-
 	data := struct {
 		Page         string
 		ThemeCSS     string

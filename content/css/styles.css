@@ -8,12 +8,13 @@ html {
 }
 
 a {
-  color: var(--button);
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 button {
@@ -152,6 +153,7 @@ main {
 .top-nav-menu-card:hover {
   cursor: pointer;
   background-color: var(--button-hover);
+  text-decoration: none;
 }
 
 .top-nav-menu-card-title {
@@ -328,6 +330,7 @@ main {
 
 .download-button:hover {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .download-button:focus .clipped-smpp-logo,

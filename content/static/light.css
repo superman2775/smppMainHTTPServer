@@ -13,9 +13,10 @@ html {
   --button-hover: #e3e1d4;
   --highlight-shadow: #6b75fe;
   --background-card: rgba(221, 219, 206, 0.5);
+  --background-ui: rgba(224, 222, 209, 0.5);
   --transparent-image-background: rgba(239, 239, 230, 0.514);
   --red: #ce4b4e;
-  --green: #68b74f;
+  --green: #8edf76;
 }
 
 ::selection,
