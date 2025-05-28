@@ -494,6 +494,7 @@ main {
   gap: 1rem;
   padding-left: 1rem;
   margin: 0;
+  font-size: 1rem;
 }
 
 .mobile-menu-nav-list-item:focus,
@@ -552,6 +553,7 @@ li a {
 }
 ul {
   line-height: 2;
+  text-align: left;
 }
 .copy-right {
   font-weight: 500;
@@ -630,10 +632,17 @@ h4 {
   .gradient-box-wrapper {
     flex-direction: column;
     margin-bottom: -48rem;
+    margin-top: -10rem;
+    z-index: -100;
   }
   .gradient-box {
-    width: 300%;
-    height: 120rem;
+    width: 400%;
+    height: 110rem;
     margin-bottom: -40rem;
+  }
+  .footer-title {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
   }
 }
