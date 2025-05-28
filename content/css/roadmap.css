@@ -123,7 +123,7 @@ ul {
   font-size: 1.2rem;
   text-align: left;
 }
-li {
+li:not(.mobile-menu-nav-list-item) {
   margin-bottom: 1.5rem;
 }
 
@@ -166,7 +166,7 @@ li {
   p {
     margin-bottom: 1.25rem !important;
   }
-  li {
+  li:not(.mobile-menu-nav-list-item) {
     margin-bottom: 0.5rem;
   }
   ul {

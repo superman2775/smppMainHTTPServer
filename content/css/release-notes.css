@@ -73,7 +73,7 @@ main {
   p {
     margin-bottom: 1.25rem !important;
   }
-  li {
+  li:not(.mobile-menu-nav-list-item) {
     margin-bottom: 0.5rem;
   }
   ul {

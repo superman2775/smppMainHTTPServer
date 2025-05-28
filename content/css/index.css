@@ -726,7 +726,9 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   flex-direction: column;
   height: 100%;
 }
-
+.gradient-box-wrapper {
+  z-index: auto !important;
+}
 @media (max-width: 1170px) {
   #top-title {
     font-size: 0.8em;
