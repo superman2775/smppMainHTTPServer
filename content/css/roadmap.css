@@ -11,9 +11,17 @@
   background-color: var(--background-ui2);
   z-index: -2;
   width: 40rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.4s ease-in-out;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0rem) scale(1) !important;
 }
 .first-card .card {
   margin-bottom: 0rem !important;
+  transform: translateY(0rem) scale(0.95);
 }
 .card.dark {
   color: var(--white);
@@ -37,8 +45,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.4s ease-in-out;
 }
-
+.first-card.visible {
+  opacity: 1;
+  transform: translateY(0rem);
+}
 .backdrop-card {
   background-color: rgba(0, 0, 0, 0.21);
   -webkit-backdrop-filter: blur(10px); /* Safari support */

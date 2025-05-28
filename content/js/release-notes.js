@@ -12,7 +12,3 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".card").forEach((el) => {
   observer.observe(el);
 });
-
-document.querySelectorAll(".text-card").forEach((el) => {
-  observer.observe(el);
-});

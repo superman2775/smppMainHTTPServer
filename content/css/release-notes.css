@@ -11,6 +11,14 @@
   background-color: var(--background-ui1);
   z-index: -2;
   width: 40rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.4s ease-in-out;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0rem);
 }
 
 ul {

@@ -13,6 +13,6 @@ document.querySelectorAll(".card").forEach((el) => {
   observer.observe(el);
 });
 
-document.querySelectorAll(".text-card").forEach((el) => {
+document.querySelectorAll(".first-card").forEach((el) => {
   observer.observe(el);
 });

@@ -413,15 +413,6 @@ main {
   color: var(--accent);
 }
 
-footer {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 #overlay {
   position: fixed;
   z-index: -10;
@@ -521,7 +512,66 @@ footer {
   transition: all 0.1s ease-in-out;
   font-weight: 500;
 }
+.gradient-box-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -20rem;
+}
+.gradient-box {
+  width: 500%;
+  height: 80rem;
+  background: radial-gradient(
+    at center bottom,
+    var(--button),
+    var(--button) 10%,
+    var(--background) 70%,
+    var(--background) 99%
+  );
+  margin-bottom: -40rem;
+}
+footer {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--transparent-background);
+  backdrop-filter: blur(10px);
+  padding-bottom: 3rem;
+  height: 16.75rem;
+}
+li a {
+  font-weight: 600;
+  color: var(--text-color);
+}
+ul {
+  line-height: 2;
+}
+.copy-right {
+  font-weight: 500;
+}
+.footer-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+}
 
+h4 {
+  font-size: 1.6rem;
+  text-align: left;
+  margin-left: 1.5rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  width: 100%;
+}
 @media (max-width: 1170px) {
   body {
     width: 100%;
@@ -567,5 +617,23 @@ footer {
   #mobile-menu-button:hover {
     scale: 1.1;
     cursor: pointer;
+  }
+  footer {
+    height: 45rem;
+    align-items: start;
+  }
+  .footer-columns {
+    flex-direction: column;
+    gap: 0rem;
+    padding-left: 1rem;
+  }
+  .gradient-box-wrapper {
+    flex-direction: column;
+    margin-bottom: -48rem;
+  }
+  .gradient-box {
+    width: 300%;
+    height: 120rem;
+    margin-bottom: -40rem;
   }
 }

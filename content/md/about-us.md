@@ -6,7 +6,7 @@ Sibe decided it was time to ditch his profile picture — and just like that, a 
 ## Early 2024
 
 ICO 🚀  
-After months of coding, tweaking, and dreaming, **Smartschool++** officially launched on the Chrome Web Store, complete with a vibrant new Discord community.
+After months of coding, tweaking, **Smartschool++** officially launched on the Chrome Web Store, complete with an official Discord community.
 
 ## Mid 2024
 
@@ -15,8 +15,8 @@ We rolled out our first major update — packed with exciting features, but more
 
 ## September 2024
 
-ICO 🎉  
-_Enter Global Chat_ — launched in beta, and yes… the plant made its debut too. 🌱
+ICO 💬  
+_Global Chat_ launched in beta and the plant made its debut as well. 🌱
 
 ## Late 2024
 
@@ -31,7 +31,7 @@ Our first appearance on national television! Featured on **VRT**, _Nws Nws Nws_,
 ## March 2025
 
 ICO 🎉  
-Just one month later, we celebrated **20,000 users**. 🚀 Growth never looked this good.
+We celebrated **20,000 users**. 🚀 Growth never looked this good.
 
 ## Early 2025
 
@@ -40,10 +40,11 @@ We introduced **Smartschool++ Lite** — a streamlined, school-friendly version 
 
 ## April 2025
 
-ICO 🗞️  
-Back on the big screen with another national TV feature — **VRT**, _Nws Nws Nws_, and **Rob-TV**.
+ICO 🧡
+
+We paid a visit to the **Smartschool headquarters** — a memorable day filled with insights, conversations, and a glimpse behind the scenes of the platform we’re building on.
 
 ## Mid 2025
 
 ICO 🏞️  
-We launched our official site — your new go-to hub for everything **Smartschool++**.
+We launched our official site — a new place for everything about **Smartschool++**.

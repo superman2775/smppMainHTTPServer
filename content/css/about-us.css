@@ -1,7 +1,9 @@
 .main-content {
-  min-width: 60rem;
+  width: 60rem;
   margin-bottom: 3rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .timeline-line {
@@ -74,6 +76,33 @@
     0px 5px 30px 0px var(--shadow-color);
   width: 37.5%;
   position: relative;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.text-card {
+  background: var(--background-ui1);
+  padding: 2rem;
+  border-radius: 2.5rem;
+  box-shadow: 0px 0px 10px 0px var(--shadow-color) inset,
+    0px 5px 30px 0px var(--shadow-color);
+  position: relative;
+  width: 45rem;
+  margin-bottom: 2rem;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.text-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-card > p {
+  margin-top: 0;
+  font-size: 1.2rem;
 }
 
 .card:nth-child(odd) {
@@ -93,14 +122,137 @@ h2 {
   margin-right: 2rem;
 }
 
+.name {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(
+    60deg,
+    rgb(62, 73, 232) 0%,
+    rgb(83, 95, 250) 48%,
+    rgb(121, 127, 209) 100%
+  );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+
+.contributers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+  width: 90%;
+}
+
 h1 {
   font-size: 3rem;
   margin-top: 0;
+  width: 90%;
+}
+
+h3 {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-size: 1.6rem;
 }
 
 p {
   margin-bottom: 0;
 }
 
+ul {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+b,
+strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+a {
+  font-weight: 500;
+}
+
 @media (max-width: 1170px) {
+  .main-content {
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .first-card .card:nth-child(odd) .card-icon,
+  .card:nth-child(odd) .card-icon,
+  .card:nth-child(even) .card-icon {
+    top: 1rem;
+    right: 0rem;
+    left: 1rem;
+  }
+
+  .card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  .first-card .card:nth-child(odd) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .first-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    backdrop-filter: blur(20px);
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 0px var(--shadow-color) inset,
+      0px 5px 20px 0px var(--shadow-color);
+    width: 85%;
+  }
+
+  .text-card {
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 0px var(--shadow-color) inset,
+      0px 5px 20px 0px var(--shadow-color);
+    width: 85%;
+  }
+
+  .text-card > p {
+    font-size: 1rem;
+  }
+
+  .card:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .card:nth-child(even) {
+    margin-right: 0;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+  }
+
+  .contributers-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
 }
