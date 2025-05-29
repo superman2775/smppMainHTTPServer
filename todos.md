@@ -1,7 +1,7 @@
 # Navigation Checklist
 
 ## 🚀 Getting Started
-- [ ] Products
+- [X] Products
 - [ ] Quick Start Guide
 - [ ] Roadmap
 
