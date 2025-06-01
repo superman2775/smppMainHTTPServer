@@ -186,6 +186,7 @@ a {
     justify-content: center;
     align-items: center;
   }
+
   .first-card .card:nth-child(odd) .card-icon,
   .card:nth-child(odd) .card-icon,
   .card:nth-child(even) .card-icon {
@@ -204,11 +205,13 @@ a {
     margin-right: 0;
     margin-left: 0;
   }
+
   .first-card {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  
   .card {
     backdrop-filter: blur(20px);
     padding: 1rem;

@@ -28,7 +28,7 @@ IMG /media/backgroundCherryHaze.webp
 Save **_multiple_** custom themes (_switch seamlessly_)  
 **Gradient** backgrounds
 
-## dark Profile Personalisation Update 🪪
+## dark Profile personalization Update 🪪
 
 IMG /media/backgroundFluorescentGalaxy.webp  
 **Express yourself** with **_custom_** profile pictures  

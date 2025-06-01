@@ -476,41 +476,46 @@
       </a>
     </div>
     <main>{{ template "content" . }}</main>
+
     <div class="gradient-box-wrapper"><div class="gradient-box"></div></div>
-
     <footer>
-      <!-- DONT FORGET THE GRADIENT-->
-
       <div class="footer-columns">
         <div class="footer-column">
           <h4 class="footer-title">Product🎁</h4>
-          <ul class="footer-links">
-            <li><a href="/guide">Guide</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/roadmap">Roadmap</a></li>
+          <ul class="footer-list">
+            <li class="footer-item"><a href="/guide">Guide</a></li>
+            <li class="footer-item"><a href="/products">Products</a></li>
+            <li class="footer-item"><a href="/roadmap">Roadmap</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h4 class="footer-title">Community👥</h4>
-          <ul class="footer-links">
-            <li>
+          <ul class="footer-list">
+            <li class="footer-item">
               <a href="https://discord.gg/qCHZYepDqZ" target="_blank"
                 >Discord</a
               >
             </li>
-            <li>
+            <li class="footer-item">
               <a href="https://github.com/sprksoft/smpp" target="_blank"
                 >GitHub</a
               >
             </li>
-            <li><a href="/about-us">About Us</a></li>
+            <li class="footer-item"><a href="/about-us">About Us</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h4 class="footer-title">Updates🚀</h4>
-          <ul class="footer-links">
-            <li><a href="/release-notes">Release Notes</a></li>
-            <li>
+          <h4 class="footer-title">Extra🚀</h4>
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a href="/release-notes">Release Notes</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://gc.smartschoolplusplus.com/" target="_blank"
+                >Global Chat</a
+              >
+            </li>
+            <li class="footer-item">
               <a
                 href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf"
                 target="_blank"
@@ -524,6 +529,7 @@
         <span class="copy-right">© 2025 Smartschool++ — Built with ❤️</span>
       </div>
     </footer>
+
     <script src="js/main.js"></script>
     {{ if ne .MainJS "null"}}
     <script src="js/{{ .MainJS }}"></script>

@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 #guide-menu {
   position: fixed;
   left: 0rem;
@@ -10,6 +11,7 @@ html {
   transform: translateY(-50%);
   align-items: center;
 }
+
 .guide-menu-buttons {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,7 @@ html {
   border-top-right-radius: 1.75rem;
   border-bottom-right-radius: 1.75rem;
 }
+
 .guide-button {
   padding: 1rem 1rem;
   border-radius: 0.75rem;
@@ -34,27 +37,34 @@ html {
   font-weight: 600;
   font-size: 1.1rem;
 }
+
 #guide-menu-toggle {
   display: none;
 }
+
 .guide-button svg {
   stroke: var(--text-color);
 }
+
 .guide-button:hover {
   background-color: var(--background-ui2);
   cursor: pointer;
   scale: 1.05;
 }
+
 .guide-button.active {
   background-color: var(--button);
   color: var(--white);
 }
+
 .guide-button.active svg {
   stroke: var(--white);
 }
+
 .guide-button-icon {
   width: 2rem;
 }
+
 main {
   margin-left: 14rem;
   width: calc(100% - 17rem);
@@ -69,6 +79,9 @@ section {
   align-items: center;
   gap: 3rem;
   margin-bottom: 7rem;
+}
+section:last-child {
+  margin-bottom: 0rem;
 }
 
 .toast {
@@ -88,12 +101,14 @@ section {
   right: 0.5rem;
   transition: all 0.3s ease-in-out;
 }
+
 .toast.toast-visible {
   opacity: 1;
   bottom: 1rem;
   right: 1rem;
   z-index: 10000;
 }
+
 code {
   font-family: "JetBrains Mono", monospace;
   color: var(--red);
@@ -103,6 +118,7 @@ code {
   border-radius: 0.5rem;
   padding: 0 0.2em;
 }
+
 kbd {
   font-family: "JetBrains Mono", monospace;
   border: 2px solid var(--background);
@@ -112,19 +128,24 @@ kbd {
   border-radius: 0.65rem;
   cursor: default;
 }
+
 #content {
   width: 100%;
 }
+
 code:hover {
   cursor: pointer;
 }
+
 a {
   font-weight: 700;
 }
+
 h2 {
   font-size: 2rem;
   margin-bottom: 0rem;
 }
+
 .guide-toggle-arrow {
   stroke: var(--text-color);
   transition: all 0.3s;
@@ -132,6 +153,7 @@ h2 {
   rotate: -90deg;
   width: 100%;
 }
+
 #guide-menu.active .guide-toggle-arrow {
   rotate: 90deg;
 }
@@ -176,12 +198,14 @@ h2 {
   margin: 0;
   font-size: 1.5rem;
 }
+
 .instruction-card-top {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
 }
+
 .instruction-card-bottom {
   display: flex;
   flex-direction: row;
@@ -190,16 +214,19 @@ h2 {
   padding-top: 0rem;
   align-items: center;
 }
+
 .instruction-description {
   font-size: 1.4rem;
   margin: 0;
   text-align: left;
   margin-top: -0.75rem;
 }
+
 .instruction-card.faq-card {
   width: 100%;
   max-width: 40rem;
 }
+
 @media (max-width: 1170px) {
   main {
     margin-left: 0rem;
@@ -207,18 +234,22 @@ h2 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
   #guide-menu {
     z-index: 40;
     transition: all ease-in-out 0.2s;
     transform: translateX(calc(2rem - 100%)) translateY(-50%);
   }
+
   #guide-menu.active {
     transform: translateX(0) translateY(-50%);
   }
+
   .guide-menu-buttons {
     box-shadow: none;
     background-color: var(--background);
   }
+
   #guide-menu-toggle {
     height: 10rem;
     width: 2rem;
@@ -229,20 +260,25 @@ h2 {
     align-items: center;
     justify-content: center;
   }
+
   #guide-menu.active {
     filter: drop-shadow(0px 0px 10px var(--shadow-color));
   }
+
   #guide-menu:not(.active) #guide-menu-toggle {
     box-shadow: 0px 0px 10px var(--shadow-color);
   }
+
   .instruction-card {
     margin-left: 0 !important;
     margin-right: 0 !important;
     width: 100%;
   }
+
   .instruction-description {
     font-size: 1.2rem;
   }
+
   .instruction-icon {
     width: 3rem;
   }

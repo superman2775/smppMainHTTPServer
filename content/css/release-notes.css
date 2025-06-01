@@ -27,19 +27,23 @@ ul:not(.footer-links >) {
   font-size: 1rem;
   text-align: left;
 }
+
 h2 {
   margin-top: 0;
   text-align: left;
   color: var(--accent);
 }
+
 main {
   padding-top: 8rem;
 }
+
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 @media (max-width: 1170px) {
   .card {
     width: 85% !important;
@@ -49,30 +53,38 @@ main {
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.323) inset,
       0px 0px 20px 2px var(--shadow-color) !important;
   }
+
   .first-card {
     width: 100%;
   }
+
   .first-card .card {
     margin-left: auto;
     margin-right: auto;
   }
+
   .main-content {
     width: 100%;
   }
+
   main {
     padding-top: 5rem !important;
   }
+
   h1 {
     font-size: 2.5rem !important  ;
   }
+
   h2 {
     font-size: 1.6rem !important;
     width: 90% !important;
     margin-left: 5% !important;
   }
+
   p {
     margin-bottom: 1.25rem !important;
   }
+
   ul {
     padding-left: 1.5rem !important;
   }

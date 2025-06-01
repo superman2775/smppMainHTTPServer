@@ -389,6 +389,19 @@
       </picture>
     </div>
   </div>
+  <span class="interactive-text"
+    ><svg
+      class="mr-2 h-3.5 w-3.5 fill-current transition duration-500"
+      viewBox="0 0 28 28"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      style="width: 1rem; margin-right: 1rem; fill: var(--text-color)"
+    >
+      <path
+        d="M5.06 3.024C4.804 1.238 6.858.052 8.276 1.168l17.117 13.466c1.47 1.159.688 3.522-1.182 3.574l-7.03.19a1.998 1.998 0 0 0-1.65.953l-3.68 5.993c-.98 1.594-3.418 1.089-3.685-.764L5.06 3.024Z"
+      ></path></svg
+    >Psst... this page is interactive</span
+  >
   <div id="theme-preview-buttons">
     <button id="prev-button" class="theme-preview-button">
       <svg
@@ -592,7 +605,16 @@
     </div>
     <div id="fun-app-preview-container">
       <div id="fun-app-video-container">
-        <video id="fun-app-preview" class="active" autoplay muted loop></video>
+        <video
+          id="fun-app-preview"
+          class="active"
+          playsinline
+          webkit-playsinline
+          muted
+          autoplay
+          preload="auto"
+          loop
+        ></video>
         <div id="volume-container">
           <svg
             id="volume-icon"

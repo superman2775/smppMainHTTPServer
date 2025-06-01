@@ -15,14 +15,17 @@
   transform: translateY(1rem);
   transition: all 0.4s ease-in-out;
 }
+
 .card.visible {
   opacity: 1;
   transform: translateY(0rem) scale(1) !important;
 }
+
 .first-card .card {
   margin-bottom: 0rem !important;
   transform: translateY(0rem) scale(0.95);
 }
+
 .card.dark {
   color: var(--white);
 }
@@ -49,10 +52,12 @@
   transform: translateY(1rem);
   transition: all 0.4s ease-in-out;
 }
+
 .first-card.visible {
   opacity: 1;
   transform: translateY(0rem);
 }
+
 .backdrop-card {
   background-color: rgba(0, 0, 0, 0.21);
   -webkit-backdrop-filter: blur(10px); /* Safari support */
@@ -123,7 +128,8 @@ ul:not(.footer-links) {
   font-size: 1.2rem;
   text-align: left;
 }
-li:not(.mobile-menu-nav-list-item):not(.footer-links >) {
+
+li {
   margin-bottom: 1.5rem;
 }
 
@@ -166,7 +172,7 @@ li:not(.mobile-menu-nav-list-item):not(.footer-links >) {
   p {
     margin-bottom: 1.25rem !important;
   }
-  li:not(.mobile-menu-nav-list-item) {
+  li {
     margin-bottom: 0.5rem;
   }
   ul {

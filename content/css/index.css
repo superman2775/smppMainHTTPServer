@@ -44,12 +44,24 @@
 }
 
 .accent-text {
+  color: var(--accent);
   font-style: italic;
-  font-weight: 600;
-  text-shadow: 1px 1px 2px rgb(62, 73, 232), 0 0 1em rgb(83, 95, 250),
-    0 0 0.2em rgb(121, 127, 209);
-  color: var(--white);
+  font-weight: 800;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 4px var(--shadow-color);
 }
+
+.interactive-text {
+  top: 2rem;
+  position: relative;
+  opacity: 0.4;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  z-index: 10;
+  cursor: default;
+}
+
 .accent-text:hover {
   text-decoration: none;
 }
@@ -269,7 +281,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   align-items: center;
   justify-content: center;
   gap: 8rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .theme-preview-button {
@@ -471,7 +483,7 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
 
 #time-forward-button:hover,
 #time-back-button:hover {
-  background-color: var(--background-ui1);
+  background-color: var(--background-ui2);
   backdrop-filter: blur(10px);
   cursor: pointer;
   transform: scaleX(1.1);
@@ -726,9 +738,11 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   flex-direction: column;
   height: 100%;
 }
+
 .gradient-box-wrapper {
   z-index: auto !important;
 }
+
 @media (max-width: 1170px) {
   #top-title {
     font-size: 0.8em;
@@ -740,6 +754,10 @@ html:has(.preview-img-container.ready #fluorescentGalaxy) {
   .main-title {
     font-size: 1.9rem;
     margin-bottom: 2rem;
+  }
+
+  .interactive-text {
+    display: none;
   }
 
   #top-title-accent {
