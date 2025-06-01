@@ -8,7 +8,7 @@
   margin-bottom: 4rem;
   box-shadow: 0px 0px 20px 0px var(--shadow-color) inset,
     0px 0px 30px 5px var(--shadow-color);
-  background-color: var(--background-ui2);
+  background: var(--card-gradient);
   z-index: -2;
   width: 40rem;
   opacity: 0;
@@ -117,13 +117,13 @@ p:last-child {
   margin-bottom: 1rem !important;
 }
 
-ul {
+ul:not(.footer-links) {
   margin-top: 0rem;
   margin-bottom: 0rem;
   font-size: 1.2rem;
   text-align: left;
 }
-li:not(.mobile-menu-nav-list-item) {
+li:not(.mobile-menu-nav-list-item):not(.footer-links >) {
   margin-bottom: 1.5rem;
 }
 

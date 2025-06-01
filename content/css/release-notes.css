@@ -8,7 +8,7 @@
   margin-bottom: 1rem;
   box-shadow: 0px 0px 10px 0px var(--shadow-color) inset,
     0px 5px 30px -10px var(--shadow-color);
-  background-color: var(--background-ui1);
+  background: var(--card-gradient);
   z-index: -2;
   width: 40rem;
   opacity: 0;
@@ -21,7 +21,7 @@
   transform: translateY(0rem);
 }
 
-ul {
+ul:not(.footer-links >) {
   margin-top: 0rem;
   margin-bottom: 0rem;
   font-size: 1rem;
@@ -72,9 +72,6 @@ main {
   }
   p {
     margin-bottom: 1.25rem !important;
-  }
-  li:not(.mobile-menu-nav-list-item) {
-    margin-bottom: 0.5rem;
   }
   ul {
     padding-left: 1.5rem !important;

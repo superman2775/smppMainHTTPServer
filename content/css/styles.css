@@ -5,6 +5,11 @@ html {
     rgb(62, 73, 232) 0%,
     rgb(121, 127, 209) 100%
   );
+  --card-gradient: linear-gradient(
+    0deg,
+    var(--background-ui1),
+    var(--background-ui2)
+  );
   font-family: "Montserrat", sans-serif;
   background-color: var(--background);
   color: var(--text-color);
