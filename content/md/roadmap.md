@@ -21,6 +21,13 @@ IMG /media/backgroundDefaultDeluxe.webp
 **Expanded** settings panel for _currently fixed_ customisation options  
 **_More control_** over all features
 
+## dark Global Chat Update 2 🌐
+
+IMG /media/backgroundDarkSands.webp
+Plant sticker — show off your plant to everyone
+Replying to messages
+Auto complete for stickers
+
 ## dark Theme Update 🎨
 
 IMG /media/backgroundCherryHaze.webp  
