@@ -160,9 +160,9 @@ h2 {
 
 .instruction-card {
   border-radius: 2rem;
-  background-color: var(--background-ui2);
-  box-shadow: 0px 0px 20px 0px var(--shadow-color) inset,
-    0px 0px 30px 5px var(--shadow-color);
+  background: var(--card-gradient);
+  box-shadow: 0px 0px 10px 0px var(--shadow-color) inset,
+    0px 5px 30px 0px var(--shadow-color);
   max-width: 30rem;
   transition: all 0.25s ease-in-out;
 }
