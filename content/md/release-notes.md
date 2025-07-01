@@ -22,7 +22,7 @@
 
 ## Removed 🗑️
 
-- **Quick** button (Use ":" to open quick)
+- **Quick** button (Alternatively use ":" to open quick)
 
 # 3.2.0
 
