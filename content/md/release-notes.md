@@ -1,3 +1,29 @@
+# 4.0.0
+
+## New ✨
+
+- **Widget** system — more info in our guide 🚀
+- **Breakout++** 🧱
+- **Assignments** widget 🗃️
+- **Smartschool's default** widgets are back 🧡
+
+## Updates 🚀
+
+- **Global Chat** client
+- New **Custom backgrounds** UI and system 🖼️
+- Size sliders and grid in **Snake++** 🐍
+- **Settings** system is cleaner ⚙️
+
+## Reworks 🛠️
+
+- **Custom Name** ✏️
+- **Flappy++** 🐤
+- **Theme** system 🎨
+
+## Removed 🗑️
+
+- **Quick** button (Use ":" to open quick)
+
 # 3.2.0
 
 ## New ✨
@@ -50,7 +76,6 @@
 ## Fixes and Updates 🛠️
 
 - _Minor bug fixes_
-
 - _Improved Quick Menu_
 - _Some buttons have icons_
 - _The title of the tab now shows relevant info_
