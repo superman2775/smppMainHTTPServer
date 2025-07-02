@@ -8,13 +8,6 @@ Usernames are now synced across multiple devices
 Moderators can now **ban users** from the chat
 Fresh batch of **stickers** added 🎉
 
-## dark Widget Update 🧩
-
-IMG /media/backgroundMidnightSapphire.webp  
-**_All-new_** **widgets** on the homepage, now **fully customisable** 🏠
-Old settings → **Quick Settings** (**_streamlined_**)  
-**_Major_** code refactors/rewrites (_performance focus_) 📈
-
 ## dark Settings Update ⚙️
 
 IMG /media/backgroundDefaultDeluxe.webp  
