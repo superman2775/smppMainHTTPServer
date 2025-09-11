@@ -3,6 +3,7 @@ html {
 }
 
 #guide-menu {
+  z-index: 40;
   position: fixed;
   left: 0rem;
   top: 50%;
@@ -236,7 +237,6 @@ h2 {
   }
 
   #guide-menu {
-    z-index: 40;
     transition: all ease-in-out 0.2s;
     transform: translateX(calc(2rem - 100%)) translateY(-50%);
   }

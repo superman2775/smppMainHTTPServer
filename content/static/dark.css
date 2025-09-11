@@ -1,7 +1,8 @@
 html {
   --accent: #5660ea;
   --background: #1c1c1c;
-  --transparent-background: rgba(32, 32, 32, 0.34);
+  --transparent-background: rgba(27, 27, 27, 0.585);
+  --transparent-overlay-color: rgba(29, 29, 30, 0.17);
   --shadow-color: rgba(12, 12, 12, 0.709);
   --button: #626bf0;
   --text-color: #f0f3ff;

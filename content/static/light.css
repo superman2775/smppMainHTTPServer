@@ -1,8 +1,9 @@
 html {
   --accent: #4a50d9;
-  --background: #f2f0e3;
-  --transparent-background: rgba(229, 228, 211, 0.516);
-  --shadow-color: rgba(117, 117, 117, 0.71);
+  --background: #f3f1e8;
+  --transparent-background: rgba(245, 245, 234, 0.708);
+  --transparent-overlay-color: rgba(35, 35, 33, 0.198);
+  --shadow-color: rgba(29, 29, 29, 0.259);
   --button: #434ede;
   --text-color: #2e2e2e;
   --border-color: #343434;
