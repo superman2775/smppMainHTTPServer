@@ -15,7 +15,7 @@
 
 # Features Checklist
 
-- [ ] Dutch/English support
+- [X] Dutch/English support
 
 # Home Page Checklist
 

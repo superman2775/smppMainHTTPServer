@@ -5,10 +5,20 @@ import (
 	"log"
 	"net/http"
 	"smppmainhttpserver/handler"
+	"smppmainhttpserver/i18n"
 )
 
 func main() {
+	// Initialize i18n system
+	if err := i18n.Init(); err != nil {
+		log.Fatalf("Failed to initialize i18n: %v", err)
+	}
+
 	http.HandleFunc("/", handler.DynamicHandler)
+	http.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "content/static/favicon.ico")
+	})
+	http.HandleFunc("/set-lang", handler.SetLanguageHandler)
 	http.HandleFunc("/set-mode", handler.SetModeHandler)
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./content/css"))))
 	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("./content/js"))))

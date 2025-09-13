@@ -1,6 +1,6 @@
 {{ define "content" }}
 
-<h1>Our available products</h1>
+<h1>{{ Localize "products_title" }}</h1>
 
 <section class="product-top">
   <div id="smartschoolplusplus" class="product-top-container">
@@ -28,9 +28,9 @@
         />
       </svg>
     </a>
-    <h2 class="product-main-title">Smartschool++</h2>
+    <h2 class="product-main-title">{{ Localize "smartschool_plus_plus" }}</h2>
     <p class="product-main-description">
-      The full experience — with fun, personal touches.
+      {{ Localize "smartschool_pp_description" }}
     </p>
   </div>
   <div class="product-top-line"></div>
@@ -60,7 +60,7 @@
       </svg>
     </a>
     <h2 class="product-main-title">
-      Smartschool++
+      {{ Localize "smartschool_plus_plus" }}
       <span
         style="
           background: linear-gradient(
@@ -80,20 +80,20 @@
       >
     </h2>
     <p class="product-main-description">
-      Streamlined for focus and productivity.
+      {{ Localize "smartschool_lite_description" }}
     </p>
   </div>
 </section>
 <section id="product-table">
   <div class="table-container">
-    <h2>Feature Comparison</h2>
+    <h2>{{ Localize "feature_comparison" }}</h2>
     <table class="comparison-table">
       <thead>
         <tr>
           <th
             style="text-align: left; background: transparent; box-shadow: none"
           >
-            Features
+            {{ Localize "features" }}
           </th>
           <th
             class="table-header"
@@ -113,8 +113,8 @@
               href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf"
               target="_blank"
             >
-              <span class="visible-when-small-text">MAIN</span>
-              <span class="smartschool-text-in-table">Smartschool++</span></a
+              <span class="visible-when-small-text">{{ Localize "main" }}</span>
+              <span class="smartschool-text-in-table">{{ Localize "smartschool_plus_plus" }}</span></a
             >
           </th>
           <th
@@ -130,15 +130,15 @@
               style="color: inherit"
               href="https://chromewebstore.google.com/detail/smartschool++-lite/dogkhghdahlgebhojaaoijdcadmebkcg"
               target="_blank"
-              ><span class="smartschool-text-in-table">Smartschool++</span>
-              LITE</a
+              ><span class="smartschool-text-in-table">{{ Localize "smartschool_plus_plus" }}</span>
+              {{ Localize "lite" }}</a
             >
           </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Productivity</td>
+          <td>{{ Localize "productivity" }}</td>
           <td class="check">
             <svg viewBox="0 0 24 24" fill="none" width="2rem">
               <path
@@ -161,7 +161,7 @@
           </td>
         </tr>
         <tr>
-          <td>Theme Support</td>
+          <td>{{ Localize "theme_support" }}</td>
           <td class="check">
             <svg viewBox="0 0 24 24" fill="none" width="2rem">
               <path
@@ -184,7 +184,7 @@
           </td>
         </tr>
         <tr>
-          <td>Games</td>
+          <td>{{ Localize "games" }}</td>
           <td class="check">
             <svg viewBox="0 0 24 24" fill="none" width="2rem">
               <path
@@ -208,7 +208,7 @@
           </td>
         </tr>
         <tr>
-          <td>Global Chat</td>
+          <td>{{ Localize "global_chat" }}</td>
           <td class="check">
             <svg viewBox="0 0 24 24" fill="none" width="2rem">
               <path
@@ -232,7 +232,7 @@
           </td>
         </tr>
         <tr>
-          <td>Available Everywhere</td>
+          <td>{{ Localize "available_everywhere" }}</td>
           <td class="cross">
             <svg viewBox="0 0 24 24" fill="none" width="2rem">
               <path

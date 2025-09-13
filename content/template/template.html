@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Lang }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
       content="https://raw.githubusercontent.com/frickingbird8002/smpp-images/main/icon128.png"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/i18n.css" />
     <link rel="stylesheet" href="/static/{{ .ThemeCSS }}" />
     {{ if ne .MainCSS "null"}}
     <link rel="stylesheet" href="/css/{{ .MainCSS }}" />
@@ -61,14 +62,14 @@
               width="25px"
               height="25px"
             />
-            <span class="visible-on-desktop">Smartschool++</span>
+            <span class="visible-on-desktop">{{ Localize "smartschool_plus_plus" }}</span>
           </a>
         </div>
 
         <div id="top-nav-menu-buttons">
           <!-- Getting Started Menu -->
           <button class="visible-on-desktop top-nav-menu-button">
-            <span>Getting started</span>
+            <span>{{ Localize "menu_getting_started" }}</span>
             <svg
               class="top-nav-arrow"
               width="24"
@@ -87,15 +88,14 @@
               <a href="/guide" class="top-nav-menu-card take-off-card">
                 <div>
                   <span class="top-nav-menu-card-title"
-                    >Quick Start Guide 🚀</span
+                    >{{ Localize "nav_quick_start_guide" }} 🚀</span
                   >
                   <span class="top-nav-menu-card-description"
-                    >Step-by-step instructions to set up and configure
-                    <i style="font-weight: 500">your</i> Smartschool++</span
+                    >{{ Localize "nav_quick_start_description" }}</span
                   >
                 </div>
                 <div class="take-off-button visible-on-desktop">
-                  <div class="take-off-button-text">Take off</div>
+                  <div class="take-off-button-text">{{ Localize "nav_take_off" }}</div>
                   <svg
                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
                     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -124,16 +124,15 @@
               <!-- Right Column -->
               <div style="display: flex; flex-direction: column; gap: 0.2rem">
                 <a href="/products" class="top-nav-menu-card">
-                  <span class="top-nav-menu-card-title">Products 🎁</span>
+                  <span class="top-nav-menu-card-title">{{ Localize "nav_products" }} 🎁</span>
                   <span class="top-nav-menu-card-description"
-                    >Explore our different products</span
+                    >{{ Localize "nav_products_description" }}</span
                   >
                 </a>
                 <a href="/roadmap" class="top-nav-menu-card">
-                  <span class="top-nav-menu-card-title">Roadmap 🚧</span>
+                  <span class="top-nav-menu-card-title">{{ Localize "nav_roadmap" }} 🚧</span>
                   <span class="top-nav-menu-card-description"
-                    >Discover upcoming features and our development
-                    timeline</span
+                    >{{ Localize "nav_roadmap_description" }}</span
                   >
                 </a>
               </div>
@@ -142,7 +141,7 @@
 
           <!-- Resources Menu -->
           <button class="visible-on-desktop top-nav-menu-button">
-            <span>Resources</span>
+            <span>{{ Localize "nav_resources" }}</span>
             <svg
               class="top-nav-arrow"
               width="24"
@@ -162,7 +161,7 @@
                 class="top-nav-menu-card"
               >
                 <span class="top-nav-menu-card-title"
-                  >GitHub
+                  >{{ Localize "nav_github" }}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="1.5rem"
@@ -177,8 +176,7 @@
                     /></svg
                 ></span>
                 <span class="top-nav-menu-card-description"
-                  >Access source code, report issues, and contribute to
-                  development</span
+                  >{{ Localize "nav_github_description" }}</span
                 >
               </a>
               <a
@@ -187,7 +185,7 @@
                 class="top-nav-menu-card"
               >
                 <span class="top-nav-menu-card-title"
-                  >Discord
+                  >{{ Localize "nav_discord" }}
                   <svg
                     width="1.5rem"
                     height="1.5rem"
@@ -203,27 +201,32 @@
                     /></svg
                 ></span>
                 <span class="top-nav-menu-card-description"
-                  >Join our community for real-time support and
-                  discussions</span
+                  >{{ Localize "nav_discord_description" }}</span
                 >
               </a>
               <a href="/release-notes" class="top-nav-menu-card">
-                <span class="top-nav-menu-card-title">Release Notes 📃</span>
+                <span class="top-nav-menu-card-title">{{ Localize "nav_release_notes" }} 📃</span>
                 <span class="top-nav-menu-card-description"
-                  >Stay updated with latest changes and version history</span
+                  >{{ Localize "nav_release_notes_description" }}</span
                 >
               </a>
               <a href="/about-us" class="top-nav-menu-card">
-                <span class="top-nav-menu-card-title">About Us ✨</span>
+                <span class="top-nav-menu-card-title">{{ Localize "nav_about_us" }} ✨</span>
                 <span class="top-nav-menu-card-description"
-                  >Learn about our team, and contributors</span
+                  >{{ Localize "nav_about_us_description" }}</span
                 >
               </a>
             </div>
           </button>
         </div>
 
-        <div id="light-dark-selectors" class="outer-top-nav-element">
+        <div id="language-light-dark-selectors" class="outer-top-nav-element">
+          <!-- Language Switcher -->
+          <div class="language-toggle-container" data-current-lang="{{ .Lang }}">
+            <div class="lang-indicator" id="lang-indicator"></div>
+            <button class="lang-toggle-btn {{ if eq .Lang "nl" }}active{{ end }}" onclick="setLanguage('nl', '{{ .Redirect }}')" data-lang="nl">NL</button>
+            <button class="lang-toggle-btn {{ if eq .Lang "en" }}active{{ end }}" onclick="setLanguage('en', '{{ .Redirect }}')" data-lang="en">EN</button>
+          </div>
           {{ if eq .Mode "dark" }}
           <a
             id="light-mode-selector"
@@ -296,7 +299,7 @@
               </g>
             </svg>
 
-            <span class="download-button-text">Download</span>
+            <span class="download-button-text">{{ Localize "nav_install" }}</span>
             <svg
               class="download-button-arrow"
               viewBox="0 0 24 24"
@@ -342,7 +345,7 @@
     <div id="overlay"></div>
     <div id="mobile-menu">
       <div class="mobile-menu-top">
-        <span class="mobile-menu-top-title">Menu</span>
+        <span class="mobile-menu-top-title">{{ Localize "nav_menu" }}</span>
 
         <button id="mobile-menu-close-button">
           <svg
@@ -359,21 +362,21 @@
       </div>
       <nav class="mobile-menu-nav">
         <div style="display: flex; flex-direction: column; gap: 0.75rem">
-          <span class="mobile-menu-nav-title">Getting started</span>
+          <span class="mobile-menu-nav-title">{{ Localize "nav_getting_started" }}</span>
           <ul class="mobile-menu-nav-list">
             <a href="/guide" style="text-decoration: none">
-              <li class="mobile-menu-nav-list-item">Quick Start Guide 🚀</li>
+              <li class="mobile-menu-nav-list-item">{{ Localize "nav_quick_start_guide" }} 🚀</li>
             </a>
             <a href="/products" style="text-decoration: none">
-              <li class="mobile-menu-nav-list-item">Products 🎁</li>
+              <li class="mobile-menu-nav-list-item">{{ Localize "nav_products" }} 🎁</li>
             </a>
             <a href="/roadmap" style="text-decoration: none">
-              <li class="mobile-menu-nav-list-item">Roadmap 🚧</li>
+              <li class="mobile-menu-nav-list-item">{{ Localize "nav_roadmap" }} 🚧</li>
             </a>
           </ul>
         </div>
         <div style="display: flex; flex-direction: column; gap: 0.75rem">
-          <span class="mobile-menu-nav-title">Resources</span>
+          <span class="mobile-menu-nav-title">{{ Localize "nav_resources" }}</span>
           <ul class="mobile-menu-nav-list">
             <a
               href="https://github.com/sprksoft/smpp"
@@ -381,7 +384,7 @@
               style="text-decoration: none"
             >
               <li class="mobile-menu-nav-list-item">
-                GitHub
+                {{ Localize "nav_github" }}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1rem"
@@ -403,7 +406,7 @@
               style="text-decoration: none"
             >
               <li class="mobile-menu-nav-list-item">
-                Discord
+                {{ Localize "nav_discord" }}
                 <svg
                   width="1rem"
                   height="1rem"
@@ -421,10 +424,10 @@
               </li>
             </a>
             <a href="/release-notes" style="text-decoration: none">
-              <li class="mobile-menu-nav-list-item">Release Notes 📃</li>
+              <li class="mobile-menu-nav-list-item">{{ Localize "nav_release_notes" }} 📃</li>
             </a>
             <a href="/about-us" style="text-decoration: none">
-              <li class="mobile-menu-nav-list-item">About Us ✨</li>
+              <li class="mobile-menu-nav-list-item">{{ Localize "nav_about_us" }} ✨</li>
             </a>
           </ul>
         </div>
@@ -462,7 +465,7 @@
           </g>
         </svg>
 
-        <span class="download-button-text">Download</span>
+        <span class="download-button-text">{{ Localize "nav_download" }}</span>
         <svg
           class="download-button-arrow"
           viewBox="0 0 24 24"
@@ -481,55 +484,69 @@
     <footer>
       <div class="footer-columns">
         <div class="footer-column">
-          <h4 class="footer-title">Product🎁</h4>
+          <h4 class="footer-title">{{ Localize "footer_product" }}🎁</h4>
           <ul class="footer-list">
-            <li class="footer-item"><a href="/guide">Guide</a></li>
-            <li class="footer-item"><a href="/products">Products</a></li>
-            <li class="footer-item"><a href="/roadmap">Roadmap</a></li>
+            <li class="footer-item"><a href="/guide">{{ Localize "footer_guide" }}</a></li>
+            <li class="footer-item"><a href="/products">{{ Localize "footer_products" }}</a></li>
+            <li class="footer-item"><a href="/roadmap">{{ Localize "footer_roadmap" }}</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h4 class="footer-title">Community👥</h4>
+          <h4 class="footer-title">{{ Localize "footer_community" }}👥</h4>
           <ul class="footer-list">
             <li class="footer-item">
               <a href="https://discord.gg/qCHZYepDqZ" target="_blank"
-                >Discord</a
+                >{{ Localize "footer_discord" }}</a
               >
             </li>
             <li class="footer-item">
               <a href="https://github.com/sprksoft/smpp" target="_blank"
-                >GitHub</a
+                >{{ Localize "footer_github" }}</a
               >
             </li>
-            <li class="footer-item"><a href="/about-us">About Us</a></li>
+            <li class="footer-item"><a href="/about-us">{{ Localize "footer_about_us" }}</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h4 class="footer-title">Extra🚀</h4>
+          <h4 class="footer-title">{{ Localize "footer_extra" }}🚀</h4>
           <ul class="footer-list">
             <li class="footer-item">
-              <a href="/release-notes">Release Notes</a>
+              <a href="/release-notes">{{ Localize "footer_release_notes" }}</a>
             </li>
             <li class="footer-item">
               <a href="https://gc.smartschoolplusplus.com/" target="_blank"
-                >Global Chat</a
+                >{{ Localize "footer_global_chat" }}</a
               >
             </li>
             <li class="footer-item">
               <a
                 href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf"
                 target="_blank"
-                >Download</a
+                >{{ Localize "footer_install" }}</a
               >
             </li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="copy-right">© 2025 Smartschool++ — Built with ❤️</span>
+        <span class="copy-right">{{ Localize "footer_copyright" }}</span>
       </div>
     </footer>
 
+    <script>
+      function setLanguage(lang, redirect) {
+        document.cookie = `lang=${lang}; path=/; max-age=31536000`;
+        window.location.href = redirect;
+      }
+
+      // Initialize indicator position when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        // The CSS handles positioning, just ensure smooth transitions
+      });
+
+      // JavaScript translations
+      window.jsTranslations = {{ .JSTranslations }};
+    </script>
     <script src="js/main.js"></script>
     {{ if ne .MainJS "null"}}
     <script src="js/{{ .MainJS }}"></script>
