@@ -16,7 +16,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>Installation</span>
+      <span>{{ Localize "installation" }}</span>
     </button>
     <button class="guide-button" data-target="settings">
       <svg
@@ -38,7 +38,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <span>Settings</span>
+      <span>{{ Localize "settings" }}</span>
     </button>
     <button class="guide-button" data-target="widgets">
       <svg
@@ -55,7 +55,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      Widgets
+      {{ Localize "widgets" }}
     </button>
     <button class="guide-button" data-target="quick">
       <svg
@@ -72,7 +72,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      Quick Menu
+      {{ Localize "quick_menu" }}
     </button>
     <button class="guide-button" data-target="faq">
       <svg
@@ -88,7 +88,7 @@
           stroke-linecap="round"
         />
       </svg>
-      FAQ
+      {{ Localize "frequently_asked_questions" }}
     </button>
   </div>
   <button id="guide-menu-toggle">
@@ -105,12 +105,12 @@
 </div>
 <div id="content">
   <section id="install">
-    <h2>How to install Smartschool++</h2>
+    <h2>{{ Localize "how_to_install" }}</h2>
 
     <div class="instruction-card" style="margin-left: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">1</span>
-        <h3 class="instruction-title">Go to the Chrome Webstore</h3>
+        <h3 class="instruction-title">{{ Localize "go_to_chrome_webstore" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -121,16 +121,16 @@
           />
         </div>
         <p class="instruction-description">
-          Go to the Webstore and look for
+          {{ Localize "step_1" }}
           <a
             target="_blank"
             href="https://chromewebstore.google.com/detail/smartschool++/bdhficnphioomdjhdfbhdepjgggekodf"
-            >Smartschool++</a
+            >{{ Localize "smartschool_plus_plus" }}</a
           >, or
           <a
             target="_blank"
             href="https://chromewebstore.google.com/detail/smartschool++-lite/dogkhghdahlgebhojaaoijdcadmebkcg"
-            >Lite</a
+            >{{ Localize "lite" }}</a
           >
         </p>
       </div>
@@ -138,7 +138,7 @@
     <div class="instruction-card" style="margin-right: 20rem">
       <div class="instruction-card-top">
         <span class="instruction-number">2</span>
-        <h3 class="instruction-title">Click "Install"</h3>
+        <h3 class="instruction-title">{{ Localize "step_2" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -158,30 +158,14 @@
           </svg>
         </div>
         <p class="instruction-description">
-          Click
-          <button
-            style="
-              background-color: #0b57d0;
-              border-radius: 1000px;
-              padding: 0.25rem 0.6rem;
-              font-size: 0.9rem;
-              display: inline-flex;
-              font-weight: 600;
-              transform: translateY(-0.1rem);
-              box-shadow: 0px 0px 1rem -0.2rem var(--shadow-color);
-              color: var(--white);
-            "
-          >
-            Download
-          </button>
-          & then allow <i>all</i> the required <b>permissions</b>
+          {{ Localize "click_install" }}
         </p>
       </div>
     </div>
     <div class="instruction-card">
       <div class="instruction-card-top">
         <span class="instruction-number">3</span>
-        <h3 class="instruction-title">Go to <i>your</i> Smartschool</h3>
+        <h3 class="instruction-title">{{ Localize "step_3" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -201,18 +185,18 @@
           </svg>
         </div>
         <p class="instruction-description">
-          Go to <i>your</i> Smartschool & refresh the page.
-          <b>Congratulation, your journey just started!</b>
+          {{ Localize "go_to_your_smartschool" }}
+          <b>{{ Localize "congratulations" }}</b>
         </p>
       </div>
     </div>
   </section>
   <section id="settings">
-    <h2>How to configure Settings</h2>
+    <h2>{{ Localize "how_to_configure_settings" }}</h2>
     <div class="instruction-card" style="margin-right: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">1</span>
-        <h3 class="instruction-title">Open the Quick Settings</h3>
+        <h3 class="instruction-title">{{ Localize "open_quick_settings" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -237,72 +221,45 @@
           </svg>
         </div>
         <p class="instruction-description">
-          Click the
-          <button
-            style="
-              height: 2.5rem;
-              line-height: initial;
-              text-decoration-thickness: 2px;
-              width: auto;
-              border: 2px solid var(--background);
-              box-shadow: 0px 0px 1rem -0.2rem var(--shadow-color);
-              border-radius: 50px;
-              background: var(--background);
-              font-size: 1.1rem;
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              padding: 0.25rem 1rem;
-              height: calc(100% - 0.5rem);
-              transform: translateY(-0.1rem);
-              color: var(--button);
-              font-weight: 800;
-            "
-            title="Ga in/uit edit mode om de locatie van de widgets te veranderen."
-          >
-            Settings
-          </button>
-          button <br />
-          in the top right
+          {{ Localize "click_settings_button" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-left: 20rem">
       <div class="instruction-card-top">
         <span class="instruction-number">2</span>
-        <h3 class="instruction-title">Choose a setting</h3>
+        <h3 class="instruction-title">{{ Localize "choose_setting" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">⚡</p>
         </div>
         <p class="instruction-description">
-          Try out some settings and watch <br />
-          them update in <i>real-time</i>
+          {{ Localize "try_settings" }}
         </p>
       </div>
     </div>
     <div class="instruction-card">
       <div class="instruction-card-top">
         <span class="instruction-number">3</span>
-        <h3 class="instruction-title">Close the settings</h3>
+        <h3 class="instruction-title">{{ Localize "close_settings" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">❌</p>
         </div>
         <p class="instruction-description">
-          Close the settings by clicking anywhere outside of the settings
+          {{ Localize "close_settings_desc" }}
         </p>
       </div>
     </div>
   </section>
   <section id="widgets">
-    <h2>How to use Widgets</h2>
+    <h2>{{ Localize "how_to_use_widgets" }}</h2>
     <div class="instruction-card" style="margin-right: 5rem">
       <div class="instruction-card-top">
         <span class="instruction-number">1</span>
-        <h3 class="instruction-title">Enter <b>edit</b> mode</h3>
+        <h3 class="instruction-title">{{ Localize "enter_edit_mode" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -345,93 +302,28 @@
           </p>
         </div>
         <p class="instruction-description">
-          Click the edit button
-          <button
-            style="
-              display: inline;
-              vertical-align: sub;
-              height: 2.5rem;
-              line-height: initial;
-              font-weight: bold;
-              text-decoration-thickness: 2px;
-              width: auto;
-              border: 2px solid var(--background);
-              box-shadow: 0px 0px 1rem -0.2rem var(--shadow-color);
-              border-radius: 50px;
-              background: var(--background);
-            "
-            title="Ga in/uit edit mode om de locatie van de widgets te veranderen."
-          >
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0.25rem 1rem;
-                height: calc(100% - 0.5rem);
-              "
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                x="0px"
-                y="0px"
-                class="edit_button"
-                height="100%"
-                viewBox="0 0 24 24"
-                xml:space="preserve"
-                style="fill: none; stroke: var(--text-color)"
-              >
-                <g>
-                  <g>
-                    <path
-                      xmlns="http://www.w3.org/2000/svg"
-                      style="fill: var(--button); stroke: var(--button)"
-                      stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none
-                      d="m 19.792969,1.2089844 c -0.773047,0 -1.546203,0.290977 -2.134766,0.8730469 -6.69e-4,6.478e-4 -0.0013,0.0013 -0.002,0.00195 L 8.4119915,11.389897 c -0.5321594,0.536333 -1.9587661,2.040145 -2.9061791,5.334709 -0.1062793,0.369579 -0.1650107,0.570623 -0.2207032,0.85994 -0.046789,0.243065 -0.1295961,0.724628 0.2070338,1.013107 0.3909805,0.335056 1.0440816,0.133455 1.3847656,0.03125 C 7.387553,18.47571 7.9834625,18.287442 8.5897993,18.031247 11.103423,16.969168 12.593117,15.70399 12.985931,15.188066 l 8.93985,-8.8697066 C 23.11495,5.1606353 23.105005,3.2461646 21.927734,2.0820313 21.339171,1.4999614 20.566016,1.2089844 19.792969,1.2089844 Z"
-                      id="path5"
-                      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                      sodipodi:nodetypes="scccssssscccs"
-                    ></path>
-                    <path
-                      xmlns="http://www.w3.org/2000/svg"
-                      d="M 10.273212,2.8358152 H 5.5822718 c -1.3827164,0 -2.0740869,0 -2.6022128,0.2661137 C 2.5154954,3.3360099 2.1378007,3.709514 1.9011058,4.1689107 1.6320062,4.6911889 1.6320062,5.3748762 1.6320062,6.7422506 V 18.461557 c 0,1.367374 0,2.051122 0.2690996,2.573363 0.2366949,0.459374 0.6143896,0.832926 1.0789532,1.066946 0.5281259,0.266126 1.2194964,0.266126 2.6022128,0.266126 H 17.433068 c 1.382716,0 2.074137,0 2.602237,-0.266126 0.464527,-0.23402 0.842271,-0.607572 1.078917,-1.066946 0.269112,-0.522241 0.269112,-1.205989 0.269112,-2.573363 v -5.249273"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      style="stroke-width: 3.25435; stroke-dasharray: none"
-                      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                      sodipodi:nodetypes="csccssccssccsccc"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-          </button>
-          <br />
-          at the top left to enter
+          {{ Localize "click_edit_button" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-left: 20rem">
       <div class="instruction-card-top">
         <span class="instruction-number">2</span>
-        <h3 class="instruction-title">Open the drawer</h3>
+        <h3 class="instruction-title">{{ Localize "open_drawer" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">🗃️</p>
         </div>
         <p class="instruction-description">
-          Open the drawer at the top to grab some widgets
+          {{ Localize "open_drawer_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-right: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">3</span>
-        <h3 class="instruction-title">Drop the <b>widgets</b></h3>
+        <h3 class="instruction-title">{{ Localize "drop_widgets" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -452,75 +344,73 @@
           </p>
         </div>
         <p class="instruction-description">
-          Place the widgets in existing panels or create new ones
+          {{ Localize "drop_widgets_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-left: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">4</span>
-        <h3 class="instruction-title">Stow them away</h3>
+        <h3 class="instruction-title">{{ Localize "stow_away" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">❌</p>
         </div>
         <p class="instruction-description">
-          Store your widgets by <b>dropping</b> them <i>back</i> in the drawer
+          {{ Localize "stow_away_desc" }}
         </p>
       </div>
     </div>
   </section>
   <section id="quick">
-    <h2>How to use Quick Menu</h2>
+    <h2>{{ Localize "how_to_use_quick_menu" }}</h2>
     <div class="instruction-card" style="margin-left: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">1</span>
-        <h3 class="instruction-title">Open Quick with <kbd>:</kbd></h3>
+        <h3 class="instruction-title">{{ Localize "open_quick" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">⚡</p>
         </div>
         <p class="instruction-description">
-          Open the quick menu using <br />
-          the <kbd>:</kbd> key
+          {{ Localize "open_quick_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-right: 10rem">
       <div class="instruction-card-top">
         <span class="instruction-number">2</span>
-        <h3 class="instruction-title">Type it out!</h3>
+        <h3 class="instruction-title">{{ Localize "type_it_out" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">🔎</p>
         </div>
         <p class="instruction-description">
-          Look up any function in quick menu, for example "<code>planner</code>"
+          {{ Localize "type_it_out_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-left: 5rem">
       <div class="instruction-card-top">
         <span class="instruction-number">3</span>
-        <h3 class="instruction-title">Navigate the menu</h3>
+        <h3 class="instruction-title">{{ Localize "navigate_menu" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">⌨️</p>
         </div>
         <p class="instruction-description">
-          Use <kbd>Tab</kbd> to navigate and <kbd>Enter</kbd> to confirm your
-          choice
+          {{ Localize "navigate_menu_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card" style="margin-right: 5rem">
       <div class="instruction-card-top">
         <span class="instruction-number">4</span>
-        <h3 class="instruction-title">Save your own Quicks</h3>
+        <h3 class="instruction-title">{{ Localize "save_quicks" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -541,36 +431,31 @@
           </p>
         </div>
         <p class="instruction-description">
-          Use "<code>quick add</code>" to save a shortcut. Enter a
-          <code>name</code>: (eg. <i style="font-weight: 600">google</i>), then
-          a <code>value</code> <i>(URL)</i>: (e.g.
-          <i style="font-weight: 600">https://google.com</i>)
+          {{ Localize "save_quicks_desc" }}
         </p>
       </div>
     </div>
   </section>
   <section id="faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2>{{ Localize "frequently_asked_questions" }}</h2>
     <div class="instruction-card faq-card">
       <div class="instruction-card-top">
         <span class="instruction-number">?</span>
-        <h3 class="instruction-title">How do I change my weather location?</h3>
+        <h3 class="instruction-title">{{ Localize "change_weather_location" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
           <p class="instruction-icon">🌦️</p>
         </div>
         <p class="instruction-description">
-          Click on the current location in the widget and type out
-          <i>your own</i>
-          location.
+          {{ Localize "weather_location_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card faq-card">
       <div class="instruction-card-top">
         <span class="instruction-number">?</span>
-        <h3 class="instruction-title">Why can't I install it?</h3>
+        <h3 class="instruction-title">{{ Localize "why_cant_install" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -591,13 +476,7 @@
           </p>
         </div>
         <p class="instruction-description">
-          On school laptops or school <i>wifi</i>, it might be <b>blocked</b>.
-          Try a different browser or use
-          <a
-            href="https://chromewebstore.google.com/detail/smartschool++-lite/dogkhghdahlgebhojaaoijdcadmebkcg"
-            target="_blank"
-            >Lite</a
-          >.
+          {{ Localize "install_issue_desc" }}
         </p>
       </div>
     </div>
@@ -605,7 +484,7 @@
       <div class="instruction-card-top">
         <span class="instruction-number">?</span>
         <h3 class="instruction-title">
-          Can I use Smarter/Smartest Smartschool?
+          {{ Localize "compatible_extensions" }}
         </h3>
       </div>
       <div class="instruction-card-bottom">
@@ -619,27 +498,14 @@
           </p>
         </div>
         <p class="instruction-description">
-          Yes, both
-          <a
-            href="https://chromewebstore.google.com/detail/smarter-smartschool/lbpdknjafmmnemenflppkofaakldbfom"
-            target="_blank"
-            >Smarter Smartschool</a
-          >
-          and <br />
-          <a
-            href="https://chromewebstore.google.com/detail/smartest-smartschool/hamjjkjpoeaomembdbcfegkmblbocgke"
-            target="_blank"
-            >Smartest Smartschool</a
-          >
-          are compatible<br />
-          But don't forget to disable the <i>Smarter</i> themes
+          {{ Localize "compatible_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card faq-card">
       <div class="instruction-card-top">
         <span class="instruction-number">?</span>
-        <h3 class="instruction-title">On which browsers can I install?</h3>
+        <h3 class="instruction-title">{{ Localize "which_browsers" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -648,22 +514,14 @@
           </p>
         </div>
         <p class="instruction-description">
-          You can use any
-          <a
-            href="https://alternativeto.net/category/browsers/chromium-based/"
-            target="_blank"
-            >Chromium</a
-          >
-          based browser like Opera or Edge. <b>Firefox</b> users can follow our
-          guide on
-          <a href="https://discord.gg/qCHZYepDqZ" target="_blank">Discord</a>.
+          {{ Localize "browsers_desc" }}
         </p>
       </div>
     </div>
     <div class="instruction-card faq-card">
       <div class="instruction-card-top">
         <span class="instruction-number">?</span>
-        <h3 class="instruction-title">Other questions?</h3>
+        <h3 class="instruction-title">{{ Localize "other_questions" }}</h3>
       </div>
       <div class="instruction-card-bottom">
         <div class="instruction-card-icon">
@@ -682,13 +540,11 @@
           </p>
         </div>
         <p class="instruction-description">
-          You can reach out in our <i>official</i> Smartschool++
-          <a href="https://discord.gg/qCHZYepDqZ" target="_blank">Discord</a>
-          server.
+          {{ Localize "other_questions_desc" }}
         </p>
       </div>
     </div>
   </section>
 </div>
-<div id="toast" class="toast">Copied to clipboard!</div>
+<div id="toast" class="toast">{{ Localize "copied_to_clipboard" }}</div>
 {{end}}

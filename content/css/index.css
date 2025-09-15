@@ -3,8 +3,8 @@
   font-size: 1.9em;
   color: var(--text-color);
   overflow: visible;
-  margin-top: 2rem;
-  margin-bottom: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 #top-title-accent {
@@ -213,23 +213,23 @@ html {
 }
 
 html:has(.preview-img-container.ready #darkSands) {
-  background-image: url(../media/backgroundDarkSands.webp);
+  background-image: url(../media/backgroundDarkSands.jpg);
 }
 
 html:has(.preview-img-container.ready #midnightSapphire) {
-  background-image: url(../media/backgroundMidnightSapphire.webp);
+  background-image: url(../media/backgroundMidnightSapphire.jpg);
 }
 
 html:has(.preview-img-container.ready #rubyEclipse) {
-  background-image: url(../media/backgroundRubyEclipse.webp);
+  background-image: url(../media/backgroundRubyEclipse.jpg);
 }
 
 html:has(.preview-img-container.ready #cherryHaze) {
-  background-image: url(../media/backgroundCherryHaze.webp);
+  background-image: url(../media/backgroundCherryHaze.jpg);
 }
 
 html:has(.preview-img-container.ready #fluorescentGalaxy) {
-  background-image: url(../media/backgroundFluorescentGalaxy.webp);
+  background-image: url(../media/backgroundFluorescentGalaxy.jpg);
 }
 
 .preview-img-container.prev {

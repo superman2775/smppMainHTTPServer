@@ -314,7 +314,8 @@ main {
   flex-direction: row;
   align-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
+  min-width: fit-content;
 }
 
 .clipped-smpp-logo {
@@ -329,6 +330,7 @@ main {
   text-decoration: none;
   font-size: 1.3em;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .download-button-arrow {
@@ -369,7 +371,7 @@ main {
 }
 
 .outer-top-nav-element {
-  width: 230px;
+  width: 280px;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
@@ -685,4 +687,85 @@ h4 {
     margin-top: 1rem;
     margin-left: 0.5rem;
   }
+}
+
+
+/* theme toggler styles  start ehre */
+.language-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--background-ui1);
+  padding: 2px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.lang-indicator {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: calc(100% - 4px);
+  width: calc(50% - 1px);
+  background: var(--button-gradient);
+  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px var(--highlight-shadow-color);
+  z-index: 1;
+}
+
+[data-current-lang="nl"] .lang-indicator {
+  left: 2px;
+}
+
+[data-current-lang="en"] .lang-indicator {
+  left: calc(50% + 1px);
+}
+
+.lang-toggle-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.lang-toggle-btn:hover {
+  color: var(--accent);
+}
+
+.lang-toggle-btn.active {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.lang-toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+@media (max-width: 1170px) {
+  .lang-toggle-btn {
+    padding: 5px 12px;
+    font-size: 0.9rem;
+  }
+
+  .lang-indicator {
+    width: calc(50% - 1px);
+  }
+}
+
+#language-light-dark-selectors {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }

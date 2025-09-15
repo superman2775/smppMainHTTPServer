@@ -1,3 +1,13 @@
 {{ define "content" }}
-AAAAAAAAAAAAAAAAA WHY ARE YOU HERE
+<div style="text-align: center; padding-bottom: 20px; font-family: 'Montserrat', sans-serif;">
+  <h1 style="font-size: 72px; font-weight: 900; margin-bottom: 20px; color: var(--text-color);">404</h1>
+  <p style="font-size: 24px; font-weight: 600; margin-bottom: 30px; color: var(--text-color);">
+    {{ Localize "page_not_found" }}
+  </p>
+  <img src="./media/404.gif" alt="404" style="max-width: 200px; width: 100%; height: auto; margin-bottom: 30px; border-radius: 1rem;">
+  <br>
+  <a href="/" style="display: inline-block; padding: 12px 24px; background: var(--button-gradient); color: var(--white); text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease;">
+    {{ Localize "btn_go_home" }}
+  </a>
+</div>
 {{ end }}

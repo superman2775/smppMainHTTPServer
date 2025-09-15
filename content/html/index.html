@@ -1,11 +1,11 @@
 {{ define "content" }}
 <div id="top-title">
   <h1 style="margin: 0">
-    Welcome to <br /><span id="top-title-accent">{{ .PageTitle }}</span><br /><i
+    {{ Localize "welcome" }} <br /><span id="top-title-accent">{{ .PageTitle }}</span><br /><i
       style="font-weight: 400"
-      >innovating</i
+    >{{ Localize "innovating" }}</i
     >
-    education
+    {{ Localize "education" }}
   </h1>
 </div>
 <div id="try-now-button-container">
@@ -42,7 +42,7 @@
       </g>
     </svg>
 
-    <span class="try-now-text">Try it now</span>
+    <span class="try-now-text">{{ Localize "try_it_now" }}</span>
     <svg
       class="try-now-arrow"
       viewBox="0 0 24 24"
@@ -57,7 +57,7 @@
 </div>
 <div id="personalization" class="mains">
   <h1 class="main-title">
-    A new standard for <span class="accent-text">personalization</span>
+    {{ Localize "personalization_prefix" }} <span class="accent-text">{{ Localize "personalization_highlight" }}</span>
   </h1>
   <div id="theme-preview-container">
     <div class="preview-img-container">
@@ -112,15 +112,15 @@
             </g>
           </svg>
         </div>
-        <span class="preview-img-title">Midnight Sapphire</span>
+        <span class="preview-img-title">{{ Localize "midnight_sapphire" }}</span>
       </div>
       <picture>
-        <source srcset="media/previewMidnightSapphire.webp" type="image/webp" />
+        <source srcset="media/previewMidnightSapphire.jpg" type="image/jpeg" />
         <img
           id="midnightSapphire"
           class="preview-img"
           loading="lazy"
-          src="media/previewMidnightSapphire.png"
+          src="media/previewMidnightSapphire.jpg"
           alt="Homepage preview"
         />
       </picture>
@@ -177,15 +177,15 @@
             </g>
           </svg>
         </div>
-        <span class="preview-img-title">Dark Sands</span>
+        <span class="preview-img-title">{{ Localize "dark_sands" }}</span>
       </div>
       <picture>
-        <source srcset="media/previewDarkSands.webp" type="image/webp" />
+        <source srcset="media/previewDarkSands.jpg" type="image/jpeg" />
         <img
           id="darkSands"
           class="preview-img"
           loading="lazy"
-          src="media/previewDarkSands.png"
+          src="media/previewDarkSands.jpg"
           alt="Homepage preview"
         />
       </picture>
@@ -242,18 +242,18 @@
             </g>
           </svg>
         </div>
-        <span class="preview-img-title">Fluorescent Galaxy</span>
+        <span class="preview-img-title">{{ Localize "fluorescent_galaxy" }}</span>
       </div>
       <picture>
         <source
-          srcset="media/previewFluorescentGalaxy.webp"
-          type="image/webp"
+          srcset="media/previewFluorescentGalaxy.jpg"
+          type="image/jpeg"
         />
         <img
           id="fluorescentGalaxy"
           class="preview-img"
           loading="lazy"
-          src="media/previewFluorescentGalaxy.png"
+          src="media/previewFluorescentGalaxy.jpg"
           alt="Homepage preview"
         />
       </picture>
@@ -310,15 +310,15 @@
             </g>
           </svg>
         </div>
-        <span class="preview-img-title">Ruby Eclipse</span>
+        <span class="preview-img-title">{{ Localize "ruby_eclipse" }}</span>
       </div>
       <picture>
-        <source srcset="media/previewRubyEclipse.webp" type="image/webp" />
+        <source srcset="media/previewRubyEclipse.jpg" type="image/jpeg" />
         <img
           id="rubyEclipse"
           class="preview-img"
           loading="lazy"
-          src="media/previewRubyEclipse.png"
+          src="media/previewRubyEclipse.jpg"
           alt="Homepage preview"
         />
       </picture>
@@ -375,15 +375,15 @@
             </g>
           </svg>
         </div>
-        <span class="preview-img-title">Cherry Haze</span>
+        <span class="preview-img-title">{{ Localize "cherry_haze" }}</span>
       </div>
       <picture>
-        <source srcset="media/previewCherryHaze.webp" type="image/webp" />
+        <source srcset="media/previewCherryHaze.jpg" type="image/jpeg" />
         <img
           id="cherryHaze"
           class="preview-img"
           loading="lazy"
-          src="media/previewCherryHaze.png"
+          src="media/previewCherryHaze.jpg"
           alt="Homepage preview"
         />
       </picture>
@@ -400,7 +400,7 @@
       <path
         d="M5.06 3.024C4.804 1.238 6.858.052 8.276 1.168l17.117 13.466c1.47 1.159.688 3.522-1.182 3.574l-7.03.19a1.998 1.998 0 0 0-1.65.953l-3.68 5.993c-.98 1.594-3.418 1.089-3.685-.764L5.06 3.024Z"
       ></path></svg
-    >Psst... this page is interactive</span
+    >{{ Localize "psst_interactive" }}</span
   >
   <div id="theme-preview-buttons">
     <button id="prev-button" class="theme-preview-button">
@@ -431,7 +431,7 @@
 </div>
 <div id="productivity" class="mains">
   <h1 class="main-title">
-    <span class="accent-text">Productivity</span> at its finest
+    {{ Localize "productivity_prefix" }} <span class="accent-text">{{ Localize "productivity_highlight" }}</span>
   </h1>
   <div id="prod">
     <div id="prod-preview-wrapper">
@@ -559,22 +559,22 @@
 </div>
 <div id="fun" class="mains">
   <h1 class="main-title">
-    Not without some <span class="accent-text">fun</span>
+    {{ Localize "fun_prefix" }} <span class="accent-text">{{ Localize "fun_highlight" }}</span>
   </h1>
   <div id="fun-container">
     <div id="fun-app-gallery">
       <div id="fun-app-gallery-grid">
         <div id="fun-app-flappy" class="fun-app-container">
           <span class="emoji">🐤</span>
-          <span class="fun-app-title">Flappy++</span>
+          <span class="fun-app-title">{{ Localize "flappy_plus" }}</span>
         </div>
         <div id="fun-app-snake" class="fun-app-container">
           <span class="emoji">🐍</span>
-          <span class="fun-app-title">Snake++</span>
+          <span class="fun-app-title">{{ Localize "snake_plus" }}</span>
         </div>
         <div id="fun-app-plant" class="fun-app-container">
           <span class="emoji">🪴</span>
-          <span class="fun-app-title">Plant</span>
+          <span class="fun-app-title">{{ Localize "plant" }}</span>
         </div>
         <div id="fun-app-gc" class="fun-app-container">
           <svg
@@ -599,7 +599,7 @@
               </g>
             </g>
           </svg>
-          <span class="fun-app-title">Global Chat</span>
+          <span class="fun-app-title">{{ Localize "global_chat_app" }}</span>
         </div>
       </div>
     </div>
