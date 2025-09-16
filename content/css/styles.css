@@ -88,6 +88,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-wrap-mode: nowrap;
   gap: 1.5rem;
 }
 
@@ -120,6 +121,7 @@ main {
   border-radius: 1.75rem;
   width: 40rem;
   cursor: default;
+  text-wrap-mode: wrap;
   gap: 0.2rem;
 }
 
@@ -371,7 +373,7 @@ main {
 }
 
 .outer-top-nav-element {
-  width: 280px;
+  width: 290px;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
@@ -689,7 +691,6 @@ h4 {
   }
 }
 
-
 /* theme toggler styles  start ehre */
 .language-toggle-container {
   display: flex;
@@ -712,7 +713,7 @@ h4 {
   background: var(--button-gradient);
   border-radius: 8px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px var(--highlight-shadow-color);
+  box-shadow: 0px 0.5px 6px -0.5px var(--highlight-shadow-color);
   z-index: 1;
 }
 
@@ -758,13 +759,13 @@ h4 {
     padding: 5px 12px;
     font-size: 0.9rem;
   }
-
-  .lang-indicator {
-    width: calc(50% - 1px);
+  .language-toggle-container {
+    transform: translateY(2px);
   }
 }
 
 #language-light-dark-selectors {
+  justify-content: end;
   display: flex;
   align-items: center;
   gap: 0.5rem;

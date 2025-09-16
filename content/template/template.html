@@ -222,11 +222,11 @@
 
         <div id="language-light-dark-selectors" class="outer-top-nav-element">
           <!-- Language Switcher -->
-          <div class="language-toggle-container" data-current-lang="{{ .Lang }}">
+          <button class="language-toggle-container visible-on-desktop" onclick="setLanguage('{{ if eq .Lang "nl" }}en{{ else }}nl{{ end }}', '{{ .Redirect }}')" data-current-lang="{{ .Lang }}">
             <div class="lang-indicator" id="lang-indicator"></div>
-            <button class="lang-toggle-btn {{ if eq .Lang "nl" }}active{{ end }}" onclick="setLanguage('nl', '{{ .Redirect }}')" data-lang="nl">NL</button>
-            <button class="lang-toggle-btn {{ if eq .Lang "en" }}active{{ end }}" onclick="setLanguage('en', '{{ .Redirect }}')" data-lang="en">EN</button>
-          </div>
+            <div class="lang-toggle-btn {{ if eq .Lang "nl" }}active{{ end }}"  data-lang="nl">NL</div>
+            <div class="lang-toggle-btn {{ if eq .Lang "en" }}active{{ end }}"  data-lang="en">EN</div>
+          </button>
           {{ if eq .Mode "dark" }}
           <a
             id="light-mode-selector"
@@ -346,7 +346,11 @@
     <div id="mobile-menu">
       <div class="mobile-menu-top">
         <span class="mobile-menu-top-title">{{ Localize "nav_menu" }}</span>
-
+            <button class="language-toggle-container" onclick="setLanguage('{{ if eq .Lang "nl" }}en{{ else }}nl{{ end }}', '{{ .Redirect }}')" data-current-lang="{{ .Lang }}">
+              <div class="lang-indicator" id="lang-indicator"></div>
+              <div class="lang-toggle-btn {{ if eq .Lang "nl" }}active{{ end }}"  data-lang="nl">NL</div>
+              <div class="lang-toggle-btn {{ if eq .Lang "en" }}active{{ end }}"  data-lang="en">EN</div>
+          </button>
         <button id="mobile-menu-close-button">
           <svg
             width="1.5rem"

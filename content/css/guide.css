@@ -191,7 +191,6 @@ h2 {
   box-shadow: 0px 0px 2px
       color-mix(in srgb, var(--button) 10%, var(--black) 90%) inset,
     0px 0px 10px 0px var(--shadow-color);
-  z-index: 10;
 }
 
 .instruction-title {

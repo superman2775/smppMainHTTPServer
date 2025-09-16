@@ -1,99 +1,98 @@
 {{ define "content" }}
 <h1>{{ Localize "our_story" }}</h1>
 <div class="main-content">
-    <div class="timeline-line"></div>
-    {{ .MarkdownHTML }}
+  <div class="timeline-line"></div>
+  {{ .MarkdownHTML }}
 </div>
 <h1>{{ Localize "our_team" }}</h1>
 
 <h2 class="name">Sibe</h2>
 <div class="text-card">
-    <p>
-        {{ Localize "sibe_description" }}
-        <br />
-        <br />
-        – <b>Sibe</b>, <i>developer</i> &
-        <a href="https://rust-lang.org" target="_blank">
-            {{ Localize "sibe_rust_fan" }}</a
-        >
-    </p>
+  <p>
+    {{ Localize "sibe_description" }}
+    <br />
+    <br />
+    – <b>Sibe</b>, <i>developer</i> &
+    <a href="https://rust-lang.org" target="_blank">
+      {{ Localize "sibe_rust_fan" }}</a
+    >
+  </p>
 </div>
 <h2 class="name">Lukas</h2>
 <div class="text-card">
-    <p>
-        <i>{{ Localize "marcel_description" }}</i>
-        <br /><br />
-        – <b>Lukas</b>, <i>UI-ontwerper</i>, <i>ontwikkelaar</i> &
-        <a href="https://radiohead.com/" target="_blank">Radiohead-fan 📻</a>
-    </p>
+  <p>
+    <i>{{ Localize "lukas_description" }}</i>
+    <br /><br />
+    – <b>Lukas</b>, <i>UI-ontwerper</i>, <i>ontwikkelaar</i> &
+    <a href="https://radiohead.com/" target="_blank">Radiohead-fan 📻</a>
+  </p>
 </div>
 <h2 class="name">Bjarne</h2>
 <div class="text-card">
-    <p>
-        {{ Localize "bjarne_description" }}<br /><br />
-        – <b>Bjarne</b>, <i>Ervaringscoördinator</i>, &
-        <a href="https://myanimelist.net/" target="_blank">Anime-fan 📻</a>
-    </p>
+  <p>
+    {{ Localize "bjarne_description" }}<br /><br />
+    – <b>Bjarne</b>, <i>Ervaringscoördinator</i>, &
+    <a href="https://myanimelist.net/" target="_blank">Anime-fan 📻</a>
+  </p>
 </div>
 <h1>{{ Localize "our_contributors" }}</h1>
 <div class="contributers-container">
-    <div>
-        <h3 style="text-align: left">{{ Localize "development" }}</h3>
-        <ul>
-            <li><b>BeagleNF404</b>, {{ Localize "beagle_designer" }}</li>
-            <li><b>JJorne</b>, {{ Localize "jjorne_widget" }}</li>
-            <li>
-                <a href="https://broodje56.is-a.dev/" target="_blank"
-                    ><b>Broodje56</b></a
-                >, new game development
-            </li>
-            <li><b>ProgramORdie</b>, {{ Localize "programordie_game" }}</li>
-            <li><b>Xavier Demaerel</b>, {{ Localize "xavier_initial_dev" }}</li>
-            <li>
-                <href target="_blank" href="https://yamura.dev">
-                    <b>Yamura (Marcel)</b>, {{ Localize "yamura_first_docs" }}
-                </href>
-            </li>
-        </ul>
-        <h3 style="text-align: left">{{ Localize "other_section" }}</h3>
-        <ul>
-            <li>
-                <a href="https://discord.gg/qCHZYepDqZ" target="_blank"
-                    ><b>Our community</b></a
-                >, {{ Localize "keeping_us_motivated" }}
-            </li>
-            <li>
-                <a
-                    href="https://www.linkedin.com/in/frank-claikens-b6b1a1248/"
-                    target="_blank"
-                    ><b>Frank Claikens</b></a
-                >
-                , {{ Localize "our_mentor" }}
-            </li>
-            <li><b>Otis</b>, {{ Localize "discord_manager" }}</li>
-            <li><b>Our families</b>, {{ Localize "supporting_us" }}</li>
-            <li><b>Karel Broens</b>, {{ Localize "the_plant_idea" }}</li>
-            <li>
-                <a
-                    href="https://www.technischatheneumkeerbergen.be/"
-                    target="_blank"
-                    ><b>TAK</b></a
-                >, {{ Localize "our_school" }}
-            </li>
-            <li>
-                <b>The moderators</b>, {{ Localize "keeping_everything_clean" }}
-            </li>
-        </ul>
-    </div>
-    <div>
+  <div>
+    <h3 style="text-align: left">{{ Localize "development" }}</h3>
+    <ul>
+      <li><b>BeagleNF404</b>, {{ Localize "beagle_designer" }}</li>
+      <li><b>JJorne</b>, {{ Localize "jjorne_widget" }}</li>
+      <li>
+        <href target="_blank" href="https://yamura.dev">
+          <b>Yamura (Marcel)</b>, {{ Localize "yamura_first_docs" }}
+        </href>
+      </li>
+      <li>
+        <a href="https://broodje56.is-a.dev/" target="_blank"
+          ><b>Broodje56</b></a
+        >, new game development
+      </li>
+      <li><b>ProgramORdie</b>, {{ Localize "programordie_game" }}</li>
+      <li><b>Xavier Demaerel</b>, {{ Localize "xavier_initial_dev" }}</li>
+    </ul>
+    <h3 style="text-align: left">{{ Localize "other_section" }}</h3>
+    <ul>
+      <li>
+        <a href="https://discord.gg/qCHZYepDqZ" target="_blank"
+          ><b>{{Localize "our_community"}}</b></a
+        >, {{ Localize "keeping_us_motivated" }}
+      </li>
+      <li>
         <a
-            href="https://github.com/sprksoft/smpp/graphs/contributors"
-            target="_blank"
+          href="https://www.linkedin.com/in/frank-claikens-b6b1a1248/"
+          target="_blank"
+          ><b>Frank Claikens</b></a
         >
-            <img
-                src="https://contrib.rocks/image?repo=sprksoft/smpp&columns=3"
-            />
-        </a>
-    </div>
+        , {{ Localize "our_mentor" }}
+      </li>
+      <li><b>Otis</b>, {{ Localize "discord_manager" }}</li>
+      <li>
+        <b>{{Localize "our_families"}}</b>, {{ Localize "supporting_us" }}
+      </li>
+      <li><b>Karel Broens</b>, {{ Localize "the_plant_idea" }}</li>
+      <li>
+        <a href="https://www.technischatheneumkeerbergen.be/" target="_blank"
+          ><b>TAK</b></a
+        >, {{ Localize "our_school" }}
+      </li>
+      <li>
+        <b>{{Localize "the_moderators"}}</b>, {{ Localize
+        "keeping_everything_clean" }}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <a
+      href="https://github.com/sprksoft/smpp/graphs/contributors"
+      target="_blank"
+    >
+      <img src="https://contrib.rocks/image?repo=sprksoft/smpp&columns=3" />
+    </a>
+  </div>
 </div>
 {{ end }}

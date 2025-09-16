@@ -2,7 +2,7 @@
 
 ## dark Global Chat Update 🌐
 
-IMG /media/backgroundDarkSands.webp
+IMG /media/backgroundDarkSands.jpg
 Inloggen via **Smartschool** — tot ziens spammers 👋  
 Gebruikersnamen zijn nu gesynchroniseerd over meerdere apparaten  
 Moderators kunnen nu **gebruikers verbannen** uit de chat
@@ -10,33 +10,33 @@ Verse lading **stickers** toegevoegd 🎉
 
 ## dark Settings Update ⚙️
 
-IMG /media/backgroundDefaultDeluxe.webp  
+IMG /media/backgroundDefaultDeluxe.jpg  
 **Uitgebreid** instellingenpaneel voor _momenteel vaste_ aanpassingsopties  
 **_Meer controle_** over alle functies
 
 ## dark Global Chat Update 2 🌐
 
-IMG /media/backgroundDarkSands.webp
+IMG /media/backgroundDarkSands.jpg
 Plant sticker — laat je plant aan iedereen zien
 Beantwoorden van berichten
 Automatisch aanvullen voor stickers
 
 ## dark Theme Update 🎨
 
-IMG /media/backgroundCherryHaze.webp  
+IMG /media/backgroundCherryHaze.jpg  
 **Verse thema's** + **_door gebruikers ingediende_** ontwerpen in een **vernieuwdde UI**  
 Sla **_meerdere_** aangepaste thema's op (_wissel naadloos_)  
 **Gradiënt** achtergronden
 
 ## dark Profiel personalisatie Update 🪪
 
-IMG /media/backgroundFluorescentGalaxy.webp  
+IMG /media/backgroundFluorescentGalaxy.jpg  
 **Druk jezelf uit** met **_aangepaste_** profielfoto's  
 **Kies** je eigen _stijl_ en kleuren
 
 ## dark Plant Update 🪴
 
-IMG /media/backgroundMatchaGreen.webp  
+IMG /media/backgroundMatchaGreen.jpg  
 **Nieuwe planten** _ontgrendelbaar_ door groeivoortgang  
 **Geef je plant een naam** (_geef het persoonlijkheid!_)  
 **_Seizoensgebonden_** decoraties (bijv. _paaseieren, kerstverlichting_)  
