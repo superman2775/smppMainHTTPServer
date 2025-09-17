@@ -1,13 +1,5 @@
 # Routekaart
 
-## dark Global Chat Update 🌐
-
-IMG /media/backgroundDarkSands.jpg
-Inloggen via **Smartschool** — tot ziens spammers 👋  
-Gebruikersnamen zijn nu gesynchroniseerd over meerdere apparaten  
-Moderators kunnen nu **gebruikers verbannen** uit de chat
-Verse lading **stickers** toegevoegd 🎉
-
 ## dark Settings Update ⚙️
 
 IMG /media/backgroundDefaultDeluxe.jpg  
